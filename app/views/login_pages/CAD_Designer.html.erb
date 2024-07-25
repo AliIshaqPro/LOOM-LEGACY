@@ -1,0 +1,19 @@
+<!-- app/views/login_pages/CAD_Designer.html.erb -->
+<%= stylesheet_link_tag 'login_signup', media: 'all', 'data-turbo-track': 'reload' %>
+
+<%= form_with(model: @CAD_Designer, url: cad_designers_create_session_path, method: :post, class: 'signup-form') do |form| %>
+  <div class="form-group">
+    <%= form.email_field :email, placeholder: 'Enter your email', name: 'cad_designer[email]', class: 'form-input' %>
+  </div>
+  <div class="form-group">
+    <%= form.password_field :password, placeholder: 'Enter your password', name: 'cad_designer[password]', class: 'form-input' %>
+  </div>
+  <div>
+    <%= form.submit 'Login', class: 'form-submit' %>
+  </div>
+  <div class="form-submit">
+    <%= link_to 'Forgotten Password', forgot_path, class: 'form-submit' %>
+  </div>
+<% end %>
+
+

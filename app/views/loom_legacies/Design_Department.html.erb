@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOM-LEGACY</title>
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>LOOM-LEGACY</h1>
+        </div>
+    </header>
+
+    <section id="home" class="welcome">
+    <div class="container">
+        <h1>WELCOME TO LOOM-LEGACY</h1>
+    </div>
+    </section>
+    <section id="departments" class="departs">
+    <div class="container">
+        <h2>PLEASE SELECT YOUR POSITION</h2><br>
+        <div class="departments-grid">
+        <a href="<%= new_textile_designer_session_path %>">
+    <div class="board-member"></div>
+    <h3>Textile Designer</h3>
+</a>
+<a href="<%= new_cad_designer_session_path %>">
+    <div class="chairman-of-board"></div>
+    <h3>CAD Designer</h3>
+</a>
+<a href="<%= new_pattern_maker_session_path %>">
+    <div class="pd"></div>
+    <h3>Pattern Maker</h3>
+</a>
+<a href="<%= new_colorist_session_path %>">
+    <div class="qc"></div>
+    <h3>Colorist</h3>
+</a>
+
+        </div>
+    </div>
+</section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LOOM-LEGACY. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

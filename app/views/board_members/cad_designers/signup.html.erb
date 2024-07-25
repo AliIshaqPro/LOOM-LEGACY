@@ -1,0 +1,43 @@
+<!-- app/views/cad_designers/signup.html.erb -->
+
+<h1>Sign Up as Cad_designers</h1>
+
+<%= form_with(model: @cad_designers, url: cad_designers_signup_path, method: :post) do |form| %>
+  <% if @cad_designers.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cad_designers.errors.count, "error") %> prohibited this cad_designers from being saved:</h2>
+
+      <ul>
+        <% @cad_designers.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form-control" %>
+  </div>
+
+  <!-- Add more fields based on the specific attributes for each role -->
+
+  <div class="form-group">
+    <%= form.label :password %>
+    <%= form.password_field :password, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Sign Up", class: "btn btn-primary" %>
+  </div>
+<% end %>

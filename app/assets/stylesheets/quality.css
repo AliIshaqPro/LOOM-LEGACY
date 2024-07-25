@@ -1,0 +1,118 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+#hero {
+    background-image: url('quality_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#overview {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+#overview h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#overview ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#overview ul li {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#team {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+#team .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+}

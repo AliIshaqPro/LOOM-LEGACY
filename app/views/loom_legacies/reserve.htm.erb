@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOM-LEGACY</title>
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>LOOM-LEGACY</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#departments">Departments</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="welcome">
+    <div class="container">
+        <h2>Welcome to LOOM-LEGACY</h2>
+        <p>At LOOM-LEGACY, we are dedicated to weaving the finest traditions of textile craftsmanship with modern innovation. Our commitment to quality and excellence is woven into every fabric we produce, ensuring that your legacy in textiles starts here.</p>
+    </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>LOOM-LEGACY is a leading textile company known for its innovation and quality.</p>
+        </div>
+    </section>
+
+
+
+    <section id="departments" class="departs">
+    <div class="container">
+        <h2>Our Departments</h2>
+        <div class="departments-grid">
+            <a href="/loom_legacies/Production_Department">
+                <div class="pd"></div>
+                <h3>Production Department</h3>
+            </a>
+            <a href="/loom_legacies/Quality_Control_and_Assurance">
+                <div class="qc"></div>
+                <h3>Quality Control and Assurance</h3>
+            </a>
+            <a href="/loom_legacies/Research_and_Development">
+                <div class="rd"></div>
+                <h3>Research and Development (R&D)</h3>
+            </a>
+            <a href="/loom_legacies/Design_Department">
+                <div class="dd"></div>
+                <h3>Design Department</h3>
+            </a>
+            <a href="/loom_legacies/Maintenance_Department">
+                <div class="md"></div>
+                <h3>Maintenance Department</h3>
+            </a>
+            <a href="/loom_legacies/Procurement_and_Supply_Chain_Management">
+                <div class="psc"></div>
+                <h3>Procurement and Supply Chain</h3>
+            </a>
+            <a href="/loom_legacies/Human_Resources_HR">
+                <div class="hr"></div>
+                <h3>Human Resources (HR)</h3>
+            </a>
+            <a href="/loom_legacies/Finance_and_Accounting">
+                <div class="fa"></div>
+                <h3>Finance and Accounting</h3>
+            </a>
+            <a href="/loom_legacies/Sales_and_Marketing">
+                <div class="sm"></div>
+                <h3>Sales and Marketing</h3>
+            </a>
+            <a href="/loom_legacies/Information_Technology_IT">
+                <div class="it"></div>
+                <h3>Information Technology (IT)</h3>
+            </a>
+            <a href="/loom_legacies/Logistics_and_Distribution">
+                <div class="ld"></div>
+                <h3>Logistics and Distribution</h3>
+            </a>
+            <a href="/loom_legacies/Compliance_and_Regulatory_Affairs">
+                <div class="cra"></div>
+                <h3>Compliance and Regulatory Affairs</h3>
+            </a>
+            <a href="/loom_legacies/Customer_Service">
+                <div class="cs"></div>
+                <h3>Customer Service</h3>
+            </a>
+            <a href="/loom_legacies/Planning_and_Control">
+                <div class="pc"></div>
+                <h3>Planning and Control</h3>
+            </a>
+            <a href="/loom_legacies/Administration">
+                <div class="admin"></div>
+                <h3>Administration</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <section id="contact" class="contactus">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <%= form_with model: @contact, url: contacts_path, method: :post, local: true do |form| %>
+      <div>
+        <%= form.label :name %>
+        <%= form.text_field :name, required: false %>
+      </div>
+
+      <div>
+        <%= form.label :email %>
+        <%= form.email_field :email, required: true %>
+      </div>
+
+      <div>
+        <%= form.label :message %>
+        <%= form.text_area :message, required: true %>
+      </div>
+
+      <div>
+        <%= form.submit "Send" %>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LOOM-LEGACY. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

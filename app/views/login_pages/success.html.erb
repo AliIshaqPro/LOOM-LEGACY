@@ -1,0 +1,22 @@
+
+<%= stylesheet_link_tag 'login_signup', media: 'all', 'data-turbo-track': 'reload' %>
+
+<div class="signup-form">
+  <h1>Accountant Details</h1>
+
+  <table>
+    <tr>
+      <th>Attribute</th>
+      <th>Value</th>
+    </tr>
+    <% @accountant.attributes.each do |attr, value| %>
+      <tr>
+        <td><%= attr.humanize %></td>
+        <td><%= value %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= link_to 'Edit', edit_accountant_path(@accountant), class: 'form-submit' %> |
+  <%= link_to 'Back', accountants_path, class: 'form-submit' %>
+</div>

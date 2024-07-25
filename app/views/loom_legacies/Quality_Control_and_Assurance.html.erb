@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOM-LEGACY</title>
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>LOOM-LEGACY</h1>
+        </div>
+    </header>
+
+    <section id="home" class="welcome">
+    <div class="container">
+        <h1>WELCOME TO LOOM-LEGACY</h1>
+    </div>
+    </section>
+    <section id="departments" class="departs">
+    <div class="container">
+        <h2>PLEASE SELECT YOUR DEPARTMENT</h2><br>
+        <div class="departments-grid">
+        <a href="<%= new_executive_session_path %>">
+        <div class="ceo"></div>
+        <h3>Executive</h3>
+    </a>
+    <a href="<%= new_board_member_session_path %>">
+        <div class="board-member"></div>
+        <h3>Board Member</h3>
+    </a>
+    <a href="<%= new_stake_holder_session_path %>">
+        <div class="chairman-of-board"></div>
+        <h3>Stake Holder</h3>
+    </a>
+    <a href="<%= new_production_department_session_path %>">
+        <div class="pd"></div>
+        <h3>Production Department</h3>
+    </a>
+    <a href="<%= new_quality_control_and_assurance_session_path %>">
+        <div class="qc"></div>
+        <h3>Quality Control and Assurance</h3>
+    </a>
+    
+        </div>
+    </div>
+</section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LOOM-LEGACY. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

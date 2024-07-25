@@ -1,0 +1,25 @@
+<!-- app/views/board_members/new_session.html.erb -->
+
+<h1>Login as Board_members</h1>
+
+<%= form_with(model: @board_members, url: board_members_create_session_path, method: :post) do |form| %>
+  <% if flash[:alert] %>
+    <div class="alert alert-danger">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form-control", placeholder: "Enter your email" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password %>
+    <%= form.password_field :password, class: "form-control", placeholder: "Enter your password" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Login", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<!-- app/views/cad_designers/new_session.html.erb -->
+
+<h1>Login as Cad_designers</h1>
+
+<%= form_with(model: @cad_designers, url: cad_designers_create_session_path, method: :post) do |form| %>
+  <% if flash[:alert] %>
+    <div class="alert alert-danger">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form-control", placeholder: "Enter your email" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password %>
+    <%= form.password_field :password, class: "form-control", placeholder: "Enter your password" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Login", class: "btn btn-primary" %>
+  </div>
+<% end %>

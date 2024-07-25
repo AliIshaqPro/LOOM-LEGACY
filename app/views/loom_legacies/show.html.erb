@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @loom_legacy %>
+
+<div>
+  <%= link_to "Edit this loom legacy", edit_loom_legacy_path(@loom_legacy) %> |
+  <%= link_to "Back to loom legacies", loom_legacies_path %>
+
+  <%= button_to "Destroy this loom legacy", @loom_legacy, method: :delete %>
+</div>

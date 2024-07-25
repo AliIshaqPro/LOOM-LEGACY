@@ -1,0 +1,256 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #000, #2575fc, #000);
+    justify-content: center;
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block;
+}
+
+nav {
+    display: inline-block;
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.departments-grid div {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 300px; 
+    height: 150px; 
+    text-align: center;
+    color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.departments-grid a {
+    text-decoration: none;
+    color: inherit; 
+    display: block; 
+    text-align: center;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    margin-top: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pd {
+    background-image: url('1710448790923.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+.qc {
+    background-image: url('QA-vs-QC.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.rd {
+    background-image: url('research-development-businessman.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.dd {
+    background-image: url('pngtree-nature-inspired-floral-s.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.md {
+    background-image: url('maintenance-engineer-technician.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.psc {
+    background-image: url('smart-warehouse-management-syste.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.hr {
+    background-image: url('depositphotos_113738750-stock-ph.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.fa {
+    background-image: url('financial-accounting-16773804.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.sm {
+    background-image: url('sales-marketing-concept-document.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.it {
+    background-image: url('360_F_314927575_yqFMAuXFTNC6gBfl.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.ld {
+    background-image: url('transportation-and-logistic-impo.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.cra {
+    background-image: url('compliance-rule-law-regulation-g.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.cs {
+    background-image: url('customer-service-call-center-wom.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.pc {
+    background-image: url('61f58fa81b17077f729ff47d_image.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.admin {
+    background-image: url('admin-office-binder-wooden-desk.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.ceo {
+    background-image: url('CEO.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.ceo1122 {
+    background-image: url('download.png');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    /* Additional background properties */
+}
+
+.board-member {
+    background-image: url('Board Member.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
+
+.chairman-of-board {
+    background-image: url('Stake Holder.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Additional background properties */
+}
