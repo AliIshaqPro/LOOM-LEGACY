@@ -1,0 +1,331 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  background-image: url('/assets/profilebackground.jpeg');
+  flex-direction: column;
+}
+
+.content {
+  background-color: #343a40;
+}
+
+#navbar {
+  background-color: #343a40;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#content {
+  margin-left: 300px;
+  flex: 1;
+  background-color: #343a40;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #495057;
+  margin-left: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  background: #343a40;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid #495057;
+  z-index: 1000; 
+  height: 75px;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+svg {
+  display: inline-block;
+}
+.logo {
+  height: 72px;
+  width: 250px;
+  justify-content: center;
+  border: 1px solid #495057;
+  border-radius: 10px;
+}
+
+nav {
+  display: flex;
+}
+
+
+.menu {
+  list-style: none;
+  margin: 0 auto; /* Center the menu container */
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+  justify-content: center; /* Centers the items horizontally */
+  align-items: center; /* Centers the items vertically */
+}
+
+.menu-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #495057;
+  margin: 30px; /* Adds margin around the items */
+  border-radius: 4px;
+  background-color: #333;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center; /* Centers the text within the item */
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column; /* Stack items vertically on mobile */
+  }
+  
+  .menu-item {
+    width: 100%; /* Take up full width on mobile */
+    margin: 5px 0; /* Adjust margin for smaller screens */
+  }
+}
+
+.menu-item:hover {
+  background-color: #ffcc00;
+  border-color: #adb5bd;
+}
+
+.nav-link:hover {
+  background-color: #ffcc00;
+  border-color: #adb5bd;
+}
+
+.chart {
+  text-align: center;
+}
+
+.dashboard {
+  width: 100%;
+  color: black;
+  margin: 0 auto;
+  background: #343a40;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.kpi {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 10px solid #ddd;
+  border-radius: 15px;
+  background-color: transparent;
+  text-align: center;
+  height: auto;
+  /* background-image: url('modified_broken_stars.gif'); */
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+.kpi:hover {
+  transition: transform 0.2s;
+  border-color: #313f64;
+}
+
+.github, .linkedin, .email, .fb, .insta {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+}
+
+
+.github { background-image: url('github.png'); }
+.linkedin { background-image: url('linkedin.png'); }
+.email { background-image: url('email.jpeg'); }
+.fb { background-image: url('facebook.png'); }
+.insta { background-image: url('insta.png'); }
+
+.kpi h2, h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: white;
+}
+
+.kpi .menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.kpi .value {
+  font-size: 60px;
+  font-weight: bold;
+  color: goldenrod;
+  margin: 0 0 50px;
+  position: static;
+}
+
+.kpi .description {
+  margin: 0;
+  font-size: 30px;
+  color: white;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: white;
+}
+
+.description {
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+.description:hover {
+  color: #ffcc00; /* Change this to the desired bright color */
+  
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .quick-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+footer .quick-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .social-media-icons {
+  margin-bottom: 10px;
+  /* Add your social media icon styles here */
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 20px; /* 20px space between each icon */
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icons a {
+  width: 60px; /* Set a fixed width for icons */
+  height: 60px; /* Set a fixed height for icons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Optionally add some hover effects */
+.social-media-icons a:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+  border-color: #4b0082; /* Indigo */
+
+}
+.profileimage {
+  
+  display: flex;
+  gap: 20px; /* 20px space between each icon */
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.profileimage a {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  background-color: transparent;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  width: 1100px;
+  height: 500px;
+  background-image: url('ali.JPG');
+
+}
+.profileimage a.myprofile {
+  width: 500px;
+  height: 500px;
+  background-image: url('ali.JPG');
+}
+.profileimage a.resume{
+  width: 400px;
+  height: 300px;
+  background-image: url('resume.png');
+}
+.profileimage a.chatapp{
+  width: 700px;
+  height: 300px;
+  background-image: url('whatsapp.jpg');
+}
+.profileimage a.loomlegacy{
+  width: 700px;
+  height: 300px;
+  background-image: url('1710448790923.jpg');
+}
+
+.profileimage a.restaurant{
+  width: 700px;
+  height: 300px;
+  background-image: url('restaurant.jpg');
+}
+
+.row {
+  display: flex;
+  gap: 20px; /* 20px space between each icon */
+  justify-content: center;
+  align-items: center;
+
+}
+
+.row a {
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+
+}

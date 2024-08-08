@@ -1,97 +1,80 @@
-<h1> HELLO I AM Customer Relations Managers AND THIS IS A DASHBOARD OF Customer Relations Managers</h1>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KPI Dashboard</title>
+    <title>CEO DASHBOARD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-    
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    item-align:center;
-    
-}
-.chart {
-    item-align:center;
-}
-
-.dashboard {
-    width: 100%;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-}
-
-h1 {
-    text-align: center;
-    color: #4CAF50;
-    margin-bottom: 40px;
-}
-
-.kpi {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fafafa;
-    text-align: center;
-}
-
-.kpi h2 {
-    margin: 0 0 10px;
-    font-size: 24px;
-    color: #333;
-}
-
-.kpi .value {
-    font-size: 32px;
-    font-weight: bold;
-    color: #4CAF50;
-    margin: 0 0 10px;
-}
-
-.kpi .description {
-    margin: 0;
-    font-size: 14px;
-    color: #777;
-}
-
-    </style>
+    <%= stylesheet_link_tag "dashboard", "data-turbo-track": "reload" %>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Home</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Profile</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Contact</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Home</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Profile</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Contact</button>
-  </li>
-</ul>
-    <div class="dashboard">
-        <h1>LOOM-LEGACY KPI Dashboard</h1>
+<div class="body" id="content">
+<header class="header">
+<a href="http://localhost:3000" class="logo-link">
+<%= image_tag 'favicon.png', loading: 'lazy', alt: 'Black Logo', class: 'logo' %>
+  <svg width="300" height="50" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="40" style="color: #4CAF50; font-family: 'Poppins'; font-size: 30px; fill: white;">LOOM-LEGACY</text>
+
+  </svg>
+</a>
+    <nav>
+      <ul class="menu">
+        <li><a href="https://www.carbonteq.com/" class="menu-item home">Home</a></li>
+        <li><a href="https://www.carbonteq.com/about" class="menu-item about">About</a></li>
+        <li><a href="https://www.carbonteq.com/portfolio" class="menu-item portfolio">Portfolio</a></li>
+        <li><a href="https://www.carbonteq.com/services" class="menu-item services">Services</a></li>
+        <li><a href="https://calendly.com/?utm_campaign=sign_up&utm_medium=badge&utm_source=invitee" class="menu-item getintouch">Get in touch</a></li>
+      </ul>
+    </nav>
+</header>
+<div id="sidebar" class="d-flex flex-column p-3">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <span class="fs-4">Sidebar</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link">
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link">
+          Orders
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link">
+          Products
+        </a>
+      </li>
+      
+      
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://via.placeholder.com/40" alt="" width="40" height="40" class="rounded-circle me-2">
+        <strong>User</strong>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+    <div id="executive_summary" class="dashboard">
+        <h1>Executive Summary</h1>
         <div class="kpi">
             <h2>Total Revenue</h2>
             <p class="value">PKR 150,000,000</p>
@@ -118,8 +101,8 @@ h1 {
             <p class="description">Market share in the Pakistani textile market</p>
         </div>
     </div>
-    <div class="dashboard">
-        <h1>LOOM-LEGACY KPI Dashboard</h1>
+    <div id="financial_performance" class="dashboard">
+        <h1>Financial Performance</h1>
         
         <div class="kpi">
             <h2>Total Revenue</h2>
@@ -168,7 +151,62 @@ h1 {
                 <rect x="400" y="50" width="50" height="200" fill="green"/>
             </svg>
         </div>
-        
+    </div>
+    <div id="sales_and_market" class="dashboard">
+        <h1>Executive Summary</h1>
+        <div class="kpi">
+            <h2>Total Revenue</h2>
+            <p class="value">PKR 150,000,000</p>
+            <p class="description">Revenue for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Net Profit Margin</h2>
+            <p class="value">18%</p>
+            <p class="description">Net profit margin for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Production Efficiency</h2>
+            <p class="value">92%</p>
+            <p class="description">Overall efficiency in Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Employee Retention Rate</h2>
+            <p class="value">95%</p>
+            <p class="description">Retention rate for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Market Share</h2>
+            <p class="value">12%</p>
+            <p class="description">Market share in the Pakistani textile market</p>
+        </div>
+    </div>
+    <div id="production" class="dashboard">
+        <h1>Executive Summary</h1>
+        <div class="kpi">
+            <h2>Total Revenue</h2>
+            <p class="value">PKR 150,000,000</p>
+            <p class="description">Revenue for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Net Profit Margin</h2>
+            <p class="value">18%</p>
+            <p class="description">Net profit margin for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Production Efficiency</h2>
+            <p class="value">92%</p>
+            <p class="description">Overall efficiency in Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Employee Retention Rate</h2>
+            <p class="value">95%</p>
+            <p class="description">Retention rate for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Market Share</h2>
+            <p class="value">12%</p>
+            <p class="description">Market share in the Pakistani textile market</p>
+        </div>
         <div class="chart">
             <h2>Operational Efficiency</h2>
             <svg width="500" height="300">
@@ -181,6 +219,268 @@ h1 {
                 <rect x="400" y="80" width="50" height="170" fill="orange"/>
             </svg>
         </div>
+    </div>
+    <div id="human_resource" class="dashboard">
+        <h1>Executive Summary</h1>
+        <div class="kpi">
+            <h2>Total Revenue</h2>
+            <p class="value">PKR 150,000,000</p>
+            <p class="description">Revenue for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Net Profit Margin</h2>
+            <p class="value">18%</p>
+            <p class="description">Net profit margin for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Production Efficiency</h2>
+            <p class="value">92%</p>
+            <p class="description">Overall efficiency in Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Employee Retention Rate</h2>
+            <p class="value">95%</p>
+            <p class="description">Retention rate for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Market Share</h2>
+            <p class="value">12%</p>
+            <p class="description">Market share in the Pakistani textile market</p>
+        </div>
+    </div>
+    <div id="customer_insigts" class="dashboard">
+        <h1>Executive Summary</h1>
+        <div class="kpi">
+            <h2>Total Revenue</h2>
+            <p class="value">PKR 150,000,000</p>
+            <p class="description">Revenue for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Net Profit Margin</h2>
+            <p class="value">18%</p>
+            <p class="description">Net profit margin for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Production Efficiency</h2>
+            <p class="value">92%</p>
+            <p class="description">Overall efficiency in Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Employee Retention Rate</h2>
+            <p class="value">95%</p>
+            <p class="description">Retention rate for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Market Share</h2>
+            <p class="value">12%</p>
+            <p class="description">Market share in the Pakistani textile market</p>
+        </div>
+    </div>
+    <div id="inovation" class="dashboard">
+        <h1>Executive Summary</h1>
+        <div class="kpi">
+            <h2>Total Revenue</h2>
+            <p class="value">PKR 150,000,000</p>
+            <p class="description">Revenue for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Net Profit Margin</h2>
+            <p class="value">18%</p>
+            <p class="description">Net profit margin for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Production Efficiency</h2>
+            <p class="value">92%</p>
+            <p class="description">Overall efficiency in Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Employee Retention Rate</h2>
+            <p class="value">95%</p>
+            <p class="description">Retention rate for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Market Share</h2>
+            <p class="value">12%</p>
+            <p class="description">Market share in the Pakistani textile market</p>
+        </div>
+    </div>
+    <div id="compliance" class="dashboard">
+        <h1>Executive Summary</h1>
+        <div class="kpi">
+            <h2>Total Revenue</h2>
+            <p class="value">PKR 150,000,000</p>
+            <p class="description">Revenue for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Net Profit Margin</h2>
+            <p class="value">18%</p>
+            <p class="description">Net profit margin for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Production Efficiency</h2>
+            <p class="value">92%</p>
+            <p class="description">Overall efficiency in Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Employee Retention Rate</h2>
+            <p class="value">95%</p>
+            <p class="description">Retention rate for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Market Share</h2>
+            <p class="value">12%</p>
+            <p class="description">Market share in the Pakistani textile market</p>
+        </div>
+    </div>
+    <div id="strategic_initiatives" class="dashboard">
+        <h1>Executive Summary</h1>
+        <div class="kpi">
+            <h2>Total Revenue</h2>
+            <p class="value">PKR 150,000,000</p>
+            <p class="description">Revenue for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Net Profit Margin</h2>
+            <p class="value">18%</p>
+            <p class="description">Net profit margin for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Production Efficiency</h2>
+            <p class="value">92%</p>
+            <p class="description">Overall efficiency in Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Employee Retention Rate</h2>
+            <p class="value">95%</p>
+            <p class="description">Retention rate for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Market Share</h2>
+            <p class="value">12%</p>
+            <p class="description">Market share in the Pakistani textile market</p>
+        </div>
+    </div>
+    <div id="sustainability_matrics" class="dashboard">
+        <h1>Executive Summary</h1>
+        <div class="kpi">
+            <h2>Total Revenue</h2>
+            <p class="value">PKR 150,000,000</p>
+            <p class="description">Revenue for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Net Profit Margin</h2>
+            <p class="value">18%</p>
+            <p class="description">Net profit margin for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Production Efficiency</h2>
+            <p class="value">92%</p>
+            <p class="description">Overall efficiency in Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Employee Retention Rate</h2>
+            <p class="value">95%</p>
+            <p class="description">Retention rate for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Market Share</h2>
+            <p class="value">12%</p>
+            <p class="description">Market share in the Pakistani textile market</p>
+        </div>
+    </div>
+    <div id="graphs_and_visualizations" class="dashboard">
+        <h1>Executive Summary</h1>
+        <div class="kpi">
+            <h2>Total Revenue</h2>
+            <p class="value">PKR 150,000,000</p>
+            <p class="description">Revenue for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Net Profit Margin</h2>
+            <p class="value">18%</p>
+            <p class="description">Net profit margin for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Production Efficiency</h2>
+            <p class="value">92%</p>
+            <p class="description">Overall efficiency in Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Employee Retention Rate</h2>
+            <p class="value">95%</p>
+            <p class="description">Retention rate for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Market Share</h2>
+            <p class="value">12%</p>
+            <p class="description">Market share in the Pakistani textile market</p>
+        </div>
+    </div>
+    <div id="alerts" class="dashboard">
+        <h1>Executive Summary</h1>
+        <div class="kpi">
+            <h2>Total Revenue</h2>
+            <p class="value">PKR 150,000,000</p>
+            <p class="description">Revenue for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Net Profit Margin</h2>
+            <p class="value">18%</p>
+            <p class="description">Net profit margin for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Production Efficiency</h2>
+            <p class="value">92%</p>
+            <p class="description">Overall efficiency in Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Employee Retention Rate</h2>
+            <p class="value">95%</p>
+            <p class="description">Retention rate for Q2 2024</p>
+        </div>
+        <div class="kpi">
+            <h2>Market Share</h2>
+            <p class="value">12%</p>
+            <p class="description">Market share in the Pakistani textile market</p>
+        </div>
+        <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     <div class="chart">
             <h2>Market Trends</h2>
@@ -238,45 +538,96 @@ h1 {
         <text x="305" y="270" font-size="12" fill="black">Talent Mgmt</text>
     </svg>
 </div>
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
+<div id="sidebar" class="d-flex flex-column flex-shrink-0 p-3">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <span class="fs-4">Sidebar</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#executive_summary" class="nav-link active" aria-current="page">
+        Executive Summary
+        </a>
+      </li>
+      <li>
+        <a href="#financial_performance" class="nav-link text-white">
+        Financial Performance
+        </a>
+      </li>
+      <li>
+        <a href="#sales_and_market" class="nav-link text-white">
+        Sales and Market Performance
+        </a>
+      </li>
+      <li>
+        <a href="#production" class="nav-link text-white">
+        Production and Operations
+        </a>
+      </li>
+      <li>
+        <a href="#human_resource" class="nav-link text-white">
+        Human Resources
+        </a>
+      </li>
+      <li>
+        <a href="#customer_insigts" class="nav-link text-white">
+        Customer Insights
+        </a>
+      </li>
+      <li>
+        <a href="#inovation" class="nav-link text-white">
+        Innovation and R&D
+        </a>
+      </li>
+      <li>
+        <a href="#compliance" class="nav-link text-white">
+        Risk Management
+        </a>
+      </li>
+      <li>
+        <a href="#strategic_initiatives" class="nav-link text-white">
+        Strategic Initiatives
+        </a>
+      </li>
+      <li>
+        <a href="#sustainability_matrics" class="nav-link text-white">
+        Sustainability Metrics
+        </a>
+      </li>
+      <li>
+        <a href="#graphs_and_visualizations" class="nav-link text-white">
+        Graphs and Visualizations
+        </a>
+      </li>
+      <li>
+        <a href="#alerts" class="nav-link text-white">
+        Alerts and Notifications
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+    <%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle me-2' %>
+    <strong>User</strong>
+  </a>
+  
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <p><%= button_to 'Logout', destroy_ceo_session_path, method: :delete %></p>
+      </ul>
     </div>
   </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.getElementById('sidebarToggle').addEventListener('click', function () {
+    document.getElementById('sidebar').classList.toggle('active');
+  });
+</script>
 </div>
-</body>
+  </body>
 </html>
-<p><%= button_to 'Logout', destroy_customer_relations_manager_session_path, method: :delete %></p>
 

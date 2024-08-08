@@ -1,9 +1,62 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+roles = [
+  { model: Ceo, name: "ceo" },
+  { model: Chairman, name: "chairman" },
+  { model: BoardMember, name: "board_member" },
+  { model: Director, name: "director" },
+  { model: Shareholder, name: "shareholder" },
+  { model: Investor, name: "investor" },
+  { model: Cfo, name: "cfo" },
+  { model: Accountant, name: "accountant" },
+  { model: FinancialAnalyst, name: "financial_analyst" },
+  { model: HrManager, name: "hr_manager" },
+  { model: RecruitmentSpecialist, name: "recruitment_specialist" },
+  { model: TrainingAndDevelopmentOfficer, name: "training_and_development_officer" },
+  { model: SalesManager, name: "sales_manager" },
+  { model: MarketingManager, name: "marketing_manager" },
+  { model: SalesRepresentative, name: "sales_representative" },
+  { model: CustomerRelationsManager, name: "customer_relations_manager" },
+  { model: ProductionManager, name: "production_manager" },
+  { model: ProductionPlanner, name: "production_planner" },
+  { model: ShiftSupervisor, name: "shift_supervisor" },
+  { model: MachineOperator, name: "machine_operator" },
+  { model: QualityControlInspector, name: "quality_control_inspector" },
+  { model: RAndDManager, name: "r_and_d_manager" }, # Update to match your model name
+  { model: TextileTechnologist, name: "textile_technologist" },
+  { model: ResearchScientist, name: "research_scientist" },
+  { model: TextileDesigner, name: "textile_designer" },
+  { model: CadDesigner, name: "cad_designer" },
+  { model: PatternMaker, name: "pattern_maker" },
+  { model: Colorist, name: "colorist" },
+  { model: ItManager, name: "it_manager" },
+  { model: SystemsAdministrator, name: "systems_administrator" },
+  { model: SoftwareDeveloper, name: "software_developer" },
+  { model: MaintenanceManager, name: "maintenance_manager" },
+  { model: ElectricalEngineer, name: "electrical_engineer" },
+  { model: MechanicalEngineer, name: "mechanical_engineer" },
+  { model: MaintenanceTechnician, name: "maintenance_technician" },
+  { model: ProcurementManager, name: "procurement_manager" },
+  { model: SupplyChainCoordinator, name: "supply_chain_coordinator" },
+  { model: PurchasingOfficer, name: "purchasing_officer" },
+  { model: LogisticsManager, name: "logistics_manager" },
+  { model: WarehouseSupervisor, name: "warehouse_supervisor" },
+  { model: DistributionCoordinator, name: "distribution_coordinator" },
+  { model: ComplianceManager, name: "compliance_manager" },
+  { model: EnvironmentalSpecialist, name: "environmental_specialist" },
+  { model: SafetyOfficer, name: "safety_officer" },
+  { model: CustomerServiceManager, name: "customer_service_manager" },
+  { model: OrderProcessor, name: "order_processor" },
+  { model: CustomerSupportRepresentative, name: "customer_support_representative" },
+  { model: InventoryController, name: "inventory_controller" },
+  { model: DemandPlanner, name: "demand_planner" },
+  { model: OfficeManager, name: "office_manager" },
+  { model: AdministrativeAssistant, name: "administrative_assistant" },
+  { model: Receptionist, name: "receptionist" }
+]
+
+roles.each do |role|
+  role[:model].create!(
+    email: "allisswell786@gmail.com",
+    password: "Allisswell786@",
+    password_confirmation: "Allisswell786@"
+  )
+end

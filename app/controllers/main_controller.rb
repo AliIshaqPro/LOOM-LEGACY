@@ -1,4 +1,4 @@
-class AccountantsController < ApplicationController
+class MainController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   def new

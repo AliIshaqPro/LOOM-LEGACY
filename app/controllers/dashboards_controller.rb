@@ -8,7 +8,8 @@ class DashboardsController < ApplicationController
     def chairman
     end
   
-    def ceos
+    def ceo
+      @ceo = Ceo.find_by(email: 'allisswell737@gmail.com') # or however you fetch the CEO
     end
   
     def chairmen
