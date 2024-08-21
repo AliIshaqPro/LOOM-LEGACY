@@ -1,18 +1,79 @@
 body {
-  font-family: Arial, sans-serif;
   background-color: #fff;
-  color: #333;
-  background-image: url('/assets/profilebackground.jpeg');
+  background-image: url('profilebackground.jpeg');
   flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  /* Ensure there's no margin around the body */
+
+  padding-top: 10px;
+
+}
+
+
+
+.navbar {
+  margin: 0;
+  /* Remove any default margin */
+  padding: 0;
+  /* Remove any default padding */
+  top: 0;
+  /* Align the navbar to the top */
+  width: 100%;
+  /* Make sure it spans the full width */
+  position: fixed;
+  /* Make the navbar fixed at the top (optional) */
+  z-index: 1000;
+  height: 70px;
+  /* Ensure it stays above other elements */
+}
+
+#home {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-top: 56px;
+  /* Adjust padding to prevent content from hiding under the navbar */
+}
+
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  margin-bottom: 30px;
+  margin-top: auto;
+}
+
+h1 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+p {
+  font-size: medium;
+
+}
+
+.card {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #222;
+}
+
+a {
+  color: #007bff;
 }
 
 .content {
-  background-color: #343a40;
+  background-color: black;
 }
 
 #navbar {
   background-color: #343a40;
-  color: #fff;
+  color: #3d0f0f;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,45 +86,22 @@ body {
   background-color: #343a40;
 }
 
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid #495057;
-  margin-left: 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s, border-color 0.3s;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: center;
-  background: #343a40;
-  color: black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 2px solid #495057;
-  z-index: 1000; 
-  height: 75px;
-}
 
 .logo-link {
   text-decoration: none;
 }
+
 svg {
   display: inline-block;
 }
+
 .logo {
-  height: 72px;
-  width: 250px;
+  height: 150px;
+  width: 350px;
   justify-content: center;
   border: 1px solid #495057;
   border-radius: 10px;
+
 }
 
 nav {
@@ -73,45 +111,21 @@ nav {
 
 .menu {
   list-style: none;
-  margin: 0 auto; /* Center the menu container */
+  margin: 0 auto;
+  /* Center the menu container */
   padding: 0;
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap onto the next line */
-  justify-content: center; /* Centers the items horizontally */
-  align-items: center; /* Centers the items vertically */
+  flex-wrap: wrap;
+  /* Allows items to wrap onto the next line */
+  justify-content: center;
+  /* Centers the items horizontally */
+  align-items: center;
+  /* Centers the items vertically */
 }
 
-.menu-item {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-  border: 1px solid #495057;
-  margin: 30px; /* Adds margin around the items */
-  border-radius: 4px;
-  background-color: #333;
-  transition: background-color 0.3s, border-color 0.3s;
-  text-align: center; /* Centers the text within the item */
-}
-
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column; /* Stack items vertically on mobile */
-  }
-  
-  .menu-item {
-    width: 100%; /* Take up full width on mobile */
-    margin: 5px 0; /* Adjust margin for smaller screens */
-  }
-}
-
-.menu-item:hover {
-  background-color: #ffcc00;
-  border-color: #adb5bd;
-}
-
-.nav-link:hover {
-  background-color: #ffcc00;
-  border-color: #adb5bd;
+.bg-transparent {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with 50% opacity */
 }
 
 .chart {
@@ -141,12 +155,17 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
 .kpi:hover {
   transition: transform 0.2s;
   border-color: #313f64;
 }
 
-.github, .linkedin, .email, .fb, .insta {
+.github,
+.linkedin,
+.email,
+.fb,
+.insta {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
@@ -161,13 +180,28 @@ nav {
 }
 
 
-.github { background-image: url('github.png'); }
-.linkedin { background-image: url('linkedin.png'); }
-.email { background-image: url('email.jpeg'); }
-.fb { background-image: url('facebook.png'); }
-.insta { background-image: url('insta.png'); }
+.github {
+  background-image: url('github.png');
+}
 
-.kpi h2, h1 {
+.linkedin {
+  background-image: url('linkedin.png');
+}
+
+.email {
+  background-image: url('email.jpeg');
+}
+
+.fb {
+  background-image: url('facebook.png');
+}
+
+.insta {
+  background-image: url('insta.png');
+}
+
+.kpi h2,
+h1 {
   margin: 0 0 10px;
   font-size: 24px;
   color: white;
@@ -182,7 +216,7 @@ nav {
 .kpi .value {
   font-size: 60px;
   font-weight: bold;
-  color: goldenrod;
+  color: black;
   margin: 0 0 50px;
   position: static;
 }
@@ -199,12 +233,15 @@ nav {
 }
 
 .description {
-  transition: color 0.3s ease; /* Smooth transition effect */
+  transition: color 0.3s ease;
+  /* Smooth transition effect */
+  font-size: 20px;
 }
 
 .description:hover {
-  color: #ffcc00; /* Change this to the desired bright color */
+  color: #440c0c;
   
+
 }
 
 footer {
@@ -233,14 +270,17 @@ footer .social-media-icons {
 
 .social-media-icons {
   display: flex;
-  gap: 20px; /* 20px space between each icon */
+  gap: 20px;
+  /* 20px space between each icon */
   justify-content: center;
   align-items: center;
 }
 
 .social-media-icons a {
-  width: 60px; /* Set a fixed width for icons */
-  height: 60px; /* Set a fixed height for icons */
+  width: 60px;
+  /* Set a fixed width for icons */
+  height: 60px;
+  /* Set a fixed height for icons */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,13 +292,16 @@ footer .social-media-icons {
 .social-media-icons a:hover {
   transform: scale(1.1);
   transition: transform 0.2s;
-  border-color: #4b0082; /* Indigo */
+  border-color: #4b0082;
+  /* Indigo */
 
 }
+
 .profileimage {
-  
+
   display: flex;
-  gap: 20px; /* 20px space between each icon */
+  gap: 20px;
+  /* 20px space between each icon */
   justify-content: center;
   align-items: center;
   height: auto;
@@ -279,28 +322,32 @@ footer .social-media-icons {
   background-image: url('ali.JPG');
 
 }
+
 .profileimage a.myprofile {
   width: 500px;
   height: 500px;
   background-image: url('ali.JPG');
 }
-.profileimage a.resume{
+
+.profileimage a.resume {
   width: 400px;
   height: 300px;
   background-image: url('resume.png');
 }
-.profileimage a.chatapp{
+
+.profileimage a.chatapp {
   width: 700px;
   height: 300px;
   background-image: url('whatsapp.jpg');
 }
-.profileimage a.loomlegacy{
+
+.profileimage a.loomlegacy {
   width: 700px;
   height: 300px;
   background-image: url('1710448790923.jpg');
 }
 
-.profileimage a.restaurant{
+.profileimage a.restaurant {
   width: 700px;
   height: 300px;
   background-image: url('restaurant.jpg');
@@ -308,7 +355,8 @@ footer .social-media-icons {
 
 .row {
   display: flex;
-  gap: 20px; /* 20px space between each icon */
+  gap: 20px;
+  /* 20px space between each icon */
   justify-content: center;
   align-items: center;
 

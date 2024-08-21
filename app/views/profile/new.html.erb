@@ -3,79 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEO DASHBOARD</title>
+    <title>Your Name - Ruby on Rails Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <%= stylesheet_link_tag "profile", "data-turbo-track": "reload" %>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <%= stylesheet_link_tag "profile", "data-turbo-track": "reload" %>
+   
 </head>
 <body>
-<header class="header">
-<a href="http://localhost:3000" class="logo-link">
-  <%= image_tag 'favicon.png', loading: 'lazy', alt: 'Black Logo', class: 'logo' %>
-  <svg width="500" height="50" xmlns="http://www.w3.org/2000/svg">
-    <text x="45%" y="50%" dy=".35em" text-anchor="middle" style="color: #4CAF50; font-family: 'Poppins'; font-size: 20px; fill: white;">
-      LOOMING DREAMS, CREATING A LEGACY
-    </text>
-  </svg>
-</a>
-    <nav>
-      <ul class="menu">
-        <li><a href="https://www.carbonteq.com/" class="menu-item home">Home</a></li>
-        <li><a href="https://www.carbonteq.com/about" class="menu-item about">About</a></li>
-        <li><a href="https://www.carbonteq.com/portfolio" class="menu-item portfolio">Portfolio</a></li>
-        <li><a href="https://www.carbonteq.com/services" class="menu-item services">Services</a></li>
-        <li><a href="https://calendly.com/?utm_campaign=sign_up&utm_medium=badge&utm_source=invitee" class="menu-item getintouch">Get in touch</a></li>
-      </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#resume">Resume/CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-</header>
 
-        <div class="kpi">
-            <h2>Ali Ishaq</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
+    <!-- Home Section -->
+    <section id="home" class="d-flex align-items-center text-center" style="background-image: url('assets/background.jpg');">
+        <div class="container">
+            <h1 class="display-4">
+            <div class="profileimage">
+      <a href="mailto:your-email@example.com" class="myprofile"></a>
+    </div>
+    <div class="kpi"> <%= image_tag 'mylogo.png', loading: 'lazy', alt: 'Logo', class: 'logo' %>
+            
+            <br>Skilled Software Engineer<br> and <br> Ruby on Rails Developer</h1>
+            <div class="kpi"> <p class="description">I'm Ali Ishaq, a software engineer specializing in web development, AI, ML, and cybersecurity. Currently, I'm seeking new opportunities as a Ruby on Rails Developer, Web Developer, Web Application Developer, C++ Developer, or Database Administrator. Explore my background, projects, resume, and contact information. Feel free to reach out for collaboration or inquiries. Let's connect and create something amazing!</p></div>
+            <p class="description"> <a href="/resume/resume.pdf" class="btn btn-primary" download>DOWNLOAD RESUME</a></p>
         </div>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
+    </section>
     
-    <footer>
-    <div class="quick-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+</div>
+    <section id="about" class="py-5">
+        <div class="container">
+        <div class="kpi">
+            <h2>Education</h2>
+            <p>I am currently pursuing a Bachelor’s degree in Computer Science from the Virtual University of Pakistan. My academic journey has been focused on acquiring a strong foundation in software engineering, web development, and cybersecurity. My coursework has included advanced topics in algorithms, artificial intelligence, machine learning, and database management, which have equipped me with the skills necessary to tackle complex software challenges</p></div>
+            <div class="kpi">
+            <h2>Career Journey</h2>
+            <p>My career as a software engineer began with a passion for coding and problem-solving. I have gained hands-on experience through various internships and freelance projects, where I specialized in web development using Ruby on Rails, C++, and database management. My recent project involves developing a comprehensive web application for a textile company, LOOM-LEGACY, where I have implemented multiple roles and ensured robust security features. Additionally, I am proficient in deploying applications on AWS and managing CI/CD pipelines, which has enhanced my ability to deliver scalable and reliable software solutions.</p></div>
+            <div class="kpi">
+            <h2>Personal Interests</h2>
+            <p>Beyond coding, I have a keen interest in politics and social issues, particularly within the context of Pakistan. I spend my free time researching and engaging in discussions about political strategies and social reforms. My long-term ambition is to contribute to the technological and political landscape of Pakistan, potentially stepping into a leadership role where I can drive meaningful change. Additionally, I enjoy exploring advancements in AI and cybersecurity, always staying updated with the latest trends to sharpen my skills and knowledge.</p></div>
+            <div class="kpi">
+            <h3>Skills</h3>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Ruby & Rails
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Proficient in building robust web applications with Ruby on Rails, including designing models, controllers, and views, implementing RESTful APIs, and integrating third-party services.</div>
     </div>
-    <div class="social-media-icons">
-        <!-- Add your social media icons here -->
+  </div>
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        JavaScript
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Skilled in JavaScript for enhancing user experiences, building dynamic front-end features, and working with frameworks like jQuery and React.</div>
     </div>
-    <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-</footer>
-  </body>
-</html>
+  </div>
 
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        HTML & CSS
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Strong command over HTML and CSS for crafting responsive, accessible, and visually appealing web pages, including experience with Bootstrap for streamlined UI development.</div>
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+        SQL & Database Management
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Experienced in designing and managing databases using MySQL and PostgreSQL, optimizing queries, and ensuring data integrity and security.</div>
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+        Version Control (Git)
+      </button>
+    </h2>
+    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> Adept at using Git for version control, collaborating on projects through GitHub, and managing codebases with best practices.</div>
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+        DevOps & Deployment
+      </button>
+    </h2>
+    <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Knowledgeable in deploying applications on AWS, configuring CI/CD pipelines, and maintaining server infrastructure for high availability and performance.</div>
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+        Cybersecurity
+      </button>
+    </h2>
+    <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Certified Ethical Hacker with a solid understanding of security protocols, encryption, and ethical hacking practices to safeguard applications against threats.</div>
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+        Problem-Solving & Algorithms
+      </button>
+    </h2>
+    <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Strong analytical skills with a focus on solving complex problems through efficient algorithms and data structures, particularly in C++.</div>
+    </div>
+  </div>
+</div>
+
+            <p></p></div>
+            <h3>Certifications & Awards</h3>
+            <p>List your certifications and awards here.</p>
+            <p class="description"> <div class="profileimage">
+      <a href="mailto:your-email@example.com" class="myprofile"></a>
+    </div>CYBERSECURITY<br><a href="/resume/resume.pdf" class="btn btn-primary" download>VIEW CERTIFICATE</a></p>
+            <p class="description"> <div class="profileimage">
+      <a href="mailto:your-email@example.com" class="myprofile"></a>
+    </div>C++<br><a href="/resume/resume.pdf" class="btn btn-primary" download>VIEW CERTIFICATE</a></p>
+            <p class="description"> <div class="profileimage">
+      <a href="mailto:your-email@example.com" class="myprofile"></a>
+    </div>RUBY ON RAILS DEVELOPER<br><a href="/resume/resume.pdf" class="btn btn-primary" download>VIEW CERTIFICATE</a></p>
+            <h3>Personal Statement</h3>
+            <p>Your professional philosophy or goals.</p>
+        </div>
+    </section>
+
+
+    <!-- Portfolio Section -->
+    <section id="projects">
+    <div class="kpi">
+    
+    <div class="profileimage">
+      <a href="/loomlegacies" class="loomlegacy"></a>
+    </div>
+    <p class="value">LOOM-LEGACIES</p>
+    <div class="profileimage">
+      <a href="mailto:your-email@example.com" class="chatapp"></a>
+    </div>
+    <p class="value">CHATSPHERE</p>
+    <div class="profileimage">
+      <a href="mailto:your-email@example.com" class="restaurant"></a>
+    </div>
+    <p class="value">GASTRONOVA</p>
+    </div>
+</section>
+
+<section id="resume">
+   
+<div class="kpi">
+<div class="profileimage">
+  <a href="/resume/resume.pdf" class="resume"></a>
+</div>
+<h2>Resume</h2>
+<p class="description">You can download my resume <a href="/resume/resume.pdf" class="btn btn-primary" download>here</a></p>
+<div class="social-media-icons mt-4">
+  <a href="https://github.com/yourusername" class="github"></a>
+  <a href="https://www.facebook.com/yourusername" class="fb"></a>
+  <a href="https://www.instagram.com/yourusername" class="insta"></a>
+  <a href="https://www.linkedin.com/in/yourusername" class="linkedin"></a>
+  <a href="mailto:your-email@example.com" class="email"></a>
+</div>
+</div>
+</section>
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img 
+    src="https://images.unsplash.com/photo-1723983548529-d6bc1bebdc73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8" 
+    alt="Description of the image" 
+    style="width: 100%; height: 50%; object-fit: cover;"
+>
+
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://images.unsplash.com/photo-1719937050792-a6a15d899281?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0MXx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://plus.unsplash.com/premium_photo-1723527885920-a91021f2f8bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1N3x8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+   <!-- Services Section -->
+<section id="services" class=" py-5">
+    <div class="container">
+        <h2>Services</h2>
+        <p>Explore the services I offer and my process.</p>
+
+        <div class="service">
+            <h3>Web Development</h3>
+            <p>Design and development of responsive, high-performance websites using modern technologies.</p>
+        </div>
+        
+        <div class="service">
+            <h3>Web Applications</h3>
+            <p>Development of complex web applications tailored to specific business needs.</p>
+        </div>
+        
+        <div class="service">
+            <h3>C++ Programming</h3>
+            <p>Expertise in C++ for developing high-performance software and systems applications.</p>
+        </div>
+        
+        <div class="service">
+            <h3>Database Management</h3>
+            <p>Comprehensive management of databases, including design, implementation, and optimization.</p>
+        </div>
+        
+        <div class="process">
+            <h4>My Process</h4>
+            <ul>
+                <li><strong>Initial Consultation:</strong> Engage with clients to understand their specific needs, project objectives, and goals. Gather detailed requirements and outline initial project scope.</li>
+                <li><strong>Project Planning:</strong> Develop a comprehensive project plan, including timelines, milestones, and resource allocation. Define deliverables and establish key performance indicators.</li>
+                <li><strong>Design & Prototyping:</strong> Create wireframes and prototypes to visualize the project. Collaborate with clients to refine designs and ensure alignment with their vision.</li>
+                <li><strong>Execution:</strong> Implement the project according to the plan. Use best practices and methodologies to ensure high-quality code and efficient development processes.</li>
+                <li><strong>Testing & Review:</strong> Conduct thorough testing, including unit tests, integration tests, and user acceptance testing. Review the project for performance, security, and usability.</li>
+                <li><strong>Delivery & Support:</strong> Deliver the final product to the client. Provide training if necessary, and offer ongoing support and maintenance to address any issues or updates.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <p>Quotes from clients or colleagues.</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="bg-dark py-5">
+        <div class="container">
+            <h2>Blog</h2>
+            <p>Recent blog posts and articles.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+<div class="kpi">
+    <h2>Contact</h2>
+    <p class="description">If you'd like to get in touch, feel free to contact me at <a href="mailto:your-email@example.com">allisswell786@gmail.com</a>.</p>
+    <div class="social-media-icons mt-4">
+      <a href="https://github.com/yourusername" class="github"></a>
+      <a href="https://www.facebook.com/yourusername" class="fb"></a>
+      <a href="https://www.instagram.com/yourusername" class="insta"></a>
+      <a href="https://www.linkedin.com/in/yourusername" class="linkedin"></a>
+      <a href="mailto:your-email@example.com" class="email"></a>
+    </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        <div class="mt-4">
+        <a href="https://github.com/yourusername" class="github"></a>
+        <a href="https://www.facebook.com/yourusername" class="fb"></a>
+        <a href="https://www.instagram.com/yourusername" class="insta"></a>
+        <a href="https://www.linkedin.com/in/yourusername" class="linkedin"></a>
+        <a href="mailto:your-email@example.com" class="email"></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

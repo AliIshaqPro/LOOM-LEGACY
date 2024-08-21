@@ -55,8 +55,8 @@ roles = [
 
 roles.each do |role|
   role[:model].create!(
-    email: "allisswell786@gmail.com",
-    password: "Allisswell786@",
-    password_confirmation: "Allisswell786@"
+    email: "aliishaq@gmail.com",
+    password: "Aliishaq786@",
+    password_confirmation: "Aliishaq786@"
   )
 end

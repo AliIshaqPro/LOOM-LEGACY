@@ -1,6 +1,10 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.assets.compile = false
+config.assets.digest = true
+config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .jpeg .gif )
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -86,7 +90,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
+  config.hosts << "ec2-3-6-73-112.ap-south-1.compute.amazonaws.com"
+  config.hosts << "aliishaq.site"
   #config.hosts << "ec2-52-66-235-204.ap-south-1.compute.amazonaws.com"
 
   # Enable DNS rebinding protection and other `Host` header attacks.

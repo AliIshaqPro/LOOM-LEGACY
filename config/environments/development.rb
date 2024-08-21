@@ -75,9 +75,10 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = true
 
   # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-   config.hosts << "165d-39-38-237-254.ngrok-free.app"
-  
-
+  # config.hosts << "165d-39-38-237-254.ngrok-free.app"
+   config.hosts << "ec2-3-6-73-112.ap-south-1.compute.amazonaws.com"
+   config.hosts << "aliishaq.site"    
+#config.hosts << "aliishaq.viewdns.net"
   # config/environments/development.rb
 
 

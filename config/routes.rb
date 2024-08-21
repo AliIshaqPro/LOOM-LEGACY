@@ -60,7 +60,7 @@ Rails.application.routes.draw do
   get 'loomlegacies', to: 'loom_legacies#index'
   # get 'departments', to: 'loom_legacies#index'
 
-  root 'profile#index'
+  root 'profile#new'
   
   get 'login', to: "main#index"
   post 'login', to: "main#create"
