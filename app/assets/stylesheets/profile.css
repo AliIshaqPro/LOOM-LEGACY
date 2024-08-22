@@ -155,6 +155,12 @@ nav {
   justify-content: center;
   align-items: center;
 }
+.kpi .logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .kpi:hover {
   transition: transform 0.2s;
