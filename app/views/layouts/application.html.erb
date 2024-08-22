@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LoomLegacy</title>
+    <title>LOOM-LEGACY</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/png" href="<%= asset_path 'favicon.png' %>">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'profile', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= yield %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+   
   </body>
 </html>
+

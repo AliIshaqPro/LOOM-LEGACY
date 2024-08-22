@@ -33,3 +33,4 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+vips-8.12.1.tar.gz

@@ -106,6 +106,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (3.1.2)
+    dotenv-rails (3.1.2)
+      dotenv (= 3.1.2)
+      railties (>= 6.1)
     drb (2.2.1)
     erubi (1.13.0)
     faraday (2.10.0)
@@ -113,6 +117,11 @@ GEM
       logger
     faraday-net_http (3.1.0)
       net-http
+    ffi (1.17.0-aarch64-linux-gnu)
+    ffi (1.17.0-arm-linux-gnu)
+    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86-linux-gnu)
+    ffi (1.17.0-x86_64-linux-gnu)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashie (5.0.0)
@@ -167,8 +176,6 @@ GEM
     nokogiri (1.16.6-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.16.6-x86-linux)
-      racc (~> 1.4)
-    nokogiri (1.16.6-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.16.6-x86_64-linux)
       racc (~> 1.4)
@@ -245,6 +252,14 @@ GEM
     rexml (3.3.2)
       strscan
     rubyzip (2.3.2)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     selenium-webdriver (4.23.0)
       base64 (~> 0.2)
       logger (~> 1.4)
@@ -265,13 +280,13 @@ GEM
     sqlite3 (1.7.3-arm-linux)
     sqlite3 (1.7.3-arm64-darwin)
     sqlite3 (1.7.3-x86-linux)
-    sqlite3 (1.7.3-x86_64-darwin)
     sqlite3 (1.7.3-x86_64-linux)
     stimulus-rails (1.3.3)
       railties (>= 6.0.0)
     stringio (3.1.1)
     strscan (3.1.0)
     thor (1.3.1)
+    tilt (2.4.0)
     timeout (0.4.1)
     turbo-rails (2.0.6)
       actionpack (>= 6.0.0)
@@ -302,7 +317,7 @@ PLATFORMS
   arm-linux
   arm64-darwin
   x86-linux
-  x86_64-darwin
+  x86_64-linux
   x86_64-linux-gnu
 
 DEPENDENCIES
@@ -310,12 +325,14 @@ DEPENDENCIES
   capybara
   debug
   devise
+  dotenv-rails
   importmap-rails
   jbuilder
   omniauth
   omniauth-oauth2
   puma (>= 5.0)
   rails (~> 7.1.3, >= 7.1.3.4)
+  sassc-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)

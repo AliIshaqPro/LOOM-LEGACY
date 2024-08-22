@@ -1,4 +1,4 @@
-class Board_membersController < ApplicationController
+class BoardMembersController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   def new
@@ -28,7 +28,7 @@ class Board_membersController < ApplicationController
   end
 
   def record_not_found
-    flash[:alert} = "Board_members not found"
+    flash[:alert] = "Board_members not found"
     redirect_to root_path
   end
 

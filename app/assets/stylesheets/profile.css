@@ -1,0 +1,379 @@
+body {
+  background-color: #fff;
+  background-image: url('profilebackground.jpeg');
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  /* Ensure there's no margin around the body */
+
+  padding-top: 10px;
+
+}
+
+
+
+.navbar {
+  margin: 0;
+  /* Remove any default margin */
+  padding: 0;
+  /* Remove any default padding */
+  top: 0;
+  /* Align the navbar to the top */
+  width: 100%;
+  /* Make sure it spans the full width */
+  position: fixed;
+  /* Make the navbar fixed at the top (optional) */
+  z-index: 1000;
+  height: 70px;
+  /* Ensure it stays above other elements */
+}
+
+#home {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-top: 56px;
+  /* Adjust padding to prevent content from hiding under the navbar */
+}
+
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  margin-bottom: 30px;
+  margin-top: auto;
+}
+
+h1 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+p {
+  font-size: medium;
+
+}
+
+.card {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #222;
+}
+
+a {
+  color: #007bff;
+}
+
+.content {
+  background-color: black;
+}
+
+#navbar {
+  background-color: #343a40;
+  color: #3d0f0f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#content {
+  margin-left: 300px;
+  flex: 1;
+  background-color: #343a40;
+}
+
+
+.logo-link {
+  text-decoration: none;
+}
+
+svg {
+  display: inline-block;
+}
+
+.logo {
+  height: 150px;
+  width: 350px;
+  justify-content: center;
+  border: 1px solid #495057;
+  border-radius: 10px;
+
+}
+
+nav {
+  display: flex;
+}
+
+
+.menu {
+  list-style: none;
+  margin: 0 auto;
+  /* Center the menu container */
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows items to wrap onto the next line */
+  justify-content: center;
+  /* Centers the items horizontally */
+  align-items: center;
+  /* Centers the items vertically */
+}
+
+.bg-transparent {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with 50% opacity */
+}
+
+.chart {
+  text-align: center;
+}
+
+.dashboard {
+  width: 100%;
+  color: black;
+  margin: 0 auto;
+  background: #343a40;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.kpi {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 10px solid #ddd;
+  border-radius: 15px;
+  background-color: transparent;
+  text-align: center;
+  height: auto;
+  /* background-image: url('modified_broken_stars.gif'); */
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.kpi:hover {
+  transition: transform 0.2s;
+  border-color: #313f64;
+}
+
+.github,
+.linkedin,
+.email,
+.fb,
+.insta {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+}
+
+
+.github {
+  background-image: url('github.png');
+}
+
+.linkedin {
+  background-image: url('linkedin.png');
+}
+
+.email {
+  background-image: url('email.jpeg');
+}
+
+.fb {
+  background-image: url('facebook.png');
+}
+
+.insta {
+  background-image: url('insta.png');
+}
+
+.kpi h2,
+h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: white;
+}
+
+.kpi .menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.kpi .value {
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+  margin: 0 0 50px;
+  position: static;
+}
+
+.kpi .description {
+  margin: 0;
+  font-size: 30px;
+  color: white;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: white;
+}
+
+.description {
+  transition: color 0.3s ease;
+  /* Smooth transition effect */
+  font-size: 20px;
+}
+
+.description:hover {
+  color: #440c0c;
+  
+
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .quick-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+footer .quick-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .social-media-icons {
+  margin-bottom: 10px;
+  /* Add your social media icon styles here */
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 20px;
+  /* 20px space between each icon */
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icons a {
+  width: 60px;
+  /* Set a fixed width for icons */
+  height: 60px;
+  /* Set a fixed height for icons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Optionally add some hover effects */
+.social-media-icons a:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+  border-color: #4b0082;
+  /* Indigo */
+
+}
+
+.profileimage {
+
+  display: flex;
+  gap: 20px;
+  /* 20px space between each icon */
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.profileimage a {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  background-color: transparent;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  width: 1100px;
+  height: 500px;
+  background-image: url('ali.JPG');
+
+}
+
+.profileimage a.myprofile {
+  width: 500px;
+  height: 500px;
+  background-image: url('ali.JPG');
+}
+
+.profileimage a.resume {
+  width: 400px;
+  height: 300px;
+  background-image: url('resume.png');
+}
+
+.profileimage a.chatapp {
+  width: 700px;
+  height: 300px;
+  background-image: url('whatsapp.jpg');
+}
+
+.profileimage a.loomlegacy {
+  width: 700px;
+  height: 300px;
+  background-image: url('1710448790923.jpg');
+}
+
+.profileimage a.restaurant {
+  width: 700px;
+  height: 300px;
+  background-image: url('restaurant.jpg');
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  /* 20px space between each icon */
+  justify-content: center;
+  align-items: center;
+
+}
+
+.row a {
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+
+}

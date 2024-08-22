@@ -1,6 +1,10 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.assets.compile = false
+config.assets.digest = true
+config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .jpeg .gif )
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -15,7 +19,7 @@ Rails.application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
-
+  config.active_record.sqlite3_production_warning=false
   # Ensures that a master key has been made available in ENV["RAILS_MASTER_KEY"], config/master.key, or an environment
   # key such as config/credentials/production.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
@@ -86,6 +90,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.hosts << "ec2-3-6-73-112.ap-south-1.compute.amazonaws.com"
+  config.hosts << "aliishaq.site"
+  #config.hosts << "ec2-52-66-235-204.ap-south-1.compute.amazonaws.com"
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   # config.hosts = [
@@ -94,4 +101,9 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+
+# config/environments/development.rb
+
+
+
 end
