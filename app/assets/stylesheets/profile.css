@@ -1,15 +1,39 @@
 body {
-  background-image: url('profilebackground.jpeg');
   display: flex;
   flex-direction: column;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   padding-top: 10px;
-  overflow-x: hidden; 
-  width: 100%; /* Ensure the body takes up full width */
-  max-width: 100%; /* Prevents the body from exceeding the viewport width */
-  box-sizing: border-box; /* Includes padding in the width calculation */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  animation: changeBackground 10s infinite;
 }
+
+@keyframes changeBackground {
+  0% {
+    background-color: #010e31;
+  }
+  20% {
+   background-color: #0a0c74;
+  }
+  40% {
+    background-color: rgb(0, 71, 129);
+  }
+  60% {
+   background-color: rgb(36, 36, 131);
+  }
+  80% {
+    background-color: rgb(17, 17, 102);
+   }
+   100% {
+    background-color: #010e31;
+   }
+}
+
 
 
 .navbar {
@@ -84,19 +108,17 @@ a {
 svg {
   display: inline-block;
 }
-
 .logo {
   justify-content: stretch;
-  border: 1px solid #495057;
-  border-radius: 10px;
   background-image: url('mylogo.png');
-  background-size: cover;
+  background-size: contain; /* Ensure the image fits within the dimensions */
   background-position: center;
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 140px;
+  height: 200px;
 }
 
 nav {
@@ -303,6 +325,21 @@ footer .social-media-icons {
   height: 500px;
   background-image: url('ali.JPG');
 }
+.profileimage a.cyber-cert {
+  width: 500px;
+  height: 500px;
+  background-image: url('https://cxotoday.com/wp-content/uploads/2023/05/Cybersecurity.jpeg');
+}
+.profileimage a.cpp {
+  width: 500px;
+  height: 500px;
+  background-image: url('https://www.educative.io/v2api/editorpage/5393602882568192/image/6038586442907648');
+}
+.profileimage a.rubyonrails {
+  width: 500px;
+  height: 500px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaaNchPIotTAIPEbzgmy1fSPTY4Hi3RsEqfw&s');
+}
 
 .profileimage a.resume {
   width: 400px;
@@ -322,6 +359,18 @@ footer .social-media-icons {
   background-image: url('1710448790923.jpg');
 }
 
+
+
+.accordion-button::after {
+  filter: invert(1);
+  text-align: center;
+}
+
+.accordion-body {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
 .profileimage a.restaurant {
   width: 700px;
   height: 300px;

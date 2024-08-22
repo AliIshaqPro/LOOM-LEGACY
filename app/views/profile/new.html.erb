@@ -11,59 +11,56 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <%= stylesheet_link_tag "profile", "data-turbo-track": "reload" %>
     <style>
-  .accordion-button {
-    background-color: black;
-    height: 120px;
-    color: white;
-    text-align: center;
-  }
-  .accordion-button {
-    text-align: center;
-    width: 100%;
-  }
-  .accordion-header {
-    text-align: center;
-    collapseThree
-  }
+    .accordion-button {
+  background-color: black;
+  height: 120px;
+  color: white;
+  text-align: center;
+}
+.accordion-button {
+  text-align: center;
+  width: 100%;
+}
+.accordion-header {
+  text-align: center;
+  collapseThree
+}
 
-  .accordion-button:not(.collapsed) {
-    background-color: white;
-    text-align: center;
-    color: black;
-  }
+.accordion-button:not (.collapsed) {
+  background-color: white;
+  text-align: center;
+  color: black;
+}
 
-  .accordion-button::after {
-    filter: invert(1);
-    text-align: center;
-  }
-
-  .accordion-body {
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #343a40; /* Change to your desired color */
+    }
+}
 </style>
-   
+
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="#resume">Resume/CV</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <a class="navbar-brand" href="#home" style="font-weight: bold; font-size: 1.5rem;">ALI ISHAQ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="#resume">Resume/CV</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
 
     <!-- Home Section -->
     <!-- Home Section -->
@@ -199,16 +196,21 @@
             <h3>Certifications & Awards</h3>
             <p>List your certifications and awards here.</p>
             <p class="description"> <div class="profileimage">
-      <a href="mailto:your-email@example.com" class="myprofile"></a>
+      <a href="mailto:your-email@example.com" class="cyber-cert"></a>
     </div>CYBERSECURITY<br><a href="/resume/resume.pdf" class="btn btn-primary" download>VIEW CERTIFICATE</a></p>
             <p class="description"> <div class="profileimage">
-      <a href="mailto:your-email@example.com" class="myprofile"></a>
+      <a href="mailto:your-email@example.com" class="cpp"></a>
     </div>C++<br><a href="/resume/resume.pdf" class="btn btn-primary" download>VIEW CERTIFICATE</a></p>
             <p class="description"> <div class="profileimage">
-      <a href="mailto:your-email@example.com" class="myprofile"></a>
+      <a href="mailto:your-email@example.com" class="rubyonrails"></a>
     </div>RUBY ON RAILS DEVELOPER<br><a href="/resume/resume.pdf" class="btn btn-primary" download>VIEW CERTIFICATE</a></p>
-            <h3>Personal Statement</h3>
-            <p>Your professional philosophy or goals.</p>
+            <h3 style="font-family: 'Georgia', serif; font-size: 28px; color: White; text-align: center; margin-bottom: 20px;">
+    Personal Statement
+</h3>
+<p style="font-family: 'Open Sans', sans-serif; font-size: 18px; color: #34495e; line-height: 1.6; text-align: justify; max-width: 800px; margin: 0 auto; padding: 10px; background-color: #f9f9f9; border-left: 5px solid #2980b9;">
+    My professional philosophy is rooted in the belief that technology should empower and elevate the human experience. As a software engineer specializing in web development, AI, and cybersecurity, I am committed to building innovative and secure solutions that address real-world challenges. My goal is to continuously expand my knowledge, contribute to cutting-edge projects, and drive positive change through technology. I aspire to lead with integrity, inspire collaboration, and make a lasting impact in the tech industry and beyond.
+</p>
+
         </div>
     </section>
 
@@ -240,36 +242,29 @@
 </div>
 <h2>Resume</h2>
 <p class="description">You can download my resume <a href="/resume/resume.pdf" class="btn btn-primary" download>here</a></p>
-<div class="social-media-icons mt-4">
-  <a href="https://github.com/yourusername" class="github"></a>
-  <a href="https://www.facebook.com/yourusername" class="fb"></a>
-  <a href="https://www.instagram.com/yourusername" class="insta"></a>
-  <a href="https://www.linkedin.com/in/yourusername" class="linkedin"></a>
-  <a href="mailto:your-email@example.com" class="email"></a>
-</div>
+
 </div>
 </section>
-<div id="carouselExampleDark" class="carousel carousel-dark slide">
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="2000">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
+    <div class="carousel-item active">
       <img 
-    src="https://images.unsplash.com/photo-1723983548529-d6bc1bebdc73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8" 
+    src="https://plus.unsplash.com/premium_photo-1723527885920-a91021f2f8bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1N3x8fGVufDB8fHx8fA%3D%3D" 
     alt="Description of the image" 
-    style="width: 100%; height: 50%; object-fit: cover;"
->
+    style="width: 100%; height: 50%; object-fit: cover;">
 
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="https://images.unsplash.com/photo-1719937050792-a6a15d899281?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0MXx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+    <div class="carousel-item">
+      <img src="https://plus.unsplash.com/premium_photo-1723527885920-a91021f2f8bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1N3x8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
@@ -292,62 +287,143 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-   <!-- Services Section -->
-<section id="services" class=" py-5">
-    <div class="container">
-        <h2>Services</h2>
-        <p>Explore the services I offer and my process.</p>
 
-        <div class="service">
-            <h3>Web Development</h3>
-            <p>Design and development of responsive, high-performance websites using modern technologies.</p>
+<!-- Services Section -->
+<section id="services" style="padding: 3rem 0; background-color: #f8f9fa;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #343a40;">Services</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 3rem; color: #6c757d;">Explore the services I offer and my process.</p>
+
+        <!-- Service 1: Web Development -->
+        <div class="service" style="margin-bottom: 2rem; padding: 2rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #007bff;">Web Development</h3>
+            <p style="font-size: 1rem; color: #495057;">Design and development of responsive, high-performance websites using modern technologies.</p>
         </div>
         
-        <div class="service">
-            <h3>Web Applications</h3>
-            <p>Development of complex web applications tailored to specific business needs.</p>
+        <!-- Service 2: Web Applications -->
+        <div class="service" style="margin-bottom: 2rem; padding: 2rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #007bff;">Web Applications</h3>
+            <p style="font-size: 1rem; color: #495057;">Development of complex web applications tailored to specific business needs.</p>
         </div>
         
-        <div class="service">
-            <h3>C++ Programming</h3>
-            <p>Expertise in C++ for developing high-performance software and systems applications.</p>
+        <!-- Service 3: C++ Programming -->
+        <div class="service" style="margin-bottom: 2rem; padding: 2rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #007bff;">C++ Programming</h3>
+            <p style="font-size: 1rem; color: #495057;">Expertise in C++ for developing high-performance software and systems applications.</p>
         </div>
         
-        <div class="service">
-            <h3>Database Management</h3>
-            <p>Comprehensive management of databases, including design, implementation, and optimization.</p>
+        <!-- Service 4: Database Management -->
+        <div class="service" style="margin-bottom: 2rem; padding: 2rem; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #007bff;">Database Management</h3>
+            <p style="font-size: 1rem; color: #495057;">Comprehensive management of databases, including design, implementation, and optimization.</p>
         </div>
-        
-        <div class="process">
-            <h4>My Process</h4>
-            <ul>
-                <li><strong>Initial Consultation:</strong> Engage with clients to understand their specific needs, project objectives, and goals. Gather detailed requirements and outline initial project scope.</li>
-                <li><strong>Project Planning:</strong> Develop a comprehensive project plan, including timelines, milestones, and resource allocation. Define deliverables and establish key performance indicators.</li>
-                <li><strong>Design & Prototyping:</strong> Create wireframes and prototypes to visualize the project. Collaborate with clients to refine designs and ensure alignment with their vision.</li>
-                <li><strong>Execution:</strong> Implement the project according to the plan. Use best practices and methodologies to ensure high-quality code and efficient development processes.</li>
-                <li><strong>Testing & Review:</strong> Conduct thorough testing, including unit tests, integration tests, and user acceptance testing. Review the project for performance, security, and usability.</li>
-                <li><strong>Delivery & Support:</strong> Deliver the final product to the client. Provide training if necessary, and offer ongoing support and maintenance to address any issues or updates.</li>
+
+        <!-- Process Section -->
+        <div class="process" style="padding: 2rem; background-color: #e9ecef; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h4 style="font-size: 2rem; margin-bottom: 1.5rem; color: #343a40;">My Process</h4>
+            <ul style="list-style-type: none; padding: 0; font-size: 1rem; color: #495057; text-align: left; max-width: 800px; margin: 0 auto;">
+                <li style="margin-bottom: 1rem;"><strong style="color: #007bff;">Initial Consultation:</strong> Engage with clients to understand their specific needs, project objectives, and goals. Gather detailed requirements and outline initial project scope.</li>
+                <li style="margin-bottom: 1rem;"><strong style="color: #007bff;">Project Planning:</strong> Develop a comprehensive project plan, including timelines, milestones, and resource allocation. Define deliverables and establish key performance indicators.</li>
+                <li style="margin-bottom: 1rem;"><strong style="color: #007bff;">Design & Prototyping:</strong> Create wireframes and prototypes to visualize the project. Collaborate with clients to refine designs and ensure alignment with their vision.</li>
+                <li style="margin-bottom: 1rem;"><strong style="color: #007bff;">Execution:</strong> Implement the project according to the plan. Use best practices and methodologies to ensure high-quality code and efficient development processes.</li>
+                <li style="margin-bottom: 1rem;"><strong style="color: #007bff;">Testing & Review:</strong> Conduct thorough testing, including unit tests, integration tests, and user acceptance testing. Review the project for performance, security, and usability.</li>
+                <li style="margin-bottom: 1rem;"><strong style="color: #007bff;">Delivery & Support:</strong> Deliver the final product to the client. Provide training if necessary, and offer ongoing support and maintenance to address any issues or updates.</li>
             </ul>
+        </div>
+    </div>
+</section>
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5" style="background-color: #f9f9f9;">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: black;">Testimonials & Endorsements</h2>
+        <p style="text-align: center; margin-bottom: 3rem; font-style: italic; color: #6c757d;">
+            Here's what others have said about my skills and achievements:
+        </p>
+
+        <!-- Endorsements -->
+        <div class="testimonial" style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #ddd; border-radius: 12px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <blockquote style="font-style: italic; margin-bottom: 1rem; font-size: 1.1rem; color: #333;">
+                "Ali is a highly dedicated and skilled software engineer. His ability to tackle complex problems and deliver effective solutions is commendable."
+            </blockquote>
+            <footer style="font-weight: bold; color: #007bff;">Professor Irfan Shahzad, National University of Sciences & Technology (NUST)</footer>
+        </div>
+
+        <!-- Personal Statement -->
+        <div class="testimonial" style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #ddd; border-radius: 12px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h4 style="margin-bottom: 1rem; color: #007bff;">My Professional Philosophy</h4>
+            <p style="font-size: 1.1rem; color: #333;">
+                "I am committed to continuous learning and growth. My goal is to leverage my skills in web development, AI, and cybersecurity to create innovative solutions and contribute to impactful projects. I believe in collaboration, integrity, and the pursuit of excellence in every endeavor."
+            </p>
+        </div>
+
+        <!-- Project Highlights -->
+        <div class="testimonial" style="margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #ddd; border-radius: 12px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h4 style="margin-bottom: 1rem; color: #007bff;">Notable Projects</h4>
+            <p style="font-size: 1.1rem; color: #333;">
+                "Throughout my academic journey, I have worked on several impactful projects, including developing a web application for a textile company and contributing to various open-source projects. Each of these experiences has enriched my skills and provided valuable insights into real-world problem-solving."
+            </p>
         </div>
     </div>
 </section>
 
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5">
-        <div class="container">
-            <h2>Testimonials</h2>
-            <p>Quotes from clients or colleagues.</p>
-        </div>
-    </section>
-
     <!-- Blog Section -->
-    <section id="blog" class="bg-dark py-5">
-        <div class="container">
-            <h2>Blog</h2>
-            <p>Recent blog posts and articles.</p>
+<section id="blog" style="background-color: #343a40; padding: 3rem 0;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; color: #fff;">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">Blog</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">Recent blog posts and articles.</p>
+
+        <!-- Blog Post 1 -->
+        <div class="blog-post" style="background-color: #495057; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">The Evolution of Ruby on Rails: What’s New in the Latest Version?</h3>
+            <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+                Ruby on Rails continues to evolve with each new version, bringing powerful features and improvements that make web development more efficient and enjoyable. In this post, we'll dive into the latest updates, focusing on enhanced performance, streamlined coding practices, and new tools that help developers build robust applications faster. 
+            </p>
+            <p style="font-size: 1rem;">
+                We'll explore key changes such as improved Active Record queries, the introduction of view components for better UI structure, and the enhanced support for modern JavaScript frameworks. Whether you're a seasoned Rails developer or just starting, understanding these updates will help you leverage Rails to its fullest potential.
+            </p>
         </div>
-    </section>
+        <!-- Blog Post 5 -->
+        
+
+        <!-- Blog Post 2 -->
+        <div class="blog-post" style="background-color: #495057; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">AI and Machine Learning in Web Development: How They're Shaping the Future</h3>
+            <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+                Artificial Intelligence (AI) and Machine Learning (ML) are not just buzzwords; they are revolutionizing the way we develop and interact with web applications. This blog post explores the integration of AI and ML in web development, from personalized user experiences to predictive analytics that can drive business decisions.
+            </p>
+            <p style="font-size: 1rem;">
+                We'll look at practical examples of AI in action, such as chatbots that enhance customer service, recommendation engines that boost sales, and AI-powered tools that automate testing and debugging. We'll also discuss how developers can start incorporating AI into their projects and what skills are needed to stay ahead in this rapidly evolving field.
+            </p>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-post" style="background-color: #495057; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Cybersecurity Best Practices for Web Developers</h3>
+            <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+                As cyber threats continue to evolve, web developers must prioritize security at every stage of the development process. This blog post outlines the most critical cybersecurity practices that developers should implement to protect their applications and users.
+            </p>
+            <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+                Topics include secure coding techniques, the importance of regular security audits, and the role of encryption in safeguarding data. We’ll also explore the benefits of adopting a DevSecOps approach, where security is integrated into the entire development lifecycle, ensuring that vulnerabilities are identified and addressed early.
+            </p>
+            <p style="font-size: 1rem;">
+                By following these best practices, developers can build more secure applications and contribute to a safer digital environment for everyone.
+            </p>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="blog-post" style="background-color: #495057; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Building Scalable Web Applications with Microservices</h3>
+            <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+                Scalability is a key concern for modern web applications, especially as user bases grow and demand for features increases. In this blog post, we’ll explore how microservices architecture can help developers build scalable, maintainable, and resilient applications.
+            </p>
+            <p style="font-size: 1rem;">
+                We’ll cover the benefits of breaking down monolithic applications into smaller, independent services that can be developed, deployed, and scaled independently. Additionally, we’ll discuss the challenges of microservices, such as managing inter-service communication and ensuring data consistency. By the end of this post, you'll have a clear understanding of when and how to apply microservices to your projects.
+            </p>
+        </div>
+    </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact">
@@ -363,21 +439,18 @@
     </div>
     </div>
 </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
-        <div class="mt-4">
-        <a href="https://github.com/yourusername" class="github"></a>
-        <a href="https://www.facebook.com/yourusername" class="fb"></a>
-        <a href="https://www.instagram.com/yourusername" class="insta"></a>
-        <a href="https://www.linkedin.com/in/yourusername" class="linkedin"></a>
-        <a href="mailto:your-email@example.com" class="email"></a>
-        </div>
-    </footer>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+    // Retract the navbar when a nav item is clicked
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var navbarCollapse = document.querySelector('.navbar-collapse');
+            var bootstrapCollapse = new bootstrap.Collapse(navbarCollapse);
+            bootstrapCollapse.hide();
+        });
+    });
+</script>
 </body>
 </html>
