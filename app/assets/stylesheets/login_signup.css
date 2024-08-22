@@ -1,77 +1,119 @@
-body {
-    background-color: #002366;
-    font-family: Arial, sans-serif;
-  }
-  
+/* Ensure the form container takes up space properly and is centered */
+.form-container {
+  max-width: 400px; /* Adjust this as needed */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.notice {
+  background-color: #f0f8ff; /* Light background color */
+  border: 1px solid #cce5ff; /* Border color */
+  color: #004085; /* Dark text color */
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding and border are included in the total width */
+}
+
+input:focus {
+  border-color: #007bff; /* Add color change on focus */
+  outline: none; /* Remove default outline */
+}
+
+.actions {
+  text-align: center;
+}
+
+.submit, .submit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.submit:hover, .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Webcam container styling */
+.webcam-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Capture button styling */
+.capture-btn {
+  display: block;
+  margin: 0 auto;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.capture-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 600px) {
   .form-container {
-    width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: gray;
-    
-  }
-  
-  .form-container h2 {
-    text-align: center;
-    color: #333;
+    padding: 15px;
   }
 
-  .field {
-    margin-bottom: 15px;
-    
+  input {
+    padding: 8px;
   }
 
-  .field label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+  .submit, .submit-btn, .capture-btn {
+    padding: 8px 15px;
   }
-
-  .field input[type="email"],
-  .field input[type="password"],
-  .field input[type="text"] {
-    width: calc(100% - 22px); /* Subtract padding and border */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-
-  .field input[type="checkbox"] {
-    margin-right: 5px;
-  }
-
-  .actions {
-    text-align: center;
-  }
-
-  .actions input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #28a745;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .actions input[type="submit"]:hover {
-    background-color: #218838;
-  }
-
-  .links {
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  .links a {
-    color: #007bff;
-    text-decoration: none;
-  }
-
-  .links a:hover {
-    text-decoration: underline;
-  }
+}

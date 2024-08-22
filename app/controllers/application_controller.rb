@@ -55,13 +55,13 @@ class ApplicationController < ActionController::Base
       research_scientist_dashboard_path
     when TextileDesigner
       textile_designer_dashboard_path
-    when CADDesigner
+    when CadDesigner
       cad_designer_dashboard_path
     when PatternMaker
       pattern_maker_dashboard_path
     when Colorist
       colorist_dashboard_path
-    when ITManager
+    when ItManager
       it_manager_dashboard_path
     when SystemsAdministrator
       systems_administrator_dashboard_path

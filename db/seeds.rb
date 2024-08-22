@@ -57,6 +57,7 @@ roles.each do |role|
   role[:model].create!(
     email: "aliishaq@gmail.com",
     password: "Aliishaq786@",
-    password_confirmation: "Aliishaq786@"
+    password_confirmation: "Aliishaq786@",
+    confirmed_at: Time.current # Automatically confirm the user
   )
 end
