@@ -1,0 +1,19 @@
+current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+/home/ali-ishaq/.rvm/rubies/ruby-3.2.3/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240822-45572-t95bz sitelibdir\=./.gem.20240822-45572-t95bz clean
+
+current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240822-45572-t95bz sitelibdir\=./.gem.20240822-45572-t95bz
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240822-45572-t95bz sitelibdir\=./.gem.20240822-45572-t95bz install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20240822-45572-t95bz/debug
+
+current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240822-45572-t95bz sitelibdir\=./.gem.20240822-45572-t95bz clean

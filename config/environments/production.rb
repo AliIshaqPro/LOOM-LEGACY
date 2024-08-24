@@ -89,9 +89,24 @@ config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .jpeg .gif )
   config.active_support.report_deprecations = false
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+  #config.active_record.dump_schema_after_migration = false
   config.hosts << "ec2-3-6-73-112.ap-south-1.compute.amazonaws.com"
   config.hosts << "aliishaq.site"
+
+    # config/environments/production.rb
+
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  address:              'email-smtp.ap-south-1.amazonaws.com', # Adjusted to match your region
+  port:                 587,
+  user_name:            'AKIA47CRW2PA6SG2GZHF', # Directly using your SMTP username
+  password:             'BBv7NeZKjjZgA/8Dv6bHOi4GbWGKG+N2nfMbJ3DsmuUo', # Directly using your SMTP password
+  authentication:       :login,
+  enable_starttls_auto: true
+}
+
+config.action_mailer.default_url_options = { host: 'aliishaq.site' }
+
   #config.hosts << "ec2-52-66-235-204.ap-south-1.compute.amazonaws.com"
 
   # Enable DNS rebinding protection and other `Host` header attacks.

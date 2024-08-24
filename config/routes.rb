@@ -58,9 +58,11 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   
   get 'loomlegacies', to: 'loom_legacies#index'
+  get 'whatsapp', to: 'whatsapp#index'
+  root 'profile#new'
   # get 'departments', to: 'loom_legacies#index'
 
-  root 'profile#new'
+  #root 'dashboards#board_member'
   
   get 'login', to: "main#index"
   post 'login', to: "main#create"

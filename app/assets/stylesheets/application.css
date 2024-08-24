@@ -1,12 +1,27 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    justify-content: center;
+    
 
 }
+
+#sidebar.retracted {
+    transform: translateX(-13rem);
+  }
+  
+  #sidebar.retracted .space-x-2 span {
+    display: none;
+  }
+  
+  #sidebar.retracted {
+    width: 4rem;
+  }
+  
+  #sidebar.retracted .h-screen {
+    width: 4rem;
+  }
+  
 
 .container {
     width: 80%;
@@ -30,7 +45,7 @@ header h1 {
 
 nav {
     display: inline-block;
-    
+
 }
 
 nav ul {
@@ -65,26 +80,28 @@ section h2 {
     gap: 30px;
     justify-content: center;
     align-items: center;
-    
-    
+
+
 }
 
 .departments-grid div {
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    width: 300px; 
-    height: 150px; 
+    width: 300px;
+    height: 150px;
     text-align: center;
-    color:black;
+    color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .departments-grid a {
     text-decoration: none;
-    color: inherit; 
-    display: block; 
+    color: inherit;
+    display: block;
     text-align: center;
 }
+
 footer {
     background: #333;
     color: #fff;
@@ -101,7 +118,8 @@ form label {
     margin-top: 10px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
@@ -117,12 +135,14 @@ form button {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .pd {
     background-image: url('1710448790923.jpg');
     background-size: cover;
     background-position: center;
     /* Additional background properties */
 }
+
 .qc {
     background-image: url('QA-vs-QC.jpg');
     background-size: cover;

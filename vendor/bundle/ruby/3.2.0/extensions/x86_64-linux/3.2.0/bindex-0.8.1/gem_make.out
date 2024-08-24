@@ -1,0 +1,18 @@
+current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+/home/ali-ishaq/.rvm/rubies/ruby-3.2.3/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240822-45572-jo6cqo sitelibdir\=./.gem.20240822-45572-jo6cqo clean
+
+current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240822-45572-jo6cqo sitelibdir\=./.gem.20240822-45572-jo6cqo
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240822-45572-jo6cqo sitelibdir\=./.gem.20240822-45572-jo6cqo install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20240822-45572-jo6cqo/skiptrace/internal
+
+current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240822-45572-jo6cqo sitelibdir\=./.gem.20240822-45572-jo6cqo clean
