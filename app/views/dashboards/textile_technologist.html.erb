@@ -1,633 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEO DASHBOARD</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <%= stylesheet_link_tag "dashboard", "data-turbo-track": "reload" %>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <title>Asdf</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "dashboard", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <style>
+  body {
+      margin: 0;
+      padding: 0;
+    
+  }
+
+  .background-image {
+      position: absolute; /* or relative or fixed */
+      top: 0;
+      left: 0;
+      width: 100%;
+      
+      z-index: -1; /* Set the z-index to a lower value */
+  }
+
+  .content {
+      position: relative; /* Ensure it stacks above the image */
+      z-index: 1; /* Higher z-index than the image */
+      padding: 20px;
+      
+  }
+</style>
 </head>
 <body>
-<div class="body" id="content">
-<header class="header">
-<a href="http://localhost:3000" class="logo-link">
-<%= image_tag 'favicon.png', loading: 'lazy', alt: 'Black Logo', class: 'logo' %>
-  <svg width="300" height="50" xmlns="http://www.w3.org/2000/svg">
-  <text x="0" y="40" style="color: #4CAF50; font-family: 'Poppins'; font-size: 30px; fill: white;">LOOM-LEGACY</text>
-
-  </svg>
-</a>
-    <nav>
-      <ul class="menu">
-        <li><a href="https://www.carbonteq.com/" class="menu-item home">Home</a></li>
-        <li><a href="https://www.carbonteq.com/about" class="menu-item about">About</a></li>
-        <li><a href="https://www.carbonteq.com/portfolio" class="menu-item portfolio">Portfolio</a></li>
-        <li><a href="https://www.carbonteq.com/services" class="menu-item services">Services</a></li>
-        <li><a href="https://calendly.com/?utm_campaign=sign_up&utm_medium=badge&utm_source=invitee" class="menu-item getintouch">Get in touch</a></li>
-      </ul>
-    </nav>
-</header>
-<div id="sidebar" class="d-flex flex-column p-3">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <span class="fs-4">Sidebar</span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link">
-          Dashboard
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link">
-          Orders
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link">
-          Products
-        </a>
-      </li>
-      
-      
-    </ul>
-    <hr>
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://via.placeholder.com/40" alt="" width="40" height="40" class="rounded-circle me-2">
-        <strong>User</strong>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Sign out</a></li>
-      </ul>
-    </div>
-  </div>
-    <div id="executive_summary" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-    </div>
-    <div id="financial_performance" class="dashboard">
-        <h1>Financial Performance</h1>
-        
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        
-        <div class="chart">
-            <h2>Sales Trends</h2>
-            <svg width="500" height="300">
-                <line x1="50" y1="250" x2="450" y2="250" stroke="black"/>
-                <line x1="50" y1="250" x2="50" y2="50" stroke="black"/>
-                <!-- Monthly sales data -->
-                <circle cx="100" cy="220" r="5" fill="blue"/>
-                <circle cx="150" cy="200" r="5" fill="blue"/>
-                <circle cx="200" cy="180" r="5" fill="blue"/>
-                <circle cx="250" cy="150" r="5" fill="blue"/>
-                <circle cx="300" cy="170" r="5" fill="blue"/>
-                <circle cx="350" cy="140" r="5" fill="blue"/>
-                <circle cx="400" cy="120" r="5" fill="blue"/>
-                <!-- Lines connecting the data points -->
-                <line x1="100" y1="220" x2="150" y2="200" stroke="blue"/>
-                <line x1="150" y1="200" x2="200" y2="180" stroke="blue"/>
-                <line x1="200" y1="180" x2="250" y2="150" stroke="blue"/>
-                <line x1="250" y1="150" x2="300" y2="170" stroke="blue"/>
-                <line x1="300" y1="170" x2="350" y2="140" stroke="blue"/>
-                <line x1="350" y1="140" x2="400" y2="120" stroke="blue"/>
-            </svg>
-        </div>
-        
-        <div class="chart">
-            <h2>Financial Performance</h2>
-            <svg width="500" height="300">
-                <line x1="50" y1="250" x2="450" y2="250" stroke="black"/>
-                <line x1="50" y1="250" x2="50" y2="50" stroke="black"/>
-                <!-- Quarterly profit data -->
-                <rect x="100" y="200" width="50" height="50" fill="green"/>
-                <rect x="200" y="150" width="50" height="100" fill="green"/>
-                <rect x="300" y="100" width="50" height="150" fill="green"/>
-                <rect x="400" y="50" width="50" height="200" fill="green"/>
-            </svg>
-        </div>
-    </div>
-    <div id="sales_and_market" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-    </div>
-    <div id="production" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-        <div class="chart">
-            <h2>Operational Efficiency</h2>
-            <svg width="500" height="300">
-                <line x1="50" y1="250" x2="450" y2="250" stroke="black"/>
-                <line x1="50" y1="250" x2="50" y2="50" stroke="black"/>
-                <!-- Efficiency percentages -->
-                <rect x="100" y="150" width="50" height="100" fill="orange"/>
-                <rect x="200" y="130" width="50" height="120" fill="orange"/>
-                <rect x="300" y="100" width="50" height="150" fill="orange"/>
-                <rect x="400" y="80" width="50" height="170" fill="orange"/>
-            </svg>
-        </div>
-    </div>
-    <div id="human_resource" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-    </div>
-    <div id="customer_insigts" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-    </div>
-    <div id="inovation" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-    </div>
-    <div id="compliance" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-    </div>
-    <div id="strategic_initiatives" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-    </div>
-    <div id="sustainability_matrics" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-    </div>
-    <div id="graphs_and_visualizations" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-    </div>
-    <div id="alerts" class="dashboard">
-        <h1>Executive Summary</h1>
-        <div class="kpi">
-            <h2>Total Revenue</h2>
-            <p class="value">PKR 150,000,000</p>
-            <p class="description">Revenue for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Net Profit Margin</h2>
-            <p class="value">18%</p>
-            <p class="description">Net profit margin for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Production Efficiency</h2>
-            <p class="value">92%</p>
-            <p class="description">Overall efficiency in Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Employee Retention Rate</h2>
-            <p class="value">95%</p>
-            <p class="description">Retention rate for Q2 2024</p>
-        </div>
-        <div class="kpi">
-            <h2>Market Share</h2>
-            <p class="value">12%</p>
-            <p class="description">Market share in the Pakistani textile market</p>
-        </div>
-        <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+<nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">SideBar</button>
+    <a class="navbar-brand" href="#">LOOMS-LEGACY</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-    <div class="chart">
-            <h2>Market Trends</h2>
-            <svg width="500" height="300">
-                <line x1="50" y1="250" x2="450" y2="250" stroke="black"/>
-                <line x1="50" y1="250" x2="50" y2="50" stroke="black"/>
-                <!-- Market trend data -->
-                <circle cx="100" cy="220" r="5" fill="red"/>
-                <circle cx="150" cy="200" r="5" fill="red"/>
-                <circle cx="200" cy="180" r="5" fill="red"/>
-                <circle cx="250" cy="160" r="5" fill="red"/>
-                <circle cx="300" cy="140" r="5" fill="red"/>
-                <circle cx="350" cy="120" r="5" fill="red"/>
-                <circle cx="400" cy="100" r="5" fill="red"/>
-                <!-- Lines connecting the data points -->
-                <line x1="100" y1="220" x2="150" y2="200" stroke="red"/>
-                <line x1="150" y1="200" x2="200" y2="180" stroke="red"/>
-                <line x1="200" y1="180" x2="250" y2="160" stroke="red"/>
-                <line x1="250" y1="160" x2="300" y2="140" stroke="red"/>
-                <line x1="300" y1="140" x2="350" y2="120" stroke="red"/>
-                <line x1="350" y1="120" x2="400" y2="100" stroke="red"/>
-            </svg>
-        </div>
-        
-        <div class="chart">
-            <h2>Competitor Analysis</h2>
-            <svg width="500" height="300">
-                <line x1="50" y1="250" x2="450" y2="250" stroke="black"/>
-                <line x1="50" y1="250" x2="50" y2="50" stroke="black"/>
-                <!-- Competitor performance data -->
-                <rect x="100" y="180" width="40" height="70" fill="blue"/>
-                <rect x="160" y="140" width="40" height="110" fill="blue"/>
-                <rect x="220" y="160" width="40" height="90" fill="blue"/>
-                <rect x="280" y="120" width="40" height="130" fill="blue"/>
-                <rect x="340" y="100" width="40" height="150" fill="blue"/>
-                <rect x="400" y="130" width="40" height="120" fill="blue"/>
-            </svg>
-        </div>
-        <div class="chart">
-    <h2>HR Metrics</h2>
-    <svg width="500" height="300">
-        <line x1="50" y1="250" x2="450" y2="250" stroke="black"/>
-        <line x1="50" y1="250" x2="50" y2="50" stroke="black"/>
-        
-        <!-- Employee Productivity -->
-        <rect x="100" y="120" width="50" height="130" fill="purple"/>
-        <text x="110" y="270" font-size="12" fill="black">Productivity</text>
-        
-        <!-- Retention Rate -->
-        <rect x="200" y="80" width="50" height="170" fill="orange"/>
-        <text x="210" y="270" font-size="12" fill="black">Retention</text>
-        
-        <!-- Talent Management -->
-        <rect x="300" y="100" width="50" height="150" fill="green"/>
-        <text x="305" y="270" font-size="12" fill="black">Talent Mgmt</text>
-    </svg>
-</div>
-<div id="sidebar" class="d-flex flex-column flex-shrink-0 p-3">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <span class="fs-4">Sidebar</span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#executive_summary" class="nav-link active" aria-current="page">
-        Executive Summary
-        </a>
-      </li>
-      <li>
-        <a href="#financial_performance" class="nav-link text-white">
-        Financial Performance
-        </a>
-      </li>
-      <li>
-        <a href="#sales_and_market" class="nav-link text-white">
-        Sales and Market Performance
-        </a>
-      </li>
-      <li>
-        <a href="#production" class="nav-link text-white">
-        Production and Operations
-        </a>
-      </li>
-      <li>
-        <a href="#human_resource" class="nav-link text-white">
-        Human Resources
-        </a>
-      </li>
-      <li>
-        <a href="#customer_insigts" class="nav-link text-white">
-        Customer Insights
-        </a>
-      </li>
-      <li>
-        <a href="#inovation" class="nav-link text-white">
-        Innovation and R&D
-        </a>
-      </li>
-      <li>
-        <a href="#compliance" class="nav-link text-white">
-        Risk Management
-        </a>
-      </li>
-      <li>
-        <a href="#strategic_initiatives" class="nav-link text-white">
-        Strategic Initiatives
-        </a>
-      </li>
-      <li>
-        <a href="#sustainability_matrics" class="nav-link text-white">
-        Sustainability Metrics
-        </a>
-      </li>
-      <li>
-        <a href="#graphs_and_visualizations" class="nav-link text-white">
-        Graphs and Visualizations
-        </a>
-      </li>
-      <li>
-        <a href="#alerts" class="nav-link text-white">
-        Alerts and Notifications
-        </a>
-      </li>
-    </ul>
-    <hr>
-    <div class="dropdown">
-    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-    <%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle me-2' %>
-    <strong>User</strong>
-  </a>
+</nav>
   
-      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <p><%= button_to 'Logout', destroy_ceo_session_path, method: :delete %></p>
-      </ul>
-    </div>
+
+
+
+
+
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <!-- Bootstrap JavaScript -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <script>
-  document.getElementById('sidebarToggle').addEventListener('click', function () {
-    document.getElementById('sidebar').classList.toggle('active');
-  });
-</script>
+  <div class="offcanvas-body">
+    <p>Try scrolling the rest of the page to see this option in action.</p>
+  </div>
 </div>
-  </body>
+
+
+
+
+<h1 class="display-1" style="text-align: center;">Welcome Back textile_technologist</h1>
+
+
+
+<p><%= button_to 'Logout', destroy_textile_technologist_session_path, method: :delete %></p>
+
+</body>
 </html>
+
 

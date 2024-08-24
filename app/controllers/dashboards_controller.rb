@@ -9,7 +9,6 @@ class DashboardsController < ApplicationController
     end
   
     def ceo
-      @ceo = Ceo.find_by(email: 'allisswell737@gmail.com') # or however you fetch the CEO
     end
   
     def chairmen
