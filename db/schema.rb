@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_24_144035) do
   create_table "accountants", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -31,6 +31,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_accountants_on_email", unique: true
     t.index ["reset_password_token"], name: "index_accountants_on_reset_password_token", unique: true
   end
@@ -83,6 +84,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["confirmation_token"], name: "index_administrative_assistants_on_confirmation_token", unique: true
     t.index ["email"], name: "index_administrative_assistants_on_email", unique: true
     t.index ["reset_password_token"], name: "index_administrative_assistants_on_reset_password_token", unique: true
@@ -109,6 +111,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_board_members_on_email", unique: true
     t.index ["reset_password_token"], name: "index_board_members_on_reset_password_token", unique: true
   end
@@ -133,6 +136,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_cad_designers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_cad_designers_on_reset_password_token", unique: true
   end
@@ -157,6 +161,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_ceos_on_email", unique: true
     t.index ["reset_password_token"], name: "index_ceos_on_reset_password_token", unique: true
   end
@@ -181,6 +186,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_cfos_on_email", unique: true
     t.index ["reset_password_token"], name: "index_cfos_on_reset_password_token", unique: true
   end
@@ -205,6 +211,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_chairmen_on_email", unique: true
     t.index ["reset_password_token"], name: "index_chairmen_on_reset_password_token", unique: true
   end
@@ -238,6 +245,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_colorists_on_email", unique: true
     t.index ["reset_password_token"], name: "index_colorists_on_reset_password_token", unique: true
   end
@@ -262,6 +270,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["confirmation_token"], name: "index_compliance_managers_on_confirmation_token", unique: true
     t.index ["email"], name: "index_compliance_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_compliance_managers_on_reset_password_token", unique: true
@@ -288,6 +297,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_customer_relations_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_customer_relations_managers_on_reset_password_token", unique: true
   end
@@ -312,6 +322,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_customer_service_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_customer_service_managers_on_reset_password_token", unique: true
   end
@@ -336,6 +347,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_customer_support_representatives_on_email", unique: true
     t.index ["reset_password_token"], name: "index_customer_support_representatives_on_reset_password_token", unique: true
   end
@@ -360,6 +372,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_demand_planners_on_email", unique: true
     t.index ["reset_password_token"], name: "index_demand_planners_on_reset_password_token", unique: true
   end
@@ -384,6 +397,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_directors_on_email", unique: true
     t.index ["reset_password_token"], name: "index_directors_on_reset_password_token", unique: true
   end
@@ -408,6 +422,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_distribution_coordinators_on_email", unique: true
     t.index ["reset_password_token"], name: "index_distribution_coordinators_on_reset_password_token", unique: true
   end
@@ -432,6 +447,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_electrical_engineers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_electrical_engineers_on_reset_password_token", unique: true
   end
@@ -456,6 +472,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_environmental_specialists_on_email", unique: true
     t.index ["reset_password_token"], name: "index_environmental_specialists_on_reset_password_token", unique: true
   end
@@ -480,6 +497,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_financial_analysts_on_email", unique: true
     t.index ["reset_password_token"], name: "index_financial_analysts_on_reset_password_token", unique: true
   end
@@ -504,6 +522,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_hr_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_hr_managers_on_reset_password_token", unique: true
   end
@@ -528,6 +547,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_inventory_controllers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_inventory_controllers_on_reset_password_token", unique: true
   end
@@ -552,6 +572,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_investors_on_email", unique: true
     t.index ["reset_password_token"], name: "index_investors_on_reset_password_token", unique: true
   end
@@ -576,6 +597,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_it_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_it_managers_on_reset_password_token", unique: true
   end
@@ -600,6 +622,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_logistics_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_logistics_managers_on_reset_password_token", unique: true
   end
@@ -624,6 +647,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_machine_operators_on_email", unique: true
     t.index ["reset_password_token"], name: "index_machine_operators_on_reset_password_token", unique: true
   end
@@ -648,6 +672,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_maintenance_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_maintenance_managers_on_reset_password_token", unique: true
   end
@@ -672,6 +697,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_maintenance_technicians_on_email", unique: true
     t.index ["reset_password_token"], name: "index_maintenance_technicians_on_reset_password_token", unique: true
   end
@@ -696,6 +722,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_marketing_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_marketing_managers_on_reset_password_token", unique: true
   end
@@ -720,6 +747,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_mechanical_engineers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_mechanical_engineers_on_reset_password_token", unique: true
   end
@@ -744,6 +772,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_office_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_office_managers_on_reset_password_token", unique: true
   end
@@ -768,6 +797,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_order_processors_on_email", unique: true
     t.index ["reset_password_token"], name: "index_order_processors_on_reset_password_token", unique: true
   end
@@ -792,6 +822,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_pattern_makers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_pattern_makers_on_reset_password_token", unique: true
   end
@@ -816,6 +847,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_procurement_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_procurement_managers_on_reset_password_token", unique: true
   end
@@ -840,6 +872,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_production_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_production_managers_on_reset_password_token", unique: true
   end
@@ -864,6 +897,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_production_planners_on_email", unique: true
     t.index ["reset_password_token"], name: "index_production_planners_on_reset_password_token", unique: true
   end
@@ -888,6 +922,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_purchasing_officers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_purchasing_officers_on_reset_password_token", unique: true
   end
@@ -912,6 +947,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_quality_control_inspectors_on_email", unique: true
     t.index ["reset_password_token"], name: "index_quality_control_inspectors_on_reset_password_token", unique: true
   end
@@ -936,6 +972,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_r_and_d_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_r_and_d_managers_on_reset_password_token", unique: true
   end
@@ -960,6 +997,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["confirmation_token"], name: "index_receptionists_on_confirmation_token", unique: true
     t.index ["email"], name: "index_receptionists_on_email", unique: true
     t.index ["reset_password_token"], name: "index_receptionists_on_reset_password_token", unique: true
@@ -986,6 +1024,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_recruitment_specialists_on_email", unique: true
     t.index ["reset_password_token"], name: "index_recruitment_specialists_on_reset_password_token", unique: true
   end
@@ -1010,6 +1049,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_research_scientists_on_email", unique: true
     t.index ["reset_password_token"], name: "index_research_scientists_on_reset_password_token", unique: true
   end
@@ -1034,6 +1074,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_safety_officers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_safety_officers_on_reset_password_token", unique: true
   end
@@ -1058,6 +1099,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_sales_managers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_sales_managers_on_reset_password_token", unique: true
   end
@@ -1082,6 +1124,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_sales_representatives_on_email", unique: true
     t.index ["reset_password_token"], name: "index_sales_representatives_on_reset_password_token", unique: true
   end
@@ -1106,6 +1149,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_shareholders_on_email", unique: true
     t.index ["reset_password_token"], name: "index_shareholders_on_reset_password_token", unique: true
   end
@@ -1130,6 +1174,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_shift_supervisors_on_email", unique: true
     t.index ["reset_password_token"], name: "index_shift_supervisors_on_reset_password_token", unique: true
   end
@@ -1154,6 +1199,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_software_developers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_software_developers_on_reset_password_token", unique: true
   end
@@ -1178,6 +1224,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_supply_chain_coordinators_on_email", unique: true
     t.index ["reset_password_token"], name: "index_supply_chain_coordinators_on_reset_password_token", unique: true
   end
@@ -1202,6 +1249,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_systems_administrators_on_email", unique: true
     t.index ["reset_password_token"], name: "index_systems_administrators_on_reset_password_token", unique: true
   end
@@ -1226,6 +1274,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_textile_designers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_textile_designers_on_reset_password_token", unique: true
   end
@@ -1250,6 +1299,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_textile_technologists_on_email", unique: true
     t.index ["reset_password_token"], name: "index_textile_technologists_on_reset_password_token", unique: true
   end
@@ -1274,6 +1324,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_training_and_development_officers_on_email", unique: true
     t.index ["reset_password_token"], name: "idx_on_reset_password_token_dddbbe3806", unique: true
   end
@@ -1298,6 +1349,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_23_173018) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["email"], name: "index_warehouse_supervisors_on_email", unique: true
     t.index ["reset_password_token"], name: "index_warehouse_supervisors_on_reset_password_token", unique: true
   end
