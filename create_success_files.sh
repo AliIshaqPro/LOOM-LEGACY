@@ -218,12 +218,6 @@ for role in "${ROLES[@]}"; do
 </div>
 
 
-<% if user.photo.attached? %>
-  <%= image_tag ${singular_role}, alt: "Profile Photo" %>
-<% else %>
-  <%= image_tag "ali.JPG", alt: "Default Profile Photo" %>
-<% end %>
-
 
 <h1 class="display-1" style="text-align: center;">Welcome Back ${singular_role}</h1>
 
