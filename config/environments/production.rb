@@ -92,6 +92,7 @@ config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .jpeg .gif )
   #config.active_record.dump_schema_after_migration = false
   config.hosts << "ec2-3-6-73-112.ap-south-1.compute.amazonaws.com"
   config.hosts << "aliishaq.site"
+  config.hosts << "3.6.73.112"
 
     # config/environments/production.rb
 
