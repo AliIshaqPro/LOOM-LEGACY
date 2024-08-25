@@ -1,0 +1,233 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+.navbar {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    height: 70px;
+  }
+  
+  .nav-link {
+
+    color:#e67e22;
+    border: #e67e22;
+    border-radius: 5px;
+
+  }
+
+
+  
+  #navbar {
+    background-color: #343a40;
+    color: #3d0f0f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  #content {
+    margin-left: 300px;
+    flex: 1;
+    background-color: #343a40;
+  }
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+}
+
+header .logo1 h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section */
+#hero {
+    width: 100%; /* Full width of the viewport */
+    height: auto; /* Auto height based on content */
+    max-height: 600px; /* Maximum height of 400px */
+    background-image: url(https://images.unsplash.com/photo-1517146783983-418c681b56c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D);
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating of the image */
+    display: flex; /* Use flexbox for centering content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text horizontally */
+    padding: 20px; /* Optional: Add some padding */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+  }
+  
+  .hero-content {
+    color: #fff; /* Ensure text is readable on background */
+    max-width: 600px; /* Optional: Limit the width of the content */
+
+  }
+  
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    background-color: #e67e22;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.navbar-nav .dropdown-menu {
+    background-color: gray; /* Change this to your preferred gray color */
+}
+
+.alert {
+
+    padding-top: 15px;
+    display: flex;
+    align-items: center; /* Vertically centers text */
+    justify-content: center; /* Horizontally centers text */
+    height: 100px; /* Set a specific height for vertical centering */
+    text-align: center;
+    position: relative;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.close {
+    position: absolute;
+    align-items: center;
+    top: 4px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .close span {
+    font-size: 3.5rem;
+  }
+
+/* About Section */
+#about {
+    padding: 50px 0;
+    background-color: #107c97;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Products Section */
+#products {
+    padding: 50px 0;
+}
+
+#products h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-item {
+    background-color: #4e3b3b;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    background-color: #2c3e50;
+    color: white;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#contact .btn {
+    background-color: #e67e22;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+}

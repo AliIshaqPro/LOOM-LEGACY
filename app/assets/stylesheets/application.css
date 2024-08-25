@@ -1,28 +1,35 @@
+/* Reset some default styling */
+body, h1, h3, p, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Body styling */
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     box-sizing: border-box;
-    
-
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Sidebar styling for retracted state */
 #sidebar.retracted {
     transform: translateX(-13rem);
-  }
-  
-  #sidebar.retracted .space-x-2 span {
-    display: none;
-  }
-  
-  #sidebar.retracted {
     width: 4rem;
-  }
-  
-  #sidebar.retracted .h-screen {
-    width: 4rem;
-  }
-  
+}
 
+#sidebar.retracted .space-x-2 span {
+    display: none;
+}
+
+#sidebar.retracted .h-screen {
+    width: 4rem;
+}
+
+/* Container styling */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -32,6 +39,7 @@ body {
     justify-content: center;
 }
 
+/* Header styling */
 header {
     background: #333;
     color: #fff;
@@ -43,9 +51,9 @@ header h1 {
     display: inline-block;
 }
 
+/* Navigation styling */
 nav {
     display: inline-block;
-
 }
 
 nav ul {
@@ -64,6 +72,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Section styling */
 section {
     padding: 50px 0;
 }
@@ -72,36 +81,64 @@ section h2 {
     text-align: center;
     margin-bottom: 20px;
 }
-
-
+/* Departments grid styling */
 .departments-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .departments-grid div {
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    width: 300px;
-    height: 150px;
+    width: 100%;
+    max-width: 300px;
+    height: 200px; /* Increase height of the grid items */
     text-align: center;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents image repetition */
+    margin: 0 auto;
+    box-sizing: border-box;
 }
+
+/* Responsive design */
+@media (max-width: 300px) {
+    .departments-grid div {
+        width: 100%;
+        height: 200px; /* Adjust height proportionally */
+    }
+}
+
 
 .departments-grid a {
     text-decoration: none;
     color: inherit;
     display: block;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
+/* Responsive design */
+@media (max-width: 768px) {
+    .departments-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    
+}
+
+
+
+
+/* Footer styling */
 footer {
     background: #333;
     color: #fff;
@@ -109,6 +146,7 @@ footer {
     padding: 10px 0;
 }
 
+/* Form styling */
 form {
     display: flex;
     flex-direction: column;
@@ -118,8 +156,7 @@ form label {
     margin-top: 10px;
 }
 
-form input,
-form textarea {
+form input, form textarea {
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
@@ -136,140 +173,69 @@ form button {
     cursor: pointer;
 }
 
-.pd {
-    background-image: url('1710448790923.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
+/* Specific Department Backgrounds */
+.pd { background-image: url('1710448790923.jpg'); }
+.qc { background-image: url('QA-vs-QC.jpg'); }
+.rd { background-image: url('research-development-businessman.jpg'); }
+.dd { background-image: url('pngtree-nature-inspired-floral-s.jpg'); }
+.md { background-image: url('maintenance-engineer-technician.jpg'); }
+.psc { background-image: url('smart-warehouse-management-syste.jpg'); }
+.hr { background-image: url('depositphotos_113738750-stock-ph.jpg'); }
+.fa { background-image: url('financial-accounting-16773804.jpg'); }
+.sm { background-image: url('sales-marketing-concept-document.jpg'); }
+.it { background-image: url('360_F_314927575_yqFMAuXFTNC6gBfl.jpg'); }
+.ld { background-image: url('transportation-and-logistic-impo.jpg'); }
+.cra { background-image: url('compliance-rule-law-regulation-g.jpg'); }
+.cs { background-image: url('customer-service-call-center-wom.jpg'); }
+.pc { background-image: url('61f58fa81b17077f729ff47d_image.jpg'); }
+.admin { background-image: url('admin-office-binder-wooden-desk.jpg'); }
+.ceo { background-image: url('CEO.jpg'); }
+.ceo1122 { background-image: url('download.png'); }
+.board-member { background-image: url('Board Member.jpg'); }
+.chairman-of-board { background-image: url('Stake Holder.jpg'); }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .departments-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .departments-grid div {
+        width: 100%;
+        height: 100px;
+        font-size: 0.9rem;
+    }
 }
 
-.qc {
-    background-image: url('QA-vs-QC.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
+@media (max-width: 480px) {
+    .departments-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
-.rd {
-    background-image: url('research-development-businessman.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
+    header h1 {
+        font-size: 1.2rem;
+    }
 
-.dd {
-    background-image: url('pngtree-nature-inspired-floral-s.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
+    form button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 
-.md {
-    background-image: url('maintenance-engineer-technician.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.psc {
-    background-image: url('smart-warehouse-management-syste.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.hr {
-    background-image: url('depositphotos_113738750-stock-ph.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.fa {
-    background-image: url('financial-accounting-16773804.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.sm {
-    background-image: url('sales-marketing-concept-document.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.it {
-    background-image: url('360_F_314927575_yqFMAuXFTNC6gBfl.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.ld {
-    background-image: url('transportation-and-logistic-impo.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.cra {
-    background-image: url('compliance-rule-law-regulation-g.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.cs {
-    background-image: url('customer-service-call-center-wom.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.pc {
-    background-image: url('61f58fa81b17077f729ff47d_image.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.admin {
-    background-image: url('admin-office-binder-wooden-desk.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.ceo {
-    background-image: url('CEO.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.ceo1122 {
-    background-image: url('download.png');
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    /* Additional background properties */
-}
-
-.board-member {
-    background-image: url('Board Member.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
-}
-
-.chairman-of-board {
-    background-image: url('Stake Holder.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Additional background properties */
+    .departments-grid div {
+        height: 80px;
+        font-size: 0.8rem;
+    }
 }
