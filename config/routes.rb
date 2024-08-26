@@ -70,7 +70,8 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'signup#index'
   post 'signup', to: 'signup#create' 
-  
+  resources :feedbacks, only: [:create]
+
   get 'forgot', to: 'forgot#index'
   get 'success', to: 'successfull_session#Acct_successfull_sesssion'
   post 'forgot', to: 'forgot#index'

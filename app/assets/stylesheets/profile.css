@@ -67,8 +67,14 @@ p {
 }
 
 .card {
-  margin-bottom: 30px;
+  display: none; /* Initially hidden */
 }
+
+.card:active {
+  transform: scale(0.98); /* Slightly shrink the card when clicked */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Reset shadow to default on click */
+}
+
 
 footer {
   background-color: #222;
@@ -149,31 +155,7 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.kpi {
-  margin-top: 100px;
-  margin-bottom: 20px;
-  padding: 30px;
-  border: 10px solid #ddd;
-  border-radius: 15px;
-  background-color: transparent;
-  text-align: center;
-  height: auto;
-  background-size: cover;
-  background-position: center;
-  justify-content: center;
-  align-items: center;
-}
 
-.kpi .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.kpi:hover {
-  transition: transform 0.2s;
-  border-color: #313f64;
-}
 
 .github, .linkedin, .email, .fb, .insta {
   margin-top: 10px;
@@ -209,31 +191,6 @@ nav {
   background-image: url('insta.png');
 }
 
-.kpi h2, h1 {
-  margin: 0 0 10px;
-  font-size: 24px;
-  color: white;
-}
-
-.kpi .menu {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.kpi .value {
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
-  margin: 0 0 50px;
-  position: static;
-}
-
-.kpi .description {
-  margin: 0;
-  font-size: 30px;
-  color: white;
-}
 
 .logo-link {
   text-decoration: none;
@@ -358,7 +315,11 @@ footer .social-media-icons {
 }
 
 
-
+.accordion-item{
+  position: relative; /* Ensure it's positioned above other elements */
+  z-index: 2;         /* Increase z-index if there are overlapping elements */
+  
+}
 .accordion-button::after {
   filter: invert(1);
   text-align: center;
@@ -394,4 +355,113 @@ footer .social-media-icons {
   background-position: center;
   width: 200px;
   height: 200px;
+}
+.kpi {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  padding: 30px;
+  border: 10px solid #ddd;
+  border-radius: 15px;
+  background-color: transparent;
+  text-align: center;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-60%); /* Start off-screen to the left */
+  opacity: 0; /* Hidden initially */
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Smooth transition */
+}
+
+.kpi.visible {
+  transform: translateX(0); /* Move to original position */
+  opacity: 1; /* Fully visible */
+}
+
+.kpi:hover {
+  transform: translateX(0); /* Slide in from the left */
+  opacity: 1; /* Make visible */
+  border-color: #313f64; /* Change border color on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Increase shadow for depth */
+}
+
+.kpi::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(0,0,0,0.2));
+  border-radius: inherit;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.kpi:hover::before {
+  opacity: 1; /* Show the overlay on hover */
+}
+
+.kpi .logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kpi h2, .kpi h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow to text for better visibility */
+}
+
+.kpi .value {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  margin: 0 0 50px;
+  position: static;
+}
+
+.kpi .description {
+  margin: 0;
+  font-size: 30px;
+  color: white;
+}
+
+/* Additional animations */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+  }
+}
+
+.kpi:hover h2, .kpi:hover h1 {
+  animation: glow 1.5s infinite alternate; /* Apply glow animation on hover */
+}
+
+.blog-post:hover {
+  transform: scale(1.1);
+
+  opacity: 1; /* Make visible */
+  border-color: #313f64; /* Change border color on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+.kpi a {
+  position: relative; /* Ensure it's positioned above other elements */
+  z-index: 2;         /* Increase z-index if there are overlapping elements */
+  display: inline-block; /* Ensure it's treated as a clickable block */
+}
+
+.card-body {
+
+  background-color: darkgray;
 }
