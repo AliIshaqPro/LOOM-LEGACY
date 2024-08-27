@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_08_26_205116) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "accountants", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -217,12 +220,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_26_205116) do
   end
 
   create_table "chat_messages", force: :cascade do |t|
-    t.integer "user_id", null: false
     t.text "content"
     t.string "room"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_chat_messages_on_user_id"
   end
 
   create_table "colorists", force: :cascade do |t|
@@ -1362,5 +1363,4 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_26_205116) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "chat_messages", "users"
 end

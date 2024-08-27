@@ -1,12 +1,12 @@
-current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext
+current directory: /home/ali-ishaq/LOOM-LEGACY/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext
 /home/ali-ishaq/.rvm/rubies/ruby-3.2.3/bin/ruby extconf.rb
 creating Makefile
 
-current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext
-make DESTDIR\= sitearchdir\=./.gem.20240822-45572-2ind9k sitelibdir\=./.gem.20240822-45572-2ind9k clean
+current directory: /home/ali-ishaq/LOOM-LEGACY/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext
+make DESTDIR\= sitearchdir\=./.gem.20240827-172795-80nu9z sitelibdir\=./.gem.20240827-172795-80nu9z clean
 
-current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext
-make DESTDIR\= sitearchdir\=./.gem.20240822-45572-2ind9k sitelibdir\=./.gem.20240822-45572-2ind9k
+current directory: /home/ali-ishaq/LOOM-LEGACY/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext
+make DESTDIR\= sitearchdir\=./.gem.20240827-172795-80nu9z sitelibdir\=./.gem.20240827-172795-80nu9z
 compiling ./libsass/src/ast.cpp
 compiling ./libsass/src/ast2c.cpp
 compiling ./libsass/src/ast_fwd_decl.cpp
@@ -75,9 +75,9 @@ compiling ./libsass/src/util_string.cpp
 compiling ./libsass/src/values.cpp
 linking shared-object sassc/libsass.so
 
-current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext
-make DESTDIR\= sitearchdir\=./.gem.20240822-45572-2ind9k sitelibdir\=./.gem.20240822-45572-2ind9k install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20240822-45572-2ind9k/sassc
+current directory: /home/ali-ishaq/LOOM-LEGACY/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext
+make DESTDIR\= sitearchdir\=./.gem.20240827-172795-80nu9z sitelibdir\=./.gem.20240827-172795-80nu9z install
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20240827-172795-80nu9z/sassc
 
-current directory: /home/ali-ishaq/LOOM-LEGACY-DEVELOPMENT/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext
-make DESTDIR\= sitearchdir\=./.gem.20240822-45572-2ind9k sitelibdir\=./.gem.20240822-45572-2ind9k clean
+current directory: /home/ali-ishaq/LOOM-LEGACY/vendor/bundle/ruby/3.2.0/gems/sassc-2.4.0/ext
+make DESTDIR\= sitearchdir\=./.gem.20240827-172795-80nu9z sitelibdir\=./.gem.20240827-172795-80nu9z clean

@@ -6,6 +6,9 @@ gem 'devise'
 
 gem 'mail'
 
+gem 'pg'
+
+
 gem 'actionmailer'
 
 
