@@ -8,6 +8,9 @@ gem 'mail'
 
 gem 'pg'
 
+gem 'ahoy_matey'
+
+
 
 gem 'actionmailer'
 

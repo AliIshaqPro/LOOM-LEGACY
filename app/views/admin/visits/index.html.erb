@@ -1,0 +1,69 @@
+<h1 style="text-align: center; font-family: Arial, sans-serif; color: #333;">All Visits</h1>
+
+<div style="overflow-x: auto;">
+  <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+    <thead>
+      <tr style="background-color: #4CAF50; color: white;">
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Visit Token</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Visitor Token</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">IP Address</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">User Agent</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Referrer</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Referring Domain</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Landing Page</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Browser</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">OS</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Device Type</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Country</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Region</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">City</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Latitude</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Longitude</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">UTM Source</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">UTM Medium</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">UTM Term</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">UTM Content</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">UTM Campaign</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">App Version</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">OS Version</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Platform</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Started At</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Created At</th>
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Updated At</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @visits.each do |visit| %>
+        <tr style="background-color: <%= cycle('#f9f9f9', '#ffffff') %>; cursor: pointer;" onmouseover="this.style.backgroundColor='#f1f1f1';" onmouseout="this.style.backgroundColor='<%= cycle('#f9f9f9', '#ffffff') %>';">
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.visit_token %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.visitor_token %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.ip %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.user_agent %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.referrer %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.referring_domain %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.landing_page %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.browser %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.os %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.device_type %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.country %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.region %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.city %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.latitude %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.longitude %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.utm_source %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.utm_medium %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.utm_term %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.utm_content %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.utm_campaign %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.app_version %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.os_version %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.platform %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.started_at %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.created_at %></td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.updated_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

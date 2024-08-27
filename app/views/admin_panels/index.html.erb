@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Admin panels</h1>
+
+<div id="admin_panels">
+  <% @admin_panels.each do |admin_panel| %>
+    <%= render admin_panel %>
+    <p>
+      <%= link_to "Show this admin panel", admin_panel %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New admin panel", new_admin_panel_path %>

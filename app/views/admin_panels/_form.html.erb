@@ -1,0 +1,22 @@
+<%= form_with(model: admin_panel) do |form| %>
+  <% if admin_panel.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(admin_panel.errors.count, "error") %> prohibited this admin_panel from being saved:</h2>
+
+      <ul>
+        <% admin_panel.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :visits_id, style: "display: block" %>
+    <%= form.text_field :visits_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
