@@ -4,6 +4,7 @@
   <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
     <thead>
       <tr style="background-color: #4CAF50; color: white;">
+        <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Visit Number</th>
         <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Visit Token</th>
         <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Visitor Token</th>
         <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">IP Address</th>
@@ -34,8 +35,9 @@
     </thead>
 
     <tbody>
-      <% @visits.each do |visit| %>
+      <% @visits.each_with_index do |visit, index| %>
         <tr style="background-color: <%= cycle('#f9f9f9', '#ffffff') %>; cursor: pointer;" onmouseover="this.style.backgroundColor='#f1f1f1';" onmouseout="this.style.backgroundColor='<%= cycle('#f9f9f9', '#ffffff') %>';">
+          <td style="padding: 12px; border: 1px solid #ddd;"><%= index + 1 %></td>
           <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.visit_token %></td>
           <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.visitor_token %></td>
           <td style="padding: 12px; border: 1px solid #ddd;"><%= visit.ip %></td>
