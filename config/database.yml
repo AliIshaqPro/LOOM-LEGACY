@@ -16,6 +16,5 @@ test:
 
 production:
   <<: *default
-  database: LOOMS-LEGACY_production
-  username: postgres
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  database: looms_legacy_production
+  username: ec2-user
