@@ -23,7 +23,7 @@ Installation
 
     bash
 
-git clone https://github.com/your-username/loom-legacy.git
+git clone https://github.com/AliIshaqPro/LOOM-LEGACY.git
 cd loom-legacy
 
 Install dependencies:
@@ -57,7 +57,7 @@ Deployment
 
 Usage
 
-    Navigate to your domain (e.g., https://your-domain.com) to access the application.
+    Navigate to your domain (e.g., https://aliishaq.site) to access the application.
     Users can view inventory, manage production schedules, and submit feedback via the built-in system.
 
 Gems Used
