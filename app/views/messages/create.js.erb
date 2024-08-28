@@ -1,0 +1,4 @@
+// app/views/messages/create.js.erb
+$("#messages").append("<%= j render(partial: 'message', locals: { message: @message }) %>");
+$("textarea").val(''); // Clear the text area after the message is sent
+$("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight }, 1000); // Scroll to bottom

@@ -1,0 +1,21 @@
+<!-- app/views/conversations/index.html.erb -->
+<h2>Conversations</h2>
+<p><%= button_to 'Logout', destroy_board_member_session_path, method: :delete %></p>
+
+<%= form_with url: conversations_path, method: :post do |f| %>
+  <%= f.hidden_field :sender_id, value: current_user.id %>
+  <%= f.collection_select :recipient_id, User.where.not(id: current_user.id), :id, :email, prompt: 'Select a recipient' %>
+  <%= f.submit 'Start Chat' %>
+<% end %>
+
+<div class="accordion1" style="width:200px;">
+<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+  <% @conversations.each do |conversation| %>
+    <li style="background: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+      <%= link_to conversation.other_user(current_user).email, conversation_messages_path(conversation), style: "text-decoration: none; color: #333; font-size: 16px; font-weight: bold;" %>
+    </li>
+  <% end %>
+</ul>
+
+
+</div>

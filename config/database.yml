@@ -8,7 +8,7 @@ default: &default
 
 development:
   <<: *default
-  database: LOOMS-LEGACY
+  database: LOOMS-LEGACY_1
 
 test:
   <<: *default
