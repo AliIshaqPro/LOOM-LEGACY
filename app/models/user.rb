@@ -8,4 +8,7 @@ class User < ApplicationRecord
          has_many :conversations, foreign_key: :sender_id
   has_many :messages
 
+  has_one_attached :photo
+
+
 end

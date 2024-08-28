@@ -1,15 +1,11 @@
 class DashboardsController < ApplicationController
   
-  
+
     def ceo
       
     end
   
     def chairman
-    end
-  
-    def ceo
-      @ceo = Ceo.find_by(email: 'aliishaq@gmail.com') # or however you fetch the CEO
     end
   
     def chairmen
@@ -165,20 +161,25 @@ class DashboardsController < ApplicationController
     def receptionists
     end
 
-    private
-
-  def authenticate_ceo!
-    # Example authentication logic; adjust as necessary
-    unless ceo_signed_in?
-      redirect_to root_path, alert: "Please sign in to access this page."
+    def edit_user_info
+      @user = current_user
     end
+  
+    def update_user_info
+      @user = current_user
+      if @user.update(user_params)
+        redirect_to whatsapp_home_path, notice: 'Your information has been updated successfully!'
+      else
+        render :edit_user_info, alert: 'There was an error updating your information.'
+      end
+    end
+  
+    private
+  
+    def user_params
+      params.require(:user).permit(:username, :date_of_birth, :full_name, :bio, :photo, :phone_number)
+    end
+    
   end
-
-  def ceo_signed_in?
-    # Define how to check if the role is signed in
-    # Example placeholder logic
-    session[:ceo_id].present?
-  end
-
-end
+  
   

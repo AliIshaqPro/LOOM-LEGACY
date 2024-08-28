@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
     case resource
     when Ceo
       ceo_dashboard_path
+    when User
+      whatsapp_home_path
+      #edit_user_info_path
     when Chairman
       chairman_dashboard_path
     when BoardMember

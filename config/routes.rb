@@ -6,14 +6,11 @@ Rails.application.routes.draw do
   resources :admin_panels
   get 'home/index'
   
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+ 
   
   get 'loomlegacies', to: 'loom_legacies#home'
   get 'loomlegacies_login', to: 'loom_legacies#index'
-  get 'whatsapp', to: 'whatsapp#index'
+  get 'whatsapp', to: 'conversations#index'
   root 'profile#new'
   # get 'departments', to: 'loom_legacies#index'
   #root 'loom_legacies#home'
@@ -97,6 +94,9 @@ roles.each do |role|
   devise_for role.to_sym
 end
 
+get 'dashboard/edit_user_info', to: 'dashboards#edit_user_info', as: :edit_user_info
+patch 'dashboard/update_user_info', to: 'dashboards#update_user_info', as: :update_user_info
 
-  
+get 'conversations/index', to: 'conversations#index', as: :whatsapp_home  
+
 end

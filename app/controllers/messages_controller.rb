@@ -3,9 +3,14 @@ class MessagesController < ApplicationController
   before_action :set_conversation
 
   # MessagesController
+# app/controllers/messages_controller.rb
+# MessagesController
 def index
   @messages = @conversation.messages.order(created_at: :asc)
+  @most_recent_message = @conversation.messages.order(created_at: :desc).first
 end
+
+
 
 
   def create

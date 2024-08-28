@@ -171,70 +171,19 @@
 
 
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action">
-    <%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle' %>
-    <div class="info">
-      <h5 class="mb-1"><b>Ali Ishaq</b></h5>
-      <p class="mb-1">Assalam u alaikum kia haal he Yaar aik baat karni thi tum se</p>
-    </div>
-    <small class="text-body-secondary">3 days ago</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">
-    <%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle' %>
-    <div class="info">
-      <h5 class="mb-1"><b>Ali Ishaq</b></h5>
-      <p class="mb-1">Assalam u alaikum kia haal he Yaar aik baat karni thi tum se</p>
-    </div>
-    <small class="text-body-secondary">3 days ago</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">
-    <%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle' %>
-    <div class="info">
-      <h5 class="mb-1"><b>Ali Ishaq</b></h5>
-      <p class="mb-1">Assalam u alaikum kia haal he Yaar aik baat karni thi tum se</p>
-    </div>
-    <small class="text-body-secondary">3 days ago</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">
-    <%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle' %>
-    <div class="info">
-      <h5 class="mb-1"><b>Ali Ishaq</b></h5>
-      <p class="mb-1">Assalam u alaikum kia haal he Yaar aik baat karni thi tum se</p>
-    </div>
-    <small class="text-body-secondary">3 days ago</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">
-    <%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle' %>
-    <div class="info">
-      <h5 class="mb-1"><b>Ali Ishaq</b></h5>
-      <p class="mb-1">Assalam u alaikum kia haal he Yaar aik baat karni thi tum se</p>
-    </div>
-    <small class="text-body-secondary">3 days ago</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">
-    <%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle' %>
-    <div class="info">
-      <h5 class="mb-1"><b>Ali Ishaq</b></h5>
-      <p class="mb-1">Assalam u alaikum kia haal he Yaar aik baat karni thi tum se</p>
-    </div>
-    <small class="text-body-secondary">3 days ago</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">
-    <%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle' %>
-    <div class="info">
-      <h5 class="mb-1"><b>Ali Ishaq</b></h5>
-      <p class="mb-1">Assalam u alaikum kia haal he Yaar aik baat karni thi tum se</p>
-    </div>
-    <small class="text-body-secondary">3 days ago</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">
-    <%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle' %>
-    <div class="info">
-      <h5 class="mb-1"><b>Ali Ishaq</b></h5>
-      <p class="mb-1">Assalam u alaikum kia haal he Yaar aik baat karni thi tum se</p>
-    </div>
-    <small class="text-body-secondary">3 days ago</small>
-  </a>
+<ul>
+<% @conversations.each do |conversation| %>
+  <%= link_to conversation_messages_path(conversation), class: 'list-group-item list-group-item-action' do %>
+<%= image_tag 'ali.JPG', alt: 'Ali', width: 40, height: 40, class: 'rounded-circle' %>
+<div class="info">
+  <h5 class="mb-1"><b>Ali Ishaq</b></h5>
+  <p class="mb-1">Assalam u alaikum kia haal he Yaar aik baat karni thi tum se</p>
+</div>
+<small class="text-body-secondary">3 days ago</small>
+<% end %>
+<% end %>
+</ul>
+<p><%= button_to 'Logout', destroy_board_member_session_path, method: :delete %></p>
 </div>
 
 
@@ -278,3 +227,4 @@
 
 </body>
 </html>
+<p><%= button_to 'Logout', destroy_board_member_session_path, method: :delete %></p>
