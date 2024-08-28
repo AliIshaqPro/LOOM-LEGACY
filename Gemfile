@@ -10,6 +10,9 @@ gem 'pg'
 
 gem 'ahoy_matey'
 
+gem 'image_processing'
+
+gem 'mini_magick'
 
 
 gem 'actionmailer'

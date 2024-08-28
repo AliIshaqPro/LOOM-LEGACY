@@ -1,5 +1,5 @@
 <!-- app/views/messages/index.html.erb -->
-<h2>Chat with <%= @conversation.other_user(current_user).email %></h2>
+<h2>Chat with <%= @conversation.other_user(current_user).username %></h2>
 <p><%= button_to 'Logout', destroy_board_member_session_path, method: :delete %></p>
 
 <div id="messages" style="padding-bottom: 150px;">
