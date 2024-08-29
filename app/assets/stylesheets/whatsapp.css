@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+/* Basic styling for the navbar */
+.navbar {
+position: fixed;
+top: 0;
+right: 0;
+width: 100%;
+height:60px;
+display: flex;
+justify-content: space-between; /* Space between title and icons */
+align-items: center;
+background-color: #f8f9fa;
+padding: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+z-index: 1000;
+}
+
+/* Styling for the dropdown container */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+/* Styling for the dropdown toggle button */
+.dropdown-toggle {
+cursor: pointer;
+display: flex; /* Ensure SVG is displayed correctly */
+align-items: center;
+justify-content: center;
+background: none; /* Remove any background */
+border: none; /* Remove border */
+padding: 0; /* Remove padding */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+display: none;
+position: absolute;
+top: 100%;
+right: 0; /* Align dropdown menu with the right edge */
+background-color: #ffffff;
+border: 1px solid #ddd;
+border-radius: 4px;
+list-style: none;
+padding: 0;
+margin: 0;
+min-width: 200px; /* Increased width */
+max-width: 300px; /* Max width to prevent overflow */
+max-height: 300px; /* Max height with scroll */
+overflow-y: auto; /* Scrollable if content exceeds max height */
+z-index: 1000;
+}
+
+/* Dropdown menu item styling */
+.dropdown-menu li {
+padding: 10px;
+}
+
+/* Link styling inside dropdown menu */
+.dropdown-menu li a {
+text-decoration: none;
+color: #333;
+display: block;
+}
+
+/* Highlight on hover */
+.dropdown-menu li:hover {
+background-color: #f1f1f1;
+}
+
+
+
+.navbar-title {
+margin: 0; /* Remove default margin */
+font-size: 1.5rem; /* Adjust font size as needed */
+color: #333; /* Set text color */
+}
+
+.navbar-icons {
+display: flex;
+gap: 10px; /* Space between icons */
+}
+
+.bi {
+  vertical-align: middle; /* Aligns icons vertically in relation to each other */
+}
+
+.navbar h3 {
+margin: 0; /* Remove default margin */
+padding: 0; /* Remove default padding */
+font-size: 1.5rem; /* Adjust font size as needed */
+color: Green;
+font-weight: bold; /* Make the text bold */
+justify-content: flex-start;
+
+}
+form {
+max-width: 400px;
+margin: 0 auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-color: #f9f9f9;
+}
+
+form select,
+form input[type="submit"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+}
+
+form select {
+background-color: #fff;
+}
+
+form input[type="submit"] {
+background-color: #007bff;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+background-color: #0056b3;
+}
+.btn.btn-primary {
+background-color: #28a745; /* Green color */
+border-color: #28a745;
+}
+
+.btn.btn-primary:hover {
+background-color: #218838; /* Darker green on hover */
+border-color: #1e7e34;
+}
+
+
+.footer {
+height:60px;
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: space-around; /* Evenly distributes the icons */
+background-color: #f8f9fa; /* Background color for the footer */
+padding: 10px; /* Padding for the footer */
+box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
+z-index: 1000; /* Ensure the footer is above other content */
+}
+
+.footer-icons {
+display: flex; /* Ensures icons are in a row */
+justify-content: space-around; /* Evenly distributes the icons */
+width: 100%; /* Make sure it spans the full width */
+}
+
+.footer-icons a {
+display: flex;
+align-items: center; /* Center icons vertically */
+justify-content: center; /* Center icons horizontally within each flex item */
+text-align:center;
+text-decoration: none;
+flex-direction: column; 
+}
+
+.navbar-icons a svg {
+width: 30px; /* Set width for the icon */
+height: 30px; /* Set height for the icon */
+}
+
+.footer-icons a svg {
+width: 30px; /* Set width for the icon */
+height: 30px; /* Set height for the icon */
+}
+.footer-icons svg {
+max-height: 90px; /* Maximum height for the icons */
+width: auto; /* Allows width to adjust based on height */
+height: auto; /* Allows height to adjust automatically */
+color: #000; /* Color for the icons */
+}
+.footer-icons a span {
+/* Space between the icon and the text */
+color: black; /* Set text color (adjust as needed) */
+font-size:12px;
+}
+.list-group {
+padding-left: 0; /* Remove padding on the left side of the list group */
+}
+
+.list-group-item {
+height: 80px; /* Set the height of the list group item */
+display: flex;
+align-items: flex-start; /* Align items to the top */
+position: relative; /* Allow absolute positioning of timestamp */
+padding-left: 0; /* Remove padding from the list group item */
+margin-left: 0; /* Remove margin from the list group item */
+border: none; /* Optional: Remove border if any */
+}
+
+.list-group-item img {
+margin-right: 10px; /* Space between the image and the text */
+margin-left: 0; /* Ensure there's no left margin */
+}
+
+.list-group-item .info {
+display: flex;
+flex-direction: column;
+justify-content: space-between; /* Space between name and description */
+width: 100%; /* Ensure it uses full width available */
+}
+
+.list-group-item h5 {
+margin: 0; /* Remove default margin */
+display: inline-block;
+font-size: 25px;
+}
+
+.list-group-item .text-body-secondary {
+position: absolute; /* Position it absolutely */
+top: 10px; /* Space from the top */
+right: 1px; /* Space from the right */
+font-size: 0.875rem; /* Optional: Adjust font size */
+color: #6c757d; /* Optional: Adjust text color */
+}

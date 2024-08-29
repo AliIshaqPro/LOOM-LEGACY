@@ -8,8 +8,11 @@ class ApplicationController < ActionController::Base
     when Ceo
       ceo_dashboard_path
     when User
-      whatsapp_home_path
-      #edit_user_info_path
+      if resource.username.present? && resource.photo.present? && resource.phone_number.present?
+        whatsapp_home_path
+      else
+        edit_user_info_path
+      end
     when Chairman
       chairman_dashboard_path
     when BoardMember

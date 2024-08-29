@@ -1,4 +1,5 @@
 <!-- app/views/messages/_message.html.erb -->
+<%= stylesheet_link_tag "whatsapp", "data-turbo-track": "reload" %>
 <% if message.user == current_user %>
   <p style="text-align: right; background-color: #e0f7fa; padding: 5px; margin: 5px; border-radius: 10px;">
     <%= message.body %> <br>

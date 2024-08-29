@@ -1,12 +1,68 @@
 /* Ensure the form container takes up space properly and is centered */
 .form-container {
-  max-width: 400px; /* Adjust this as needed */
-  margin: 0 auto; /* Center horizontally */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.field {
+  margin-bottom: 1em;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="date"],
+.field input[type="file"],
+.field input[type="tel"],
+.field textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions input[type="submit"] {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.notice {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1em;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
 
 h2 {
   text-align: center;
@@ -116,4 +172,44 @@ input:focus {
   .submit, .submit-btn, .capture-btn {
     padding: 8px 15px;
   }
+}
+
+/* Style for the current password field */
+.field.current-password {
+  margin-top: 20px;
+}
+
+/* Styling for the password confirmation field */
+.field.password-confirmation {
+  margin-top: 10px;
+}
+
+/* Styling for the form's actions section */
+.actions {
+  margin-top: 20px;
+}
+
+/* Additional styles for the cancel account section */
+.cancel-account {
+  margin-top: 30px;
+}
+
+/* Style for the "Cancel my account" button */
+.cancel-account button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-account button:hover {
+  background-color: #c9302c;
+}
+
+/* Style for error messages specific to Devise */
+.error_messages {
+  font-size: 14px;
+  margin-bottom: 20px;
 }
