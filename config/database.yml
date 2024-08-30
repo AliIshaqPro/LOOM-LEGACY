@@ -16,6 +16,6 @@ test:
 
 production:
   <<: *default
-  database: looms_legacy_production-1
+  database: looms_legacy_production-2
   username: ec2-user
   
