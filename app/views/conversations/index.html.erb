@@ -129,7 +129,7 @@
 <% end %>
 
         <div class="info">
-          <h5 class="mb-1"><b><%= conversation.other_user(current_user).email %></b></h5>
+          <h5 class="mb-1"><b><%= conversation.other_user(current_user).username %></b></h5>
           <p style="font-size: 0.75rem; color: #666; margin: 0;">
           <% if most_recent_message.present? %>
             <%= truncate(most_recent_message.body, length: 100) %>
@@ -139,8 +139,8 @@
         </p>
         </div>
         <small class="text-body-secondary">
-  <%= @most_recent_message.present? ? @most_recent_message.created_at.strftime('%I:%M:%S %p') : '- - - - - - - -' %>
-</small>
+      <%= @most_recent_message.present? ? @most_recent_message.created_at.strftime('%I:%M:%S %p') : '- - - - - - - -' %>
+    </small>
 
 
       <% end %>

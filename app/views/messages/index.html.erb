@@ -78,13 +78,20 @@
   </div>
 </div>
 
-<%= form_with(model: [@conversation, Message.new], remote: true, html: {id: 'new_message_form', class: 'custom-form sticky-form'}) do |form| %>
+<%= form_with(model: [@conversation, Message.new], remote: true, id: 'new_message_form', html: { class: 'custom-form sticky-form' }) do |form| %>
   <%= form.hidden_field :conversation_id, value: @conversation.id %>
   <div class="form-group">
     <%= form.text_area :body, id: "message_body", class: "text-input", placeholder: "Type a message...", style: "width: 90%; height: 40px; border-radius: 10px; float: left; box-sizing: border-box;" %>
     <%= form.submit "Send", style: "width: 10%; height: 40px; float: left; background-color: #00942c; color: #fff; border: none; border-radius: 4px; padding: 10px 20px; cursor: pointer; font-size: 16px;" %>
   </div>
 <% end %>
+
+<script>
+  // Ensure form submission is working via AJAX
+  $('#new_message_form').on('ajax:beforeSend', function() {
+    console.log('Form submission via AJAX is being triggered.');
+  });
+</script>
 
 <script>
   // Listen for the Enter keypress to submit the form

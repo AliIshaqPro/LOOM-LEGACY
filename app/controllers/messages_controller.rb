@@ -25,22 +25,24 @@ def index
 end
 
 
-  def create
-    @message = @conversation.messages.build(message_params)
-    @message.user = current_user
+def create
+  @message = @conversation.messages.build(message_params)
+  @message.user = current_user
 
-    if @message.save
-      respond_to do |format|
-        format.html { redirect_to conversation_messages_path(@conversation) }
-        format.js   # This will look for create.js.erb
-      end
-    else
-      respond_to do |format|
-        format.html { render :index }
-        format.js   { render 'create_error.js.erb' } # Optionally handle errors with AJAX as well
-      end
+  if @message.save
+    respond_to do |format|
+      format.html { redirect_to conversation_messages_path(@conversation) }
+      format.js   # This will render create.js.erb
+    end
+  else
+    respond_to do |format|
+      format.html { render :index }
+      format.js   { render 'create_error.js.erb' } # Handle errors with AJAX as well
     end
   end
+end
+
+
 
   private
 
