@@ -1,13 +1,5 @@
-<!-- app/views/messages/_message.html.erb -->
-<%= stylesheet_link_tag "whatsapp", "data-turbo-track": "reload" %>
-<% if message.user == current_user %>
-  <p style="text-align: right; background-color: #e0f7fa; padding: 5px; margin: 5px; border-radius: 10px;">
-    <%= message.body %> <br>
-    <small><%= message.user.email %></small>
-  </p>
-<% else %>
-  <p style="text-align: left; background-color: #f1f8e9; padding: 5px; margin: 5px; border-radius: 10px;">
-    <%= message.body %> <br>
-    <small><%= message.user.email %></small>
-  </p>
-<% end %>
+<%= stylesheet_link_tag 'whatsapp', media: 'all', 'data-turbo-track': 'reload' %>
+<p class="<%= message.user_id == current_user.id ? 'my-message' : 'other-message' %>">
+  <%= message.body %><br>
+  <small><%= message.created_at.strftime('%I:%M:%S %p') %></small>
+</p>

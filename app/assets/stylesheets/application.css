@@ -4,6 +4,7 @@ body, h1, h3, p, a {
     padding: 0;
     text-decoration: none;
     color: inherit;
+    background-color: rgb(0, 54, 107);
 }
 
 /* Body styling */
@@ -11,22 +12,8 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #f7b9b9;
     color: #333;
-}
-
-/* Sidebar styling for retracted state */
-#sidebar.retracted {
-    transform: translateX(-13rem);
-    width: 4rem;
-}
-
-#sidebar.retracted .space-x-2 span {
-    display: none;
-}
-
-#sidebar.retracted .h-screen {
-    width: 4rem;
 }
 
 /* Container styling */
@@ -37,6 +24,8 @@ body {
     text-align: center;
     color: #fff;
     justify-content: center;
+    background-color: rgb(4, 119, 119);
+    border-radius: 10px;
 }
 
 /* Header styling */
@@ -198,6 +187,7 @@ form button {
 @media (max-width: 768px) {
     .departments-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        border-radius: 10px;
     }
 
     header h1 {
@@ -237,5 +227,10 @@ form button {
     .departments-grid div {
         height: 80px;
         font-size: 0.8rem;
+        border-radius: 10px;
+    }
+    .departments-grid a {
+        
+        border-radius: 10px;
     }
 }

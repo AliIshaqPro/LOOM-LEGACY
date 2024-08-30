@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_28_151216) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_29_230025) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -335,6 +335,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_28_151216) do
     t.integer "recipient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["sender_id", "recipient_id"], name: "index_conversations_on_sender_id_and_recipient_id"
   end
 
   create_table "customer_relations_managers", force: :cascade do |t|
@@ -824,6 +825,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_28_151216) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["conversation_id", "created_at"], name: "index_messages_on_conversation_id_and_created_at"
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
   end
 
   create_table "office_managers", force: :cascade do |t|

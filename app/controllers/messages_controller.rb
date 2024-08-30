@@ -6,11 +6,14 @@ class MessagesController < ApplicationController
 # app/controllers/messages_controller.rb
 # MessagesController
 def index
-  @messages = @conversation.messages.order(created_at: :asc)
+  @conversation = Conversation.find(params[:conversation_id])
+  @messages = @conversation.messages
+    .order(created_at: :desc)
+    .limit(6)
+    .to_a
+    .reverse
   @most_recent_message = @conversation.messages.order(created_at: :desc).first
 end
-
-
 
 
   def create
