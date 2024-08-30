@@ -60,9 +60,13 @@
             <div class="d-grid gap-2">
               <button class="btn btn-primary" type="button">Button</button>
 <button class="btn btn-primary" type="button">Button</button>
-<button class="btn btn-primary" onclick="addContent()">Add Content</button>
-<%= link_to 'Logout', destroy_board_member_session_path, method: :delete, class: "btn btn-primary" %>
-<%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-primary" %>
+<!-- Logout button -->
+<%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-primary"%>
+
+<!-- Edit Profile button styled as a button using link_to -->
+<%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-secondary" %>
+
+
             </div>
           </ul>
         </div>
@@ -81,8 +85,8 @@
 <%= form_with(model: [@conversation, Message.new], remote: true, id: 'new_message_form', html: { class: 'custom-form sticky-form' }) do |form| %>
   <%= form.hidden_field :conversation_id, value: @conversation.id %>
   <div class="form-group">
-    <%= form.text_area :body, id: "message_body", class: "text-input", placeholder: "Type a message...", style: "width: 90%; height: 40px; border-radius: 10px; float: left; box-sizing: border-box;" %>
-    <%= form.submit "Send", style: "width: 10%; height: 40px; float: left; background-color: #00942c; color: #fff; border: none; border-radius: 4px; padding: 10px 20px; cursor: pointer; font-size: 16px;" %>
+    <%= form.text_area :body, id: "message_body", class: "text-input", placeholder: "Type a message...", style: "width: 70%; height: 40px; border-radius: 10px; float: left; box-sizing: border-box;" %>
+    <%= form.submit "Send", style: "width: 20%; height: 40px; float: left; background-color: #00942c; color: #fff; border: none; border-radius: 4px; padding: 10px 20px; cursor: pointer; font-size: 16px;" %>
   </div>
 <% end %>
 

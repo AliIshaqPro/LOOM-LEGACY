@@ -34,8 +34,7 @@
             <div class="d-grid gap-2">
                <button class="btn btn-primary" type="button">Button</button>
 <button class="btn btn-primary" type="button">Button</button>
-<button class="btn btn-primary" onclick="addContent()">Add Content</button>
-<%= link_to 'Logout', destroy_board_member_session_path, method: :delete, class: "btn btn-primary" %>
+<%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-primary"%>
 <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-primary" %>
             </div>
           </ul>
@@ -116,7 +115,7 @@
   <% end %>
 </div>
 
-
+<div style="padding-bottom: 100px;>
     <div class="list-group">
   <ul style="list-style: none; padding-left: 0; margin-left: 0;"> <!-- Remove default list padding -->
     <% @conversations.each do |conversation| %>
@@ -148,7 +147,7 @@
   </ul>
 </div>
 
-</div>
+</div></div>
 
     <footer class="footer">
       <div class="footer-icons">
