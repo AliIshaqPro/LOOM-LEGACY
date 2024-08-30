@@ -7,12 +7,21 @@ class MessagesController < ApplicationController
 # MessagesController
 def index
   @conversation = Conversation.find(params[:conversation_id])
+
+  # Fetch last 6 messages, ordered from oldest to newest
   @messages = @conversation.messages
     .order(created_at: :desc)
-    .limit(6)
+    .limit(50)
     .to_a
     .reverse
+
+  # Fetch the most recent message
   @most_recent_message = @conversation.messages.order(created_at: :desc).first
+
+  # Handle case where no messages exist
+  if @most_recent_message.nil?
+    flash[:notice] = "No messages available."
+  end
 end
 
 

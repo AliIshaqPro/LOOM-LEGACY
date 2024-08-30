@@ -1,5 +1,52 @@
 <%= stylesheet_link_tag 'whatsapp', media: 'all', 'data-turbo-track': 'reload' %>
+<script>
+    var scrollInterval;
+    var isScrolling = false;
+    var lastScrollTop = 0;
+
+    // Auto scroll function
+    function autoScroll() {
+      if (!isScrolling) {
+        window.scrollBy(0, 4000); // Scroll down by 1 pixel
+      }
+    }
+
+    // Function to stop auto-scrolling when user scrolls
+    function stopAutoScrollOnUserScroll() {
+      isScrolling = true; // User is actively scrolling
+      clearInterval(scrollInterval); // Stop auto-scrolling
+    }
+
+    // Resume auto-scroll after user stops scrolling for a while
+    function resumeAutoScroll() {
+      isScrolling = false; // Allow auto-scroll again
+      scrollInterval = setInterval(autoScroll, 10); // Resume auto-scrolling
+    }
+
+    // Event listener for detecting user scroll and stopping auto-scroll
+    window.onscroll = function() {
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+
+      // If user scrolls up, pause auto-scrolling
+      if (st < lastScrollTop) {
+        stopAutoScrollOnUserScroll();
+      }
+
+      lastScrollTop = st <= 0 ? 0 : st; // For mobile or negative scrolling
+
+      // Clear any existing timers and resume auto-scroll after 3 seconds of inactivity
+      clearTimeout(isScrolling);
+      isScrolling = setTimeout(resumeAutoScroll, 5000); // Adjust time as needed
+    };
+
+    // Start auto-scrolling once the page is fully loaded
+    window.onload = function() {
+      scrollInterval = setInterval(autoScroll, 10); // Start auto-scrolling
+    };
+  </script>
 <p class="<%= message.user_id == current_user.id ? 'my-message' : 'other-message' %>">
   <%= message.body %><br>
   <small><%= message.created_at.strftime('%I:%M:%S %p') %></small>
 </p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+8G5Wcl5ZY8NTN1LNN0iJp+gGXP7gkpH5VmbvGKO" crossorigin="anonymous"></script>

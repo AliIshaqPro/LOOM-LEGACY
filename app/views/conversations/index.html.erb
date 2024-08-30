@@ -69,13 +69,9 @@
      <%= form_with url: conversations_path, method: :post do |f| %>
   <%= f.hidden_field :sender_id, value: current_user.id %>
 
-  <!-- Phone Number Search Field -->
-  <div class="form-group">
-    <%= f.text_field :phone_number, placeholder: 'Search by phone number', class: 'form-control', style: 'width: 70%; height: 40px; box-sizing: border-box; border-radius: 4px 0 0 4px; border-right: none;' %>
-  </div>
-
   <!-- Collection Select -->
   <div class="form-group">
+    <%= f.collection_select :recipient_id, User.where.not(id: current_user.id), :id, :phone_number, prompt: 'Select a recipient by phone number' %>
     <%= f.collection_select :recipient_id, @filtered_users, :id, :phone_number, prompt: 'Select a recipient', class: 'form-control', style: 'width: 70%; height: 40px;' %>
   </div>
 
@@ -109,13 +105,17 @@
 
       </div>
     </div>
-<%= form_with url: conversations_path, method: :post do |f| %>
-  <%= f.hidden_field :sender_id, value: current_user.id %>
-  <div class="form-group" style="display: flex; align-items: stretch; width: 100%; height: 40px; box-sizing: border-box;">
-    <%= f.text_field :phone_number, class: "form-control", placeholder: "Enter recipient's phone number...", style: "width: 70%; height: 100%; box-sizing: border-box; border-radius: 4px 0 0 4px; border-right: none; margin: 0; padding: 0; line-height: 1.5;" %>
-    <%= f.submit "Start", class: "btn btn-primary", style: "width: 30%; height: 100%; background-color: #00942c; color: #fff; border: none; border-radius: 0 4px 4px 0; padding: 0; cursor: pointer; font-size: 16px; margin: 0;" %>
-  </div>
-<% end %>
+<div style="width: 100%; padding: 10px; box-sizing: border-box;">
+  <%= form_with url: conversations_path, method: :post, html: { style: "width: 100%;" } do |f| %>
+    <%= f.hidden_field :sender_id, value: current_user.id %>
+
+    <div style="display: flex; align-items: stretch; width: 100%; height: 40px; box-sizing: border-box;">
+      <%= f.text_field :phone_number, class: "form-control", placeholder: "Enter recipient's phone number...", style: "flex: 1; height: 100%; box-sizing: border-box; border-radius: 4px 0 0 4px; border-right: none; padding: 0 10px; line-height: 1.5;" %>
+      <%= f.submit "Start", class: "btn btn-primary", style: "flex: 0 0 20%; height: 100%; background-color: #00942c; color: #fff; border: none; border-radius: 0 4px 4px 0; cursor: pointer; font-size: 16px;" %>
+    </div>
+  <% end %>
+</div>
+
 
     <div class="list-group">
   <ul style="list-style: none; padding-left: 0; margin-left: 0;"> <!-- Remove default list padding -->
@@ -129,7 +129,7 @@
 <% end %>
 
         <div class="info">
-          <h5 class="mb-1"><b><%= conversation.other_user(current_user).username %></b></h5>
+          <h5 class="mb-1"><b><%= conversation.other_user(current_user).email %></b></h5>
           <p style="font-size: 0.75rem; color: #666; margin: 0;">
           <% if most_recent_message.present? %>
             <%= truncate(most_recent_message.body, length: 100) %>
@@ -138,14 +138,18 @@
           <% end %>
         </p>
         </div>
-        <small class="text-body-secondary"><%= most_recent_message.created_at.strftime('%I:%M:%S %p') %>
+        <small class="text-body-secondary">
+  <%= @most_recent_message.present? ? @most_recent_message.created_at.strftime('%I:%M:%S %p') : '- - - - - - - -' %>
 </small>
+
+
       <% end %>
     <% end %>
   </ul>
 </div>
 
 </div>
+
     <footer class="footer">
       <div class="footer-icons">
         <a href="https://example.com/facebook" target="_blank"
