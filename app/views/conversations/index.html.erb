@@ -138,15 +138,16 @@
         </p>
         </div>
         <small class="text-body-secondary">
-      <%= @most_recent_message.present? ? @most_recent_message.created_at.strftime('%I:%M:%S %p') : '- - - - - - - -' %>
+      <% if most_recent_message.created_at.present? %>
+            <%= most_recent_message.created_at.strftime('%I:%M:%S %p') %>
+          <% else %>
+            <span style="font-size: 0.75rem; color: #666;">- - - - - - - - - - </span>
+          <% end %>
     </small>
-
-
       <% end %>
     <% end %>
   </ul>
 </div>
-
 </div></div>
 
     <footer class="footer">
