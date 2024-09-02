@@ -326,7 +326,7 @@ footer .social-media-icons {
 }
 
 .accordion-body {
-  background-color: black;
+  background-color: rgb(114, 2, 2);
   color: white;
   text-align: center;
 }
@@ -369,9 +369,7 @@ footer .social-media-icons {
   background-position: center;
   justify-content: center;
   align-items: center;
-  transform: translateX(-60%); /* Start off-screen to the left */
-  opacity: 0; /* Hidden initially */
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Smooth transition */
+  
 }
 
 .kpi.visible {
@@ -427,7 +425,13 @@ footer .social-media-icons {
 
 .kpi .description {
   margin: 0;
-  font-size: 30px;
+  font-size: 15px;
+  color: white;
+}
+
+.kpi p {
+  margin: 0;
+  font-size: 15px;
   color: white;
 }
 
