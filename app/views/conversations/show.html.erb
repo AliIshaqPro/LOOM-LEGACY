@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Scroll</title>
+  <%= stylesheet_link_tag 'whatsapp', media: 'all', 'data-turbolinks-track': 'reload' %>
+ 
+  <style>
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1619995745882-f4128ac82ad6?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-attachment: fixed;
+    background-size: cover; /* Optional: Ensures the image covers the entire viewport */
+    background-position: center; /* Optional: Centers the image in the viewport */
+}
+
+#scrollable-section {
+      height: 500px; /* Adjust height as needed */
+      overflow-y: auto; /* Enable vertical scrolling */
+      border: 1px solid #ccc; /* Optional, for visualization */
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <%if @conversation.other_user(current_user).photo.attached? %>
+  <%= image_tag @conversation.other_user(current_user).photo.variant(resize_to_fill: [50, 50]), alt: @conversation.other_user(current_user).username, class: 'rounded-circle' %>
+<% else %>
+  <%= image_tag 'ali.JPG', alt: 'Ali', width: 50, height: 50, class: 'rounded-circle' %>
+<% end %>
+      <h3 class="navbar-title" style="font-size: 20px;"><%= @conversation.other_user(current_user).username.upcase %></h3>
+      <div class="navbar-icons">
+        <button id="close-btn" onclick="closeCamera()" aria-label="Close Camera"
+          style="display: none; position: absolute; top: 10px; left: 10px;">Close</button>
+        <a href="javascript:void(0);" onclick="openCamera()"
+          aria-label="Camera">
+          <div style="position: relative; width: 100%; height: auto;">
+
+            <video id="camera-stream" autoplay
+              style="width: 100%; height: auto; display: none;"></video>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-outbound" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5"/>
+</svg>
+        </a>
+        <a href="javascript:void(0);" onclick="openCamera()"
+          aria-label="Camera">
+          <div style="position: relative; width: 100%; height: auto;">
+
+            <video id="camera-stream" autoplay
+              style="width: 100%; height: auto; display: none;"></video>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+            <path
+              d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z" />
+            <path
+              d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+          </svg>
+        </a>
+         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="dropdown-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"/>
+        <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"/>
+        <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"/>
+      </svg></button>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+  <button class="btn btn-primary w-100" type="button">Button</button>
+  <button class="btn btn-primary w-100" type="button">Button</button>
+  
+  <!-- Logout button -->
+  <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-primary w-100" %>
+  
+  <!-- Edit Profile button styled as a button using link_to -->
+  <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-primary w-100" %>
+  </div>
+</div>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <section id="scrollable-section">
+<div id="messages" style="margin-bottom: 25px;">
+  <% @messages.each do |message| %>
+    <p class="<%= message.user_id == current_user.id ? 'my-message' : 'other-message' %>">
+      <%= message.content %><br>
+      <small><%= message.created_at.strftime('%I:%M:%S %p') %></small>
+    </p>
+  <% end %>
+</div>
+</section>
+
+<%= form_with(model: @message, url: conversation_messages_path(@conversation), method: :post, data: { turbo_frame: "_top" }, class: 'custom-form sticky-form', id: 'new_message_form') do |f| %>
+ <div class="form-group">
+    <%= f.text_area :content, id: 'message_body', class: "text-input", placeholder: "Type a message...", style: "width: 70%; height: 40px; border-radius: 10px; float: left; box-sizing: border-box;" %>
+    <%= f.submit "Send", style: "width: 20%; height: 40px; float: left; background-color: #00942c; color: #fff; border: none; border-radius: 4px; padding: 10px 20px; cursor: pointer; font-size: 16px;" %>
+  </div>
+<% end %>
+<script>
+  let isUserScrolling = false;
+  let scrollTimeout;
+
+  function autoScroll() {
+    const section = document.getElementById('scrollable-section');
+    if (section && !isUserScrolling) {
+      section.scrollTop += 4000; // Scroll down by 100 pixels
+    }
+  }
+
+  function onUserScroll() {
+    isUserScrolling = true; // User is manually scrolling
+
+    // Clear any existing timeout
+    if (scrollTimeout) {
+      clearTimeout(scrollTimeout);
+    }
+
+    // Set a timeout to resume auto-scrolling after 5 seconds of inactivity
+    scrollTimeout = setTimeout(function() {
+      isUserScrolling = false; // Resume auto-scrolling
+    }, 2000); // 5 seconds of inactivity
+  }
+
+  // Start auto-scrolling once the page is fully loaded
+  window.onload = function() {
+    setInterval(autoScroll, 0.1); // Scroll every 10 milliseconds (adjust as needed)
+  }
+
+  // Add an event listener for user scroll events
+  const section = document.getElementById('scrollable-section');
+  if (section) {
+    section.addEventListener('scroll', onUserScroll);
+  }
+</script>
+<script>
+document.addEventListener('turbolinks:load', function() {
+  const form = document.getElementById('new_message_form');
+
+  form.addEventListener('ajax:success', function() {
+    window.scrollTo(0, document.body.scrollHeight);
+  });
+});
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('new_message_form');
+  const messageBody = document.getElementById('message_body');
+
+  // Clear the text area and focus it after the form submission
+  form.addEventListener('submit', function() {
+    setTimeout(() => {
+      messageBody.value = ''; // Clear the text area
+      messageBody.focus(); // Ensure the text area remains focused
+    }, 0); // Delay to ensure the form submission completes first
+  });
+
+  // Handle the Enter key press in the text area
+  messageBody.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault(); // Prevents the default action (e.g., adding a new line)
+      form.requestSubmit(); // Programmatically submits the form
+    }
+  });
+});
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const dropdownToggle = document.getElementById('dropdownToggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  dropdownToggle.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent click event from closing the dropdown immediately
+    const isVisible = dropdownMenu.style.display === 'block';
+    dropdownMenu.style.display = isVisible ? 'none' : 'block';
+    adjustDropdownPosition();
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.style.display = 'none';
+    }
+  });
+
+  function adjustDropdownPosition() {
+    const rect = dropdownMenu.getBoundingClientRect();
+    const isOverflowingLeft = rect.left < 0;
+    const isOverflowingRight = rect.right > window.innerWidth;
+    
+    if (isOverflowingLeft) {
+      dropdownMenu.style.left = '0'; // Reset position to keep it within screen
+      dropdownMenu.style.right = '0'; // Align to the right edge of the dropdown container
+    } else if (isOverflowingRight) {
+      dropdownMenu.style.left = 'auto';
+      dropdownMenu.style.right = '0'; // Ensure it stays within the right edge of the viewport
+    } else {
+      dropdownMenu.style.left = '0'; // Default positioning
+      dropdownMenu.style.right = 'auto';
+    }
+  }
+});
+function openCamera() {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function(stream) {
+      const video = document.getElementById('camera-stream');
+      const closeButton = document.getElementById('close-btn');
+      video.style.display = 'block'; // Show the video element
+      closeButton.style.display = 'block'; // Show the close button
+      video.srcObject = stream; // Display the camera stream
+    })
+    .catch(function(err) {
+      console.error("Error: " + err);
+    });
+}
+
+function closeCamera() {
+  const video = document.getElementById('camera-stream');
+  const closeButton = document.getElementById('close-btn');
+  const stream = video.srcObject;
+  if (stream) {
+    const tracks = stream.getTracks();
+    tracks.forEach(track => track.stop());
+    video.srcObject = null;
+    video.style.display = 'none'; // Hide the video element
+    closeButton.style.display = 'none'; // Hide the close button
+  }
+}
+
+  </script>
+</body>
+</html>
+
+

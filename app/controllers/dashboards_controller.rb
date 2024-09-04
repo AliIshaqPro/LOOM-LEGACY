@@ -168,7 +168,7 @@ class DashboardsController < ApplicationController
     def update_user_info
       @user = current_user
       if @user.update(user_params)
-        redirect_to whatsapp_home_path, notice: 'Your information has been updated successfully!'
+        redirect_to whatsapp_path, notice: 'Your information has been updated successfully!'
       else
         render :edit_user_info, alert: 'There was an error updating your information.'
       end

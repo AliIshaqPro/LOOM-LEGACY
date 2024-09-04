@@ -4,9 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+# Associations
+has_many :messages
+has_many :conversations, through: :messages
 
-         has_many :conversations, foreign_key: :sender_id
-  has_many :messages
 
   has_one_attached :photo
 

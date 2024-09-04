@@ -1,56 +1,32 @@
 class MessagesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_conversation
 
-  # MessagesController
-# app/controllers/messages_controller.rb
-# MessagesController
-def index
-  @conversation = Conversation.find(params[:conversation_id])
+  def create
+    @conversation = Conversation.find(params[:conversation_id])
+    @message = @conversation.messages.new(message_params)
+    @message.user = current_user
 
-  # Fetch last 6 messages, ordered from oldest to newest
-  @messages = @conversation.messages
-    .order(created_at: :desc)
-    .limit(50)
-    .to_a
-    .reverse
+    if @message.save
+      # Broadcast the new message to the conversation's channel
+      ConversationChannel.broadcast_to(
+        @conversation,
+        render_to_string(partial: "messages/message", locals: { message: @message, current_user: current_user })
+      )
 
-  # Fetch the most recent message
-  @most_recent_message = @conversation.messages.order(created_at: :desc).first
-
-  # Handle case where no messages exist
-  if @most_recent_message.nil?
-    flash[:notice] = "No messages available."
-  end
-end
-
-
-def create
-  @message = @conversation.messages.build(message_params)
-  @message.user = current_user
-
-  if @message.save
-    respond_to do |format|
-      format.html { redirect_to conversation_messages_path(@conversation) }
-      format.js   # This will render create.js.erb
-    end
-  else
-    respond_to do |format|
-      format.html { render :index }
-      format.js   { render 'create_error.js.erb' } # Handle errors with AJAX as well
+      respond_to do |format|
+        format.turbo_stream
+        format.html { redirect_to conversation_path(@conversation) }
+      end
+    else
+      flash.now[:alert] = "Message could not be sent."
+      @messages = @conversation.messages.order(created_at: :asc)
+      render "conversations/show"
     end
   end
-end
-
-
 
   private
 
-  def set_conversation
-    @conversation = Conversation.find(params[:conversation_id])
-  end
-
   def message_params
-    params.require(:message).permit(:body)
+    params.require(:message).permit(:content)
   end
 end

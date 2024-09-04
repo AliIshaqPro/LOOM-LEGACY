@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(https://pixabay.com/photos/monument-state-history-museum-6387465/);
+  background-color: #83f1a4;
 }
 /* Basic styling for the navbar */
 .navbar {
@@ -259,9 +259,22 @@ font-size:12px;
 }
 .list-group {
 padding-left: 0; /* Remove padding on the left side of the list group */
+padding-top: 5px;
+background-color: transparent;
+border: 1px solid #ccc;
+}
+.dropdown-icon {
+  fill: black; /* Default color */
 }
 
+.btn:hover .dropdown-icon {
+  fill: white; /* Color on hover */
+}
+
+
 .list-group-item {
+background-color: transparent;
+border: 1px solid #ccc;
 height: 80px; /* Set the height of the list group item */
 display: flex;
 align-items: flex-start; /* Align items to the top */

@@ -15,11 +15,11 @@ Rails.application.routes.draw do
   # get 'departments', to: 'loom_legacies#index'
   #root 'loom_legacies#home'
   #root 'dashboards#board_member'
-
-  resources :conversations, only: [:index, :create] do
-    resources :messages, only: [:index, :create]
+  
+  resources :conversations, only: [:index, :show, :create] do
+    resources :messages, only: [:create]
   end
-
+  
   #root to: 'conversations#index'
   
   get 'login', to: "main#index"

@@ -1,0 +1,41 @@
+ => 
+[[32m#<Conversation:0x000072f954b7f500[0m
+  id: [34m[1m1[0m,
+  sender_id: [36m[1mnil[0m,
+  recipient_id: [36m[1mnil[0m,
+  title: [31m[1m"[0m[31mAli[0m[31m[1m"[0m,
+  created_at: Tue, 03 Sep 2024 04:49:51.301525000 UTC +00:00,
+  updated_at: Tue, 03 Sep 2024 04:49:51.301525000 UTC +00:00,
+  user_id: [34m[1m1[0m[32m>[0m,
+ [32m#<Conversation:0x000072f9571ed980[0m
+  id: [34m[1m2[0m,
+  sender_id: [36m[1mnil[0m,
+  recipient_id: [36m[1mnil[0m,
+  title: [31m[1m"[0m[31mAli[0m[31m[1m"[0m,
+  created_at: Tue, 03 Sep 2024 05:16:17.507428000 UTC +00:00,
+  updated_at: Tue, 03 Sep 2024 05:16:17.507428000 UTC +00:00,
+  user_id: [34m[1m2[0m[32m>[0m,
+ [32m#<Conversation:0x000072f9571ed5c0[0m
+  id: [34m[1m3[0m,
+  sender_id: [36m[1mnil[0m,
+  recipient_id: [36m[1mnil[0m,
+  title: [31m[1m"[0m[31maas[0m[31m[1m"[0m,
+  created_at: Tue, 03 Sep 2024 05:22:12.846573000 UTC +00:00,
+  updated_at: Tue, 03 Sep 2024 05:22:12.846573000 UTC +00:00,
+  user_id: [34m[1m1[0m[32m>[0m,
+ [32m#<Conversation:0x000072f9571ed340[0m
+  id: [34m[1m4[0m,
+  sender_id: [36m[1mnil[0m,
+  recipient_id: [36m[1mnil[0m,
+  title: [31m[1m"[0m[31mAli[0m[31m[1m"[0m,
+  created_at: Tue, 03 Sep 2024 13:25:32.623809000 UTC +00:00,
+  updated_at: Tue, 03 Sep 2024 13:25:32.623809000 UTC +00:00,
+  user_id: [34m[1m2[0m[32m>[0m,
+ [32m#<Conversation:0x000072f9571ec6c0[0m
+  id: [34m[1m5[0m,
+  sender_id: [36m[1mnil[0m,
+  recipient_id: [36m[1mnil[0m,
+  title: [31m[1m"[0m[31mygghuj[0m[31m[1m"[0m,
+  created_at: Tue, 03 Sep 2024 13:27:22.792628000 UTC +00:00,
+  updated_at: Tue, 03 Sep 2024 13:27:22.792628000 UTC +00:00,
+  user_id: [34m[1m2[0m[32m>[0m] 

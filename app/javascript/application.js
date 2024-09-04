@@ -1,13 +1,5 @@
-// app/assets/javascripts/application.js
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
+// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
+import "@hotwired/turbo-rails"
+import "controllers"
+import "channels"
 
-
-// Additional Sprockets-specific JavaScript
-$(document).on('turbolinks:load', function() {
-    $('#new_message_form').on('ajax:beforeSend', function() {
-      console.log('Form submission via AJAX is being triggered.');
-    });
-  });
-  

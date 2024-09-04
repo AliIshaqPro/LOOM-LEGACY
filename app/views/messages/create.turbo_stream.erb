@@ -1,0 +1,15 @@
+<%= turbo_stream.append "messages" do %>
+  <div id="message_<%= @message.id %>">
+    <p class="<%= @message.user_id == current_user.id ? 'my-message' : 'other-message' %>">
+      <%= @message.content %><br>
+      <small><%= @message.created_at.strftime('%I:%M:%S %p') %></small>
+    </p>
+  </div>
+<% end %>
+
+<script>
+  document.addEventListener("turbo:load", function() {
+    var messagesContainer = document.getElementById('messages');
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  });
+</script>

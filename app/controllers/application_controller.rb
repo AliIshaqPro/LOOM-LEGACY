@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
       ceo_dashboard_path
     when User
       if resource.username.present? && resource.photo.present? && resource.phone_number.present?
-        whatsapp_home_path
+        conversations_path
       else
         edit_user_info_path
       end
