@@ -6,6 +6,8 @@ import "channels"
 import { Turbo } from "@hotwired/turbo-rails";
 Turbo.start();
 import 'bootstrap';
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap';
 
 
 // app/javascript/packs/application.js
