@@ -1,0 +1,431 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding-top: 10px;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-size: cover;  /* Ensures the background covers the entire viewport */
+    background-position: center; /* Centers the background */
+    background-attachment: fixed; /* Makes the background static */
+  }
+  
+  .navbar {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    height: 70px;
+  }
+  
+  #home {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-top: 56px;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  h2, h1 {
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: medium;
+  }
+  
+  .card {
+    display: none; /* Initially hidden */
+  }
+  
+  .card:active {
+    transform: scale(0.98); /* Slightly shrink the card when clicked */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Reset shadow to default on click */
+  }
+  
+  
+  footer {
+    background-color: #222;
+  }
+  
+  a {
+    color: #007bff;
+  }
+  
+  .content {
+    background-color: black;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  #navbar {
+    background-color: #343a40;
+    color: #3d0f0f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  #content {
+    margin-left: 300px;
+    flex: 1;
+    background-color: #343a40;
+  }
+  
+  .logo-link {
+    text-decoration: none;
+  }
+  
+  svg {
+    display: inline-block;
+  }
+  .logo {
+    justify-content: stretch;
+    background-image: url('mylogo.png');
+    background-size: contain; /* Ensure the image fits within the dimensions */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  nav {
+    display: flex;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bg-transparent {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .chart {
+    text-align: center;
+  }
+  
+  .dashboard {
+    width: 100%;
+    color: black;
+    margin: 0 auto;
+    background: #343a40;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  .social-media-icons svg {
+    width: 32px;  /* Increase size */
+    height: 32px; /* Increase size */
+    fill: white;  /* Change color to white */
+  }
+  
+  .social-media-icons a {
+    margin-right: 10px; /* Add spacing between icons */
+  }
+  
+  .social-media-icons a:hover svg {
+    fill: #ccc; /* Optional: change color on hover */
+  }
+  
+  
+  
+  .logo-link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .description {
+    transition: color 0.3s ease;
+    font-size: 20px;
+  }
+  
+  .description:hover {
+    color: #440c0c;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer .quick-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  footer .quick-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  footer .social-media-icons {
+    margin-bottom: 10px;
+  }
+  
+  .social-media-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-media-icons a {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .social-media-icons a:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+    border-color: #4b0082;
+  }
+  
+  .profileimage {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  .profileimage a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    background-color: transparent;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    width: 1100px;
+    height: 500px;
+    background-image: url('ali.JPG');
+  }
+  
+  .profileimage a.myprofile {
+    width: 500px;
+    height: 500px;
+    background-image: url('ali.JPG');
+  }
+  .profileimage a.cyber-cert {
+    width: 500px;
+    height: 500px;
+    background-image: url('https://cxotoday.com/wp-content/uploads/2023/05/Cybersecurity.jpeg');
+  }
+  .profileimage a.cpp {
+    width: 500px;
+    height: 500px;
+    background-image: url('https://www.educative.io/v2api/editorpage/5393602882568192/image/6038586442907648');
+  }
+  .profileimage a.rubyonrails {
+    width: 500px;
+    height: 500px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaaNchPIotTAIPEbzgmy1fSPTY4Hi3RsEqfw&s');
+  }
+  
+  .profileimage a.resume {
+    width: 400px;
+    height: 300px;
+    background-image: url('resume.png');
+  }
+  
+  .profileimage a.chatapp {
+    width: 700px;
+    height: 300px;
+    background-image: url('whatsapp.jpg');
+  }
+  
+  .profileimage a.loomlegacy {
+    width: 700px;
+    height: 300px;
+    background-image: url('1710448790923.jpg');
+  }
+  
+  
+  .accordion-item{
+    position: relative; /* Ensure it's positioned above other elements */
+    z-index: 2;         /* Increase z-index if there are overlapping elements */
+    
+  }
+  .accordion-button::after {
+    filter: invert(1);
+    text-align: center;
+  }
+  
+  .accordion-body {
+    background-color: rgb(114, 2, 2);
+    color: white;
+    text-align: center;
+  }
+  .profileimage a.restaurant {
+    width: 700px;
+    height: 300px;
+    background-image: url('restaurant.jpg');
+  }
+  
+  .row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .row a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    background-color: transparent;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+  }
+  .kpi {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    padding: 30px;
+    border: 10px solid #ddd;
+    border-radius: 15px;
+    background-color: transparent;
+    text-align: center;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .kpi.visible {
+    transform: translateX(0); /* Move to original position */
+    opacity: 1; /* Fully visible */
+  }
+  
+  .kpi:hover {
+    transform: translateX(0); /* Slide in from the left */
+    opacity: 1; /* Make visible */
+    border-color: #313f64; /* Change border color on hover */
+    
+  }
+  
+  .kpi::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    border-radius: inherit;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .kpi:hover::before {
+    opacity: 1; /* Show the overlay on hover */
+  }
+  
+  .kpi .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .kpi h2, .kpi h1 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: white;
+    
+  }
+  
+  .kpi .value {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin: 0 0 50px;
+    position: static;
+  }
+  
+  .kpi .description {
+    margin: 0;
+    font-size: 15px;
+    color: white;
+  }
+  
+  .kpi p {
+    margin: 0;
+    font-size: 15px;
+    color: white;
+  }
+  
+  /* Additional animations */
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+    50% {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+    }
+    100% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+  }
+  
+  .kpi:hover h2, .kpi:hover h1 {
+    animation: glow 1.5s infinite alternate; /* Apply glow animation on hover */
+  }
+  
+  .blog-post:hover {
+    transform: scale(1.1);
+  
+    opacity: 1; /* Make visible */
+    border-color: #313f64; /* Change border color on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  .kpi a {
+    position: relative; /* Ensure it's positioned above other elements */
+    z-index: 2;         /* Increase z-index if there are overlapping elements */
+    display: inline-block; /* Ensure it's treated as a clickable block */
+  }
+  
+  .card-body {
+  
+    background-color: darkgray;
+  }

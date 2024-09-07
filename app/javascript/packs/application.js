@@ -11,4 +11,3 @@ import 'bootstrap/dist/css/bootstrap';
 
 
 Rails.start();
-import '../custom';

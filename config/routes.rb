@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'loomlegacies', to: 'loom_legacies#home'
   get 'loomlegacies_login', to: 'loom_legacies#index'
   get 'whatsapp', to: 'conversations#index'
-  root 'profile#index'
+  root 'profile#new'
   # get 'departments', to: 'loom_legacies#index'
   #root 'loom_legacies#home'
   #root 'dashboards#board_member'
