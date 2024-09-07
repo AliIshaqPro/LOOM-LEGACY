@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'loomlegacies', to: 'loom_legacies#home'
   get 'loomlegacies_login', to: 'loom_legacies#index'
   get 'whatsapp', to: 'conversations#index'
-  root 'profile#new'
+  root 'profile#index'
   # get 'departments', to: 'loom_legacies#index'
   #root 'loom_legacies#home'
   #root 'dashboards#board_member'
@@ -98,5 +98,7 @@ get 'dashboard/edit_user_info', to: 'dashboards#edit_user_info', as: :edit_user_
 patch 'dashboard/update_user_info', to: 'dashboards#update_user_info', as: :update_user_info
 
 get 'conversations/index', to: 'conversations#index', as: :whatsapp_home  
+
+mount ActionCable.server => '/cable'
 
 end

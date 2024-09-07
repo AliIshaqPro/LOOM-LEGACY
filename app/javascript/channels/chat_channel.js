@@ -1,8 +1,14 @@
-// app/javascript/channels/chat_channel.js
 import consumer from "./consumer"
 
-consumer.subscriptions.create({ channel: "ChatChannel", conversation_id: conversation_id }, {
-  received(data) {
-    document.getElementById('messages').innerHTML += data.message
+const conversationId = document.getElementById('messages').dataset.conversationId;
+
+consumer.subscriptions.create(
+  { channel: "ConversationChannel", id: conversationId }, // Use the correct id here
+  {
+    received(data) {
+      // Insert the received message via Turbo Streams
+      document.getElementById("messages").insertAdjacentHTML("beforeend", data);
+      scrollToBottom();
+    }
   }
-});
+);

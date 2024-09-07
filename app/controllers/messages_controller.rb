@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
     @message.user = current_user
 
     if @message.save
+      Turbo::StreamsChannel.broadcast_append_to "conversation_#{@conversation.id}", target: "messages"
       # Broadcast the new message to the conversation's channel
       ConversationChannel.broadcast_to(
         @conversation,

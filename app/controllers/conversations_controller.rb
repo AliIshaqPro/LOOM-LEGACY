@@ -25,6 +25,9 @@ class ConversationsController < ApplicationController
 
   
   def show
+    @conversations = Conversation.where(sender_id: current_user.id).or(Conversation.where(recipient_id: current_user.id))
+    @conversation = Conversation.new
+    @users = User.where.not(id: current_user.id)
     @conversation = Conversation.find(params[:id])
     @messages = @conversation.messages
     @message = Message.new

@@ -1,5 +1,27 @@
-// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
-import "controllers"
-import "channels"
+//= require jquery
+//= require rails-ujs
+//= require_tree .
 
+import { Turbo } from "@hotwired/turbo-rails"
+import { createConsumer } from "@rails/actioncable"
+
+Turbo.start()
+
+const consumer = createConsumer()
+const conversationId = document.getElementById('messages').dataset.conversationId
+
+consumer.subscriptions.create(
+  { channel: "ConversationChannel", id: conversationId },
+  {
+    received(data) {
+      const messagesElement = document.getElementById("messages")
+      messagesElement.insertAdjacentHTML("beforeend", data)
+      scrollToBottom()
+    }
+  }
+)
+
+function scrollToBottom() {
+  const messagesElement = document.getElementById("messages")
+  messagesElement.scrollTop = messagesElement.scrollHeight
+}
