@@ -12,6 +12,24 @@ body {
     background-position: center; /* Centers the background */
     background-attachment: fixed; /* Makes the background static */
   }
+  .nav-link {
+    border: 2px solid #02172e; /* Add a solid border with your preferred color */
+    padding: 5px 10px;         /* Adds padding inside the borders */
+    border-radius: 5px;        /* Optional: rounds the corners */
+    margin: 0 5px;             /* Adds space between the links */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+  }
+  .img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+  .nav-link:hover {
+    background-color: #0b488a; /* Change background color on hover */
+    color: white;              /* Change text color on hover */
+    border-color: #4e565e;     /* Darker border on hover */
+  }
   
   .navbar {
     margin: 0;
@@ -70,7 +88,7 @@ body {
   }
   
   #navbar {
-    background-color: #343a40;
+    background-color: #216fbd;
     color: #3d0f0f;
     position: fixed;
     top: 0;

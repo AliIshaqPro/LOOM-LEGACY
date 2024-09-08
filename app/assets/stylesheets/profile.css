@@ -9,7 +9,7 @@ body {
   max-width: 100%;
   box-sizing: border-box;
   /* Background properties */
-  background-image: url('https://images.unsplash.com/photo-1650954316234-5d7160b24eed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsYWNrfGVufDB8fDB8fHww');
+  background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;  /* Ensures the background covers the entire viewport */
   background-position: center; /* Centers the background */
   background-attachment: fixed; /* Makes the background static */
