@@ -4,7 +4,7 @@ body, h1, h3, p, a {
     padding: 0;
     text-decoration: none;
     color: inherit;
-    background-color: rgb(0, 54, 107);
+    background-color: rgb(5, 24, 43);
 }
 
 /* Body styling */
@@ -12,7 +12,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     box-sizing: border-box;
-    background-color: #f7b9b9;
+    background-color: #000000;
     color: #333;
 }
 
@@ -24,7 +24,7 @@ body {
     text-align: center;
     color: #fff;
     justify-content: center;
-    background-color: rgb(4, 119, 119);
+    background-color: rgb(144, 170, 170);
     border-radius: 10px;
 }
 
@@ -112,6 +112,7 @@ section h2 {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-radius: 10px;
 }
 
 /* Responsive design */

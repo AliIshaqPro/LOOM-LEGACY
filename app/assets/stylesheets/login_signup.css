@@ -20,7 +20,7 @@ body, html {
   height: 100%;
   font-family: Arial, sans-serif;
   overflow: hidden; /* Ensure there's no scrolling */
-  background-color: #851919; /* Black background */
+  background-color: #797171; /* Black background */
 }
 
 .parallax {
@@ -48,7 +48,7 @@ h1 {
 }
 
 .card {
-  background-color: #a01111;
+  background-color: #c4aeae;
   padding: 20px;
   margin-top: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

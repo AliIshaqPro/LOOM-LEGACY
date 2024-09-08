@@ -12,12 +12,21 @@ body {
     background-position: center; /* Centers the background */
     background-attachment: fixed; /* Makes the background static */
   }
+
+  .social-media-icons {
+    display: flex;
+    justify-content: center; /* Horizontal alignment */
+    align-items: center; /* Vertical alignment */
+    height: 100%; /* Ensure the parent container has a defined height */
+  }
+  
   .nav-link {
     border: 2px solid #02172e; /* Add a solid border with your preferred color */
     padding: 5px 10px;         /* Adds padding inside the borders */
     border-radius: 5px;        /* Optional: rounds the corners */
     margin: 0 5px;             /* Adds space between the links */
     transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+    background-color: #02172e;
   }
   .img-responsive {
     max-width: 100%;
@@ -101,6 +110,12 @@ body {
     flex: 1;
     background-color: #343a40;
   }
+  
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
   
   .logo-link {
     text-decoration: none;
@@ -447,3 +462,83 @@ body {
   
     background-color: darkgray;
   }
+
+
+/* About Section */
+#about {
+  padding: 50px 0;
+  background-color: #107c97;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Products Section */
+#products {
+  padding: 50px 0;
+}
+
+#products h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.product-item {
+  background-color: #c09a9a;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.product-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 0;
+  background-color: #2c3e50;
+  color: white;
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#contact .btn {
+  background-color: #e67e22;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+}
