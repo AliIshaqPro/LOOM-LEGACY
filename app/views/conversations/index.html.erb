@@ -14,6 +14,49 @@ body {
   </style>
  </head>
 <body>
+<div class="d-grid gap-2">
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-person-plus-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+          <path fill-rule="evenodd"
+            d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
+        </svg> <h4>Select a New Contact</h4></button>
+    </div>
+<div style="padding-bottom: 100px;">
+    <% @conversations.each do |conversation| %>
+      <% most_recent_message = conversation.messages.order(created_at: :desc).first %>
+      <%= link_to conversation_path(conversation), class: 'list-group-item list-group-item-action border border-secondary py-2 mb-2', style: 'background-color: rgba(255, 255, 255, 0.5); z-index:0;' do %>
+        <% other_user = conversation.other_user(current_user) %>
+        <% if other_user.photo.attached? %>
+          <%= image_tag other_user.photo.variant(resize_to_fill: [50, 50]), alt: other_user.username, class: 'rounded-circle' %>
+        <% else %>
+          <%= image_tag 'ali.JPG', alt: 'Ali', width: 50, height: 50, class: 'rounded-circle' %>
+        <% end %>
+        <div class="info">
+          <h5 class="mb-1"><b><%= other_user.username %></b></h5>
+          <p style="font-size: 0.75rem; color: Black; margin: 0;">
+            <% if most_recent_message.present? %>
+              <%= truncate(most_recent_message.content, length: 30) %>
+            <% else %>
+              <span style="font-size: 0.75rem; color: #666;">- - - - - - - - - - </span>
+            <% end %>
+          </p>
+        </div>
+        <small class="text-body-secondary">
+          <% if most_recent_message.present? %>
+            <p style="font-size:10px;"><%= most_recent_message.created_at.strftime('%I:%M:%S %p') %></p>
+          <% else %>
+            <span style="font-size: 0.75rem; color: #666;">- - - - - - - - - - </span>
+          <% end %>
+        </small>
+      <% end %>
+    <% end %>
+  </div>  
+  
     <nav class="navbar">
       
       <h3 class="navbar-title">CHATSPHERE</h3>
@@ -43,7 +86,7 @@ body {
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Setting</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
@@ -62,52 +105,9 @@ body {
         </div>
       </div>
     </nav>
-    <div class="d-grid gap-2">
-      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-          fill="currentColor" class="bi bi-person-plus-fill"
-          viewBox="0 0 16 16">
-          <path
-            d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-          <path fill-rule="evenodd"
-            d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
-        </svg> Select a New Contact</button>
-    </div>
-    <div style="padding-bottom: 100px;">
-    <div class="list-group">
-      <ul style="list-style: none; padding-left: 0; margin-left: 0;">
-        <% @conversations.each do |conversation| %>
-          <% most_recent_message = conversation.messages.order(created_at: :desc).first %>
-          <%= link_to conversation_path(conversation), class: 'list-group-item list-group-item-action border border-secondary py-2 mb-2', style: 'background-color: rgba(255, 255, 255, 0.2);' do %>
-            <% other_user = conversation.other_user(current_user) %>
-            <% if other_user.photo.attached? %>
-              <%= image_tag other_user.photo.variant(resize_to_fill: [50, 50]), alt: other_user.username, class: 'rounded-circle' %>
-            <% else %>
-              <%= image_tag 'ali.JPG', alt: 'Ali', width: 50, height: 50, class: 'rounded-circle' %>
-            <% end %>
-            <div class="info">
-              <h5 class="mb-1"><b><%= other_user.username %></b></h5>
-              <p style="font-size: 0.75rem; color: Black; margin: 0;">
-                <% if most_recent_message.present? %>
-                  <%= truncate(most_recent_message.content, length: 100) %>
-                <% else %>
-                  <span style="font-size: 0.75rem; color: #666;">- - - - - - - - - - </span>
-                <% end %>
-              </p>
-            </div>
-            <small class="text-body-secondary">
-              <% if most_recent_message.present? %>
-                <%= most_recent_message.created_at.strftime('%I:%M:%S %p') %>
-              <% else %>
-                <span style="font-size: 0.75rem; color: #666;">- - - - - - - - - - </span>
-              <% end %>
-            </small>
-          <% end %>
-        <% end %>
-      </ul>
-    </div>
-  </div>  
+    
+    
+
 <footer class="footer">
 <div class="footer-icons">
   <a href="https://example.com/facebook" target="_blank"
@@ -208,7 +208,7 @@ body {
       </div>
     
     </div>
-   
+  
   <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <script>

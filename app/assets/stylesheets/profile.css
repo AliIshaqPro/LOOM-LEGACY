@@ -326,15 +326,16 @@ footer .social-media-icons {
   padding: 30px;
   border: 10px solid #ddd;
   border-radius: 15px;
-  background-color: transparent;
+  background-color: black;
+  opacity: 0.9; /* Adjusted opacity value */
   text-align: center;
   height: auto;
   background-size: cover;
   background-position: center;
   justify-content: center;
   align-items: center;
-  
 }
+
 
 .kpi.visible {
   transform: translateX(0); /* Move to original position */
