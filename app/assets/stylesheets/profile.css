@@ -31,6 +31,7 @@ body {
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding-top: 56px;
+  
 }
 
 section {
@@ -268,13 +269,13 @@ footer .social-media-icons {
 
 .profileimage a.chatapp {
   width: 700px;
-  height: 300px;
+  height: 400px;
   background-image: url('whatsapp.jpg');
 }
 
 .profileimage a.loomlegacy {
   width: 700px;
-  height: 300px;
+  height: 400px;
   background-image: url('1710448790923.jpg');
 }
 
@@ -296,9 +297,16 @@ footer .social-media-icons {
 }
 .profileimage a.restaurant {
   width: 700px;
-  height: 300px;
-  background-image: url('restaurant.jpg');
+  height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1668901382969-8c73e450a1f5?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
+.profileimage a.bank {
+  width: 700px;
+  height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1601597110547-78516f198ce4?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+
 
 .row {
   display: flex;
@@ -326,7 +334,9 @@ footer .social-media-icons {
   padding: 30px;
   border: 10px solid #ddd;
   border-radius: 15px;
-  background-color: black;
+  background-color: rgba(26, 22, 22, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Applies the blur effect */
+  -webkit-backdrop-filter: blur(10px); 
   opacity: 0.9; /* Adjusted opacity value */
   text-align: center;
   height: auto;
@@ -335,6 +345,8 @@ footer .social-media-icons {
   justify-content: center;
   align-items: center;
 }
+/* Initial state: everything hidden */
+
 
 
 .kpi.visible {

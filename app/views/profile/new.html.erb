@@ -41,7 +41,7 @@
    
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-         <a class="navbar-brand" href="#home" style="font-weight: bold; font-size: 1.5rem;">  ALI ISHAQ</a>
+         <a class="navbar-brand" href="#home" style="font-weight: bold; font-size: 1.5rem; color:white; font-size:39px;">  ALI ISHAQ</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
          </button>
@@ -120,7 +120,7 @@
                <p>Beyond coding, I have a keen interest in politics and social issues, particularly within the context of Pakistan. I spend my free time researching and engaging in discussions about political strategies and social reforms. My long-term ambition is to contribute to the technological and political landscape of Pakistan, potentially stepping into a leadership role where I can drive meaningful change. Additionally, I enjoy exploring advancements in AI and cybersecurity, always staying updated with the latest trends to sharpen my skills and knowledge.</p>
             </div>
             <div class="kpi">
-               <h3>Skills</h3>
+               <h3 style="color:white;">Skills</h3>
                <div class="accordion accordion-flush" id="accordionFlushExample">
                   <div class="accordion-item">
                      <h2 class="accordion-header">
@@ -234,13 +234,17 @@
             </div>
             <p class="value" style="color:white;">LOOMS-LEGACY</p>
             <div class="profileimage">
-               <a href="/whatsapp" class="chatapp"></a>
+               <a href="/chatsphere_welcome" class="chatapp"></a>
             </div>
             <p class="value" style="color:white;">CHATSPHERE</p>
             <div class="profileimage">
-               <a href="mailto:your-email@example.com" class="restaurant"></a>
+               <a href="/tictactoe" class="restaurant"></a>
             </div>
-            <p class="value" style="color:white;">GASTRONOVA</p>
+            <p class="value" style="color:white;">TIC-TAC-TOE</p>
+            <div class="profileimage">
+               <a href="/smartbank" class="bank"></a>
+            </div>
+            <p class="value" style="color:white;">SMART-BANK</p>
          </div>
       </section>
       <section id="resume">
@@ -416,23 +420,26 @@
       </section>
       <div class="kpi">
       <section id="feedbacks">
-      <ol class="list-group list-group-numbered">
-  <% @feedbacks.each do |feedback| %>
-    <li class="list-group-item d-flex justify-content-between align-items-start">
-      <div class="ms-2 me-auto">
-        <b><%= feedback.message %><b>
-    </li>
-  <% end %>
-  <% if @feedbacks.empty? %>
-    <li class="list-group-item d-flex justify-content-between align-items-start">
-      <div class="ms-2 me-auto">
-        <div class="fw-bold">No Feedback</div>
-        No feedback messages available.
-      </div>
-      <span class="badge text-bg-secondary rounded-pill">0</span>
-    </li>
-  <% end %>
-</ol>
+      <div class="vstack gap-3">
+  <ol class="list-group list-group-numbered">
+    <% @feedbacks.each do |feedback| %>
+      <li class="list-group-item d-flex justify-content-between align-items-start p-2">
+        <div class="ms-2 me-auto">
+          <b><%= feedback.message %></b>
+        </div>
+      </li>
+    <% end %>
+    <% if @feedbacks.empty? %>
+      <li class="list-group-item d-flex justify-content-between align-items-start p-2">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">No Feedback</div>
+          No feedback messages available.
+        </div>
+        <span class="badge text-bg-secondary rounded-pill">0</span>
+      </li>
+    <% end %>
+  </ol>
+</div>
 </div>
       </section>
       <!-- Contact Section -->
@@ -464,6 +471,7 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <script>
+      
          // Retract the navbar when a nav item is clicked
          document.querySelectorAll('.nav-link').forEach(function(link) {
              link.addEventListener('click', function() {
@@ -524,6 +532,9 @@
       form.submit();
     }
   });
+  
       </script>
    </body>
 </html>
+
+  

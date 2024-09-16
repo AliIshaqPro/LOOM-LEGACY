@@ -2,7 +2,7 @@
   <div id="message_<%= @message.id %>">
     <p class="<%= @message.user_id == current_user.id ? 'my-message' : 'other-message' %>">
       <%= @message.content %><br>
-      <small><%= @message.created_at.strftime('%I:%M:%S %p') %></small>
+      <small style="font-size:10px;"><%= @message.created_at.strftime('%I:%M') %></small>
     </p>
   </div>
 <% end %>

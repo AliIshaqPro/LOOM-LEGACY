@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ali Ishaq 3D Sphere</title>
+  <%= javascript_include_tag 'index' %>
+
   <style>
     /* Basic styling for the content and container */
     body, html {
@@ -11,26 +13,34 @@
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      overflow: hidden; /* Ensure there's no scrolling */
       background-color: #000; /* Black background */
+      overflow-y: auto;
     }
 
     .parallax {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      width:100%;
       z-index: 2; /* Ensure this is on top of the 3D scene */
       position: relative; /* To position the content on top */
     }
 
     .content {
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
+      background-color:transparent;
+      
+      width: 100%;
       border-radius: 10px;
       text-align: center;
+      justify-content:center;
+      align-items:center;
       z-index: 3; /* Ensure content is above the sphere */
       position: relative; /* To ensure proper stacking */
+      display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
     }
 
     h1 {
@@ -47,7 +57,7 @@
       border-radius: 10px;
     }
 
-    /* Set up the canvas for Three.js */
+
     #threejs-container {
       position: fixed; /* Ensures it stays in place */
       background-color: black;
@@ -55,25 +65,24 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      z-index: 1; /* Sphere behind the content */
+      z-index: 1; 
     }
   </style>
 </head>
 <body>
-  <!-- Container for the Three.js scene -->
-  <div id="threejs-container"></div>
-  
-  <!-- Content on top of the 3D sphere -->
-  <div class="parallax">
-    <div class="content">
-      <h1>Ali Ishaq's 3D Sphere</h1>
-      <div class="card">
-        <p>This is a card on top of the rotating sphere background.</p>
-      </div>
-    </div>
-  </div>
+<!-- Container for the Three.js scene -->
+<div id="threejs-container" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: black; z-index: 1;"></div>
 
-  <!-- Three.js CDN -->
+<!-- Content on top of the 3D sphere -->
+<div class="parallax" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh; position: absolute; top: 0; left: 0; z-index: 2;">
+  <div class="content" style="text-align: center; color: white;">
+    <h1 style="font-size: 3rem; color:white;">ChatSphere</h1>
+    <p class="fs-2" style="font-size: 50px;">Welcome to Chatsphere</p><br>
+    <p class="fs-3">Thank You For Choosing Chatsphere</p><br>
+    <a href="/whatsapp" style="font-size: 20px; border: 5px solid black; background-color: rgba(26, 22, 22, 0.3); backdrop-filter: blur(10px); border-radius: 50px; padding: 1rem; text-decoration: none; color: white;">Click Here To Proceed</a>
+  </div>
+</div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   
 </body>

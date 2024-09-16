@@ -3,23 +3,7 @@
 <head>
   <title>Auto Scroll</title>
   <%= stylesheet_link_tag 'whatsapp', media: 'all', 'data-turbolinks-track': 'reload' %>
- 
-  <style>
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('https://images.unsplash.com/photo-1619995745882-f4128ac82ad6?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-attachment: fixed;
-    background-size: cover; /* Optional: Ensures the image covers the entire viewport */
-    background-position: center; /* Optional: Centers the image in the viewport */
-}
-
-#scrollable-section {
-  height: 500px; /* Adjust height as needed */
-  overflow-y: auto; /* Enable vertical scrolling */
-  margin-bottom:40px;
-}
-  </style>
+  
 </head>
 <body>
 
@@ -31,34 +15,8 @@ body {
 <% end %>
       <h3 class="navbar-title" style="font-size: 20px;"><%= @conversation.other_user(current_user).username.upcase %></h3>
       <div class="navbar-icons">
-        <button id="close-btn" onclick="closeCamera()" aria-label="Close Camera"
-          style="display: none; position: absolute; top: 10px; left: 10px;">Close</button>
-        <a href="javascript:void(0);" onclick="openCamera()"
-          aria-label="Camera">
-          <div style="position: relative; width: 100%; height: auto;">
+     
 
-            <video id="camera-stream" autoplay
-              style="width: 100%; height: auto; display: none;"></video>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-outbound" viewBox="0 0 16 16">
-  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5"/>
-</svg>
-        </a>
-        <a href="javascript:void(0);" onclick="openCamera()"
-          aria-label="Camera">
-          <div style="position: relative; width: 100%; height: auto;">
-
-            <video id="camera-stream" autoplay
-              style="width: 100%; height: auto; display: none;"></video>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-            fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
-            <path
-              d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z" />
-            <path
-              d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
-          </svg>
-        </a>
          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="dropdown-icon" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"/>
         <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"/>
@@ -96,46 +54,34 @@ body {
   <% end %>
 </div>
 </section>
-<%= form_with(model: @message, url: conversation_messages_path(@conversation), method: :post, data: { turbo_frame: "_top" }, class: 'sticky-form', id: 'new_message_form') do |f| %>
-    <%= f.text_area :content, id: 'message_body', class: "text-input", placeholder: "Type a message...", style: "width: 70%; height: 40px; border-radius: 5px; float: left; box-sizing: border-box;" %>
-    <%= f.submit "Send", style: "width: 30%; height: 40px; float: left; background-color: #00942c; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;" %>
+
+<%= form_with(model: @message, url: conversation_messages_path(@conversation), method: :post, data: { turbo_frame: "_top" }, class: 'sticky-form1', id: 'new_message_form') do |f| %>
+  <%= f.text_area :content, id: 'message_body', class: "text-input1" %>
+  
+  <!-- Wrap the submit button and dropup button in a flex container -->
+  <div class="button-group">
+    <%= f.button type: "submit", class: "submit-button1" do %><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+  <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+</svg><% end %>
+
+
+    <!-- Dropup button -->
+    <div class="btn-group dropup">
+      <button type="button" class="submit-button1" data-bs-toggle="dropdown" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-forward" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708"/>
+</svg>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Menu item 1</a></li>
+        <li><a class="dropdown-item" href="#">Menu item 2</a></li>
+        <li><a class="dropdown-item" href="#">Menu item 3</a></li>
+      </ul>
+    </div>
+  </div>
 <% end %>
-<script>
-  let isUserScrolling = false;
-  let scrollTimeout;
 
-  function autoScroll() {
-    const section = document.getElementById('scrollable-section');
-    if (section && !isUserScrolling) {
-      section.scrollTop += 4000; // Scroll down by 100 pixels
-    }
-  }
 
-  function onUserScroll() {
-    isUserScrolling = true; // User is manually scrolling
-
-    // Clear any existing timeout
-    if (scrollTimeout) {
-      clearTimeout(scrollTimeout);
-    }
-
-    // Set a timeout to resume auto-scrolling after 5 seconds of inactivity
-    scrollTimeout = setTimeout(function() {
-      isUserScrolling = false; // Resume auto-scrolling
-    }, 2000); // 5 seconds of inactivity
-  }
-
-  // Start auto-scrolling once the page is fully loaded
-  window.onload = function() {
-    setInterval(autoScroll, 0.1); // Scroll every 10 milliseconds (adjust as needed)
-  }
-
-  // Add an event listener for user scroll events
-  const section = document.getElementById('scrollable-section');
-  if (section) {
-    section.addEventListener('scroll', onUserScroll);
-  }
-</script>
 <script>
 document.addEventListener('turbolinks:load', function() {
   const form = document.getElementById('new_message_form');
@@ -230,5 +176,3 @@ function closeCamera() {
   </script>
 </body>
 </html>
-
-

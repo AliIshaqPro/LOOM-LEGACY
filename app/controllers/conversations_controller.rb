@@ -22,6 +22,22 @@ class ConversationsController < ApplicationController
       render :index
     end
   end
+  def create
+
+    recipient = User.find_by(phone_number: conversation_params[:phone_number])
+
+    if recipient
+      # Check if the conversation already exists
+      @conversation = Conversation.find_or_create_by(sender_id: current_user.id, recipient_id: recipient.id)
+
+      # Redirect to the conversation page or handle the response
+      redirect_to conversation_path(@conversation)
+    else
+      flash[:alert] = "User with the provided phone number not found."
+      render :index
+    end
+  end
+
 
   
   def show

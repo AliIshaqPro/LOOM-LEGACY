@@ -1,27 +1,26 @@
-//= require jquery
-//= require rails-ujs
-//= require_tree .
+import './index';
+import { Turbo } from "@hotwired/turbo-rails";
+import { createConsumer } from "@rails/actioncable";
 
-import { Turbo } from "@hotwired/turbo-rails"
-import { createConsumer } from "@rails/actioncable"
+Turbo.start();
 
-Turbo.start()
+const consumer = createConsumer();
+const messagesElement = document.getElementById('messages');
 
-const consumer = createConsumer()
-const conversationId = document.getElementById('messages').dataset.conversationId
+if (messagesElement) {
+  const conversationId = messagesElement.dataset.conversationId;
 
-consumer.subscriptions.create(
-  { channel: "ConversationChannel", id: conversationId },
-  {
-    received(data) {
-      const messagesElement = document.getElementById("messages")
-      messagesElement.insertAdjacentHTML("beforeend", data)
-      scrollToBottom()
+  consumer.subscriptions.create(
+    { channel: "ConversationChannel", id: conversationId },
+    {
+      received(data) {
+        messagesElement.insertAdjacentHTML("beforeend", data);
+        scrollToBottom();
+      }
     }
-  }
-)
+  );
+}
 
 function scrollToBottom() {
-  const messagesElement = document.getElementById("messages")
-  messagesElement.scrollTop = messagesElement.scrollHeight
+  messagesElement.scrollTop = messagesElement.scrollHeight;
 }

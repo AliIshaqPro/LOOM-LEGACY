@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   end
   resources :admin_panels
   get 'home/index'
-  
- 
-  
+
   get 'loomlegacies', to: 'loom_legacies#home'
   get 'loomlegacies_login', to: 'loom_legacies#index'
   get 'whatsapp', to: 'conversations#index'
+  get 'chatsphere_welcome', to: 'chatsphere_welcome_page#index'
+  get 'smartbank', to: 'smartbank#index'
+  get 'tictactoe', to: 'tictactoe#index'
   root 'profile#new'
   # get 'departments', to: 'loom_legacies#index'
   #root 'loom_legacies#home'
