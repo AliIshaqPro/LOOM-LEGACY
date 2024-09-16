@@ -38,18 +38,18 @@ body {
           <%= image_tag 'ali.JPG', alt: 'Ali', width: 50, height: 50, class: 'rounded-circle' %>
         <% end %>
         <div class="info">
-          <h5 class="mb-1"><b><%= other_user.username %></b></h5>
+          <h5 class="mb-1" style="color:white;"><b><%= other_user.username %></b></h5>
           <p style="font-size: 0.75rem; color: Black; margin: 0;">
             <% if most_recent_message.present? %>
-              <%= truncate(most_recent_message.content, length: 30) %>
+              <p style="color:white;"><%= truncate(most_recent_message.content, length: 30) %></p>
             <% else %>
-              <span style="font-size: 0.75rem; color: #666;">- - - - - No- - - - - </span>
+              <span style="font-size: 0.75rem; color: white;">- - - - - No- - - - - </span>
             <% end %>
           </p>
         </div>
         <small class="text-body-secondary">
           <% if most_recent_message.present? %>
-            <p style="font-size:10px;"><%= most_recent_message.created_at.strftime('%I:%M:%S %p') %></p>
+            <p style="font-size:15px; color:white;"><%= most_recent_message.created_at.strftime('%I:%M:%S %p') %></p>
           <% else %>
             <span style="font-size: 0.75rem; color: #666;">- - - - - - - - - - </span>
           <% end %>
