@@ -1,11 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Code Example</title>
-    <style>
-        pre {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Ishaq Video Background</title>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      color:white;
+      font-family: Arial, sans-serif;
+      overflow: hidden; /* Hide scrollbars */
+      overflow-y:auto;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Ensure video is behind other content */
+      overflow: hidden;
+    }
+
+    .video-background video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Cover the whole background */
+    }
+
+    .content {
+      position: relative; /* To ensure proper stacking */
+      z-index: 1; /* Content is above the video */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      font-size: 40px;
+      text-align:center;
+      color:white;
+    }
+
+    p {
+      font-size: 20px;
+      color:white;
+    }
+
+    a {
+      font-size: 20px;
+      border: 2px solid white;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    h3{
+        
+        color:white;
+    }
+    
+
+    a:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    pre {
             background-color: #f4f4f4;
             border: 1px solid #ddd;
             padding: 10px;
@@ -16,53 +88,3586 @@
             font-family: monospace;
             color: #333;
         }
-    </style>
+  </style>
 </head>
 <body>
-    <h1>Code Display Example</h1>
-    <pre><code>
-function greet(name) {
-    return `Hello, ${name}!`;
-}
-console.log(greet('World'));
-    </code></pre>
-    <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
+  <!-- Video background -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="https://videos.pexels.com/video-files/853919/853919-hd_1920_1080_25fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Content on top of the video background -->
+  <h1>SMART BANK OF PAKISTAN</h1>
+  <h3 style="color:white; text-align:center;">This is an banking application which is able to Deposit Withdraw and perform all banking functionalities like account opening and loan managment </h3>
+  <h3 style="color:white; text-align:center;">SMART-BANK Project Overview</h3>
+
+<p style="color:white; text-align:center;">The SMART-BANK project is a C++ application integrated with MySQL, built using Object-Oriented Programming (OOP) principles. It simulates a bank management system where users can manage various financial services. The system includes modules for handling account management, transactions, savings, insurance, loans, and personal information. 
+
+The core functionalities revolve around the interaction between several relational database tables:</p>
+<h3>Account Management (accountmgt):</h3> Stores account information like account number, pincode, account type, and balance.
+<h3>Personal Information (personalinformation):</h3> Stores user data such as name, date of birth, CNIC, and pincode, linking them to their respective bank accounts.
+<h3>Transactions:</h3> Manages transaction details, including transaction IDs, descriptions, account numbers, and pincodes.
+<h3>Savings and Insurance:</h3> Tracks savings accounts, interest rates, and insurance details.
+<h3>Loans:</h3> Handles loan status and history for users based on their account and pincode.
+
+The use of MySQL ensures data persistence, while C++ OOP principles make the system modular and easy to maintain. This project provides a complete simulation of basic banking services and a strong foundation for further enhancement.
+</>
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+    <%= image_tag 'code.jpeg', class: 'd-block w-100', alt: '...' %>
+
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+    <%= image_tag 'locations.jpeg', class: 'd-block w-100', alt: '...' %>
+
+    </div>
+    <div class="carousel-item">
+    <%= image_tag 'schema.png', class: 'd-block w-100', alt: '...' %>
+
     </div>
   </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+<div class="accordion-item" style="background-color:#a3b18a;">
+  <h2 class="accordion-header" style="background-color:#a3b18a;">
+    <button class="accordion-button collapsed" style="background-color:#344e41;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+      Account Opening
+    </button>
+  </h2>
+  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+    <div class="accordion-body"></div>
   </div>
 </div>
+<div class="accordion-item" style="background-color:#a3b18a;">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" style="background-color:#344e41;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+      Account Deleting
+    </button>
+  </h2>
+  <div id="flush-collapseTwo" style="background-color:#a3b18a;" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+  </div>
+</div>
+<div class="accordion-item" style="background-color:#a3b18a;">
+  <h2 class="accordion-header" style="background-color:#a3b18a;">
+    <button class="accordion-button collapsed" style="background-color:#344e41;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+      Code
+    </button>
+  </h2>
+  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+    <div class="accordion-body"><h2>Code Display Example</h2>
+    <pre><code>
+  #include <iostream>
+#include <string>
+#include <limits>
+#include <windows.h>
+#include <sqlext.h>
+#include <sqltypes.h>
+#include <sql.h>
+#include <iomanip> 
+#include <sqlext.h>
+#include <chrono>
+#include <thread>
+#include <sstream>
+#include <ctime>
+#include <cstdlib>
+#include <random>
+#include <fstream>
+
+using namespace std;
+using std::string;
+using std::flush;
+using namespace std::chrono;
+using namespace std::this_thread;
+
+wstring accountNumber{};
+wstring receiverAccountnumber{};
+
+wstring loanhistory{};
+wstring loanstatus{};
+SQLFLOAT loaninterestrate{};
+wstring loantype{};
+
+int sl{};
+double deposit{};
+double Amount{};
+SQLLEN rowCount{};
+SQLINTEGER currentbalance{};
+wstring columnName, columnValue;
+SQLHANDLE sqlEnvHandle;
+SQLHANDLE sqlConnectionHandle;
+SQLHANDLE sqlStatementHandle{};
+SQLRETURN retcode;
+wstring accountnumber;
+int sub_selection_by_customer;
+int new_user_check;
+int sub_selection_by_new_customer;
+int option_selected_by_customer;
+int new_user = 1;
+int transactionid = 198734;
+const string filenametransaction = "transactionid.txt";
+wstring accountsmt;
+wstring idCardNumber{};
+SQLINTEGER idCardNumberToDelete{};
+wstring name, dob, accounttype, password, email, Name;
+SQLINTEGER pincode{}, loan_amount{};
+double balance{};
+SQLDOUBLE newBalance{};
+SQLDOUBLE currentBalance{};
+int savingaccount;
+float interestrate;
+wstring insurancedetail;
+SQLLEN loanLength{}, loanHistoryLength, loanStatusLength;
+SQLINTEGER loan{};
+wchar_t loanHistory[256]{}, loanStatus[256]{};
+
+bool success;
+string continue1;
+string yes = "y";
+string no = "n";
+time_t currentTime;
+struct tm localTime;
+string welcome = "=============== WELCOME TO THE SMART BANK OF PAKISTAN ====================\n\n";
+int delay = 10;
+int accountnumbercount = 123526;
+const string filename = "Bankdata.txt";
+
+class main_menu
+{
+private:
+
+public:
+
+	string Your_AC;
+	int reciever_ID{};
+	int Your_bank{};
+	string Reciever_AC{};
+	string password;
+	int transferOption{};
+	int package{};
+
+	void executeSQLStatement(SQLHANDLE sqlStatementHandle) {
+
+		retcode = SQLExecute(sqlStatementHandle);
+		if (retcode != SQL_SUCCESS) {
+			std::wcerr << L"Failed to execute SQL statement." << std::endl;
+			showSQLError(SQL_HANDLE_STMT, sqlStatementHandle);
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+		}
+
+	}
+
+	void showSQLError(unsigned int handleType, const SQLHANDLE& handle) {
+		SQLWCHAR SQLState[1024];
+		SQLWCHAR message[1024];
+		if (SQL_SUCCESS == SQLGetDiagRec(handleType, handle, 1, SQLState, NULL, message, 1024, NULL))
+			wcerr << L"SQL Error: " << message << L"\nSQL State: " << SQLState << endl;
+	}
+
+	bool allocateStatementHandle(SQLHDBC sqlConnectionHandle, SQLHANDLE& sqlStatementHandle) {
+		SQLRETURN retcode;
+
+		retcode = SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			std::wcerr << L"Failed to allocate statement handle." << std::endl;
+			return false;
+		}
+		return true;
+	}
+	void error() {
+		if (retcode != SQL_SUCCESS) {
+			wcerr << L"Failed to get current pincode." << endl;
+			showSQLError(SQL_HANDLE_STMT, sqlStatementHandle);
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+
+		};
+	}
+
+	void main_menu_options() {
+		cout << "Please Select an Option to perform Your Task " << endl
+			<< endl;
+		cout << "            ======================================\n"
+			<< "             | [1] - Money Transfer                |\n"
+			<< "             | [2] - Mobile Load                   |\n"
+			<< "             | [3] - Bill Payments                 |\n"
+			<< "             | [4] - ATM                           |\n"
+			<< "             | [5] - Savings And Insurance         |\n"
+			<< "             | [6] - My Account                    |\n"
+			<< "             | [7] - Loan                          |\n"
+			<< "             ======================================\n"
+			<< "             => ";
+	};
+
+	wstring DprintCurrentDateTime(double Amount) {
+
+		time_t currentTime;
+		struct tm localTime;
+
+		time(&currentTime);
+		localtime_s(&localTime, &currentTime);
+
+		char buffer[20];
+		strftime(buffer, 20, "%Y-%m-%d %H:%M:%S", &localTime);
+
+		wstring dateTime(buffer, buffer + strlen(buffer));
+
+		wstring message = L"Deposited (" + to_wstring(Amount) + L") on Date (" + dateTime + L")";
+
+		return message;
+	};
+	wstring TprintCurrentDateTime(double Amount) {
+		time_t currentTime;
+		struct tm localTime;
+
+		time(&currentTime);
+		localtime_s(&localTime, &currentTime);
+
+		char buffer[20];
+		strftime(buffer, 20, "%Y-%m-%d %H:%M:%S", &localTime);
+
+		wstring dateTime(buffer, buffer + strlen(buffer));
+
+		wstring message = L"Transfered (" + to_wstring(Amount) + L") on Date (" + dateTime + L")";
+
+		return message;
+	};
+
+	void printCurrentDateTime() {
+		time_t currentTime;
+		struct tm localTime;
+
+		time(&currentTime);
+		localtime_s(&localTime, &currentTime);
+
+		char buffer[20];
+		strftime(buffer, 20, "%Y-%m-%d %H:%M:%S", &localTime);
+
+		wcout << buffer << endl;
+	};
+
+	wstring WprintCurrentDateTime(double Amount) {
+
+		time_t currentTime;
+		struct tm localTime;
+
+		time(&currentTime);
+		localtime_s(&localTime, &currentTime);
+
+		char buffer[20];
+		strftime(buffer, 20, "%Y-%m-%d %H:%M:%S", &localTime);
+
+		wstring dateTime(buffer, buffer + strlen(buffer));
+
+		wstring message = L"Withdrawn (" + to_wstring(Amount) + L") on Date (" + dateTime + L")";
+
+		return message;
+	};
+
+	int readAccountNumberCount() {
+		ifstream infile(filename);
+		int accountnumbercount = 0;
+		if (infile.is_open()) {
+			infile >> accountnumbercount;
+			infile.close();
+		}
+		return accountnumbercount;
+	}
+
+	void writeAccountNumberCount(int accountnumbercount) {
+		ofstream outfile(filename);
+		if (outfile.is_open()) {
+			outfile << accountnumbercount;
+			outfile.close();
+		}
+	};
+
+	wstring accountnumbergenerator() {
+		int accountnumbercount = readAccountNumberCount();
+		accountnumbercount++;
+		writeAccountNumberCount(accountnumbercount);
+
+		wstringstream ss;
+		ss << L"SBP" << accountnumbercount;
+		wstring accountNumber = ss.str();
+		return accountNumber;
+	};
+
+	int readtransactionidCount() {
+		ifstream infile(filenametransaction);
+		if (infile.is_open()) {
+			infile >> transactionid;
+			infile.close();
+		}
+		else {
+			cerr << "Unable to open file for reading: " << filename << endl;
+			transactionid = 0;
+		}
+		return transactionid;
+	};
+
+	void writetransactionidCount(int transactionid) {
+		ofstream outfile(filenametransaction);
+		if (outfile.is_open()) {
+			outfile << transactionid;
+			outfile.close();
+		}
+		else {
+			cerr << "Unable to open file for writing: " << filename << endl;
+
+		}
+	};
+
+	void printSlowly(const string& text, int delayMilliseconds) {
+		for (char c : text) {
+			cout << c << flush;
+			sleep_for(milliseconds(delayMilliseconds));
+		}
+		cout << endl;
+	};
+
+	void displaybalance(SQLHANDLE& sqlConnectionHandle, const wstring& accountnumber, int pincode) {
+		wstring selectSQL = L"SELECT balance FROM `accountmgt` WHERE `accountnumber` = ? AND `pincode` = ?";
+
+		SQLHANDLE sqlStatementHandle;
+		SQLRETURN retcode;
+
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+		retcode = SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)selectSQL.c_str(), SQL_NTS);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcout << L"Error preparing SQL statement." << endl;
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return;
+		}
+
+		SQLLEN accountnumberLength = SQL_NTS;
+		SQLLEN pincodeLength = sizeof(int);
+
+		retcode = SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)accountnumber.c_str(), accountnumber.length() * sizeof(wchar_t), &accountnumberLength);
+
+
+		retcode = SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, (SQLPOINTER)&pincode, 0, &pincodeLength);
+
+		executeSQLStatement(sqlStatementHandle);
+
+		SQLLEN balanceLength;
+
+		if (SQLFetch(sqlStatementHandle) == SQL_SUCCESS) {
+			SQLGetData(sqlStatementHandle, 1, SQL_C_DOUBLE, &balance, sizeof(balance), &balanceLength);
+			wcout << left << setw(20) << L"Balance: " << balance << endl;
+		}
+		else {
+			wcout << L"No record found for the provided account number and pincode." << endl;
+		}
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+	};
+
+	void repayLoan(SQLHANDLE& sqlConnectionHandle, const double& Amount, const wstring& loanhistory, const wstring& loanstatus, int pincode, SQLFLOAT loaninterestrate, const wstring& loantype) {
+		wstring updateSQL = L"UPDATE loans SET loan = loan - ? WHERE pincode = ? AND loantype = ?";
+
+		SQLHANDLE sqlStatementHandle;
+		SQLRETURN retcode;
+
+		retcode = SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+
+			wcerr << L"Failed to allocate statement handle" << endl;
+			return;
+		}
+
+		retcode = SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)updateSQL.c_str(), SQL_NTS);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcerr << L"Failed to prepare SQL statement" << endl;
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return;
+		}
+
+		SQLLEN AmountLength = sizeof(double);
+		SQLLEN pincodeLength = sizeof(int);
+		SQLLEN loantypeLength = loantype.length() * sizeof(wchar_t);
+
+		SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_DOUBLE, SQL_DOUBLE, 0, 0, (SQLPOINTER)&Amount, 0, &AmountLength);
+		SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, (SQLPOINTER)&pincode, 0, &pincodeLength);
+		SQLBindParameter(sqlStatementHandle, 3, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)loantype.c_str(), loantypeLength, &loantypeLength);
+
+		executeSQLStatement(sqlStatementHandle);
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+		wcout << L"Loan repaid successfully!" << endl;
+	}
+
+	void insertLoanData(SQLHANDLE& sqlConnectionHandle, const double& Amount, const wstring& loanhistory, const wstring& loanstatus, int pincode, SQLFLOAT loaninterestrate, const wstring& loantype) {
+		wstring insertSQL = L"INSERT INTO loans (loan, loanhistory, loanstatus, pincode, loaninterestrate, loantype) VALUES (?, ?, ?, ?, ?, ?)";
+
+		SQLHANDLE sqlStatementHandle;
+		SQLRETURN retcode;
+
+		retcode = SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			return;
+		}
+
+		retcode = SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)insertSQL.c_str(), SQL_NTS);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return;
+		}
+
+		SQLLEN AmountLength = sizeof(double);
+		SQLLEN loanhistoryLength = loanhistory.length() * sizeof(wchar_t);
+		SQLLEN loanstatusLength = loanstatus.length() * sizeof(wchar_t);
+		SQLLEN pincodeLength = sizeof(int);
+		SQLLEN loaninterestrateLength = sizeof(SQLFLOAT);
+		SQLLEN loantypeLength = loantype.length() * sizeof(wchar_t);
+
+		SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_DOUBLE, SQL_DOUBLE, 0, 0, (SQLPOINTER)&Amount, 0, &AmountLength);
+		SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)loanhistory.c_str(), loanhistoryLength, &loanhistoryLength);
+		SQLBindParameter(sqlStatementHandle, 3, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)loanstatus.c_str(), loanstatusLength, &loanstatusLength);
+		SQLBindParameter(sqlStatementHandle, 4, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, (SQLPOINTER)&pincode, 0, &pincodeLength);
+		SQLBindParameter(sqlStatementHandle, 5, SQL_PARAM_INPUT, SQL_C_FLOAT, SQL_FLOAT, 0, 0, (SQLPOINTER)&loaninterestrate, 0, &loaninterestrateLength);
+		SQLBindParameter(sqlStatementHandle, 6, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)loantype.c_str(), loantypeLength, &loantypeLength);
+
+		executeSQLStatement(sqlStatementHandle);
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+	}
+
+	void showLoanInformation(SQLHANDLE& sqlConnectionHandle, const wstring& accountNumber, int pincode) {
+		wstring selectSQL = L"SELECT l.loan, l.loanhistory, l.loanstatus FROM personalinformation pi INNER JOIN loans l ON pi.pincode = l.pincode WHERE pi.accountnumber = ? AND l.pincode = ?";
+
+		SQLHANDLE sqlStatementHandle;
+		SQLRETURN retcode;
+
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+		retcode = SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)selectSQL.c_str(), SQL_NTS);
+
+		SQLLEN accountNumberLength = accountNumber.length() * sizeof(wchar_t);
+		SQLLEN pincodeLength = sizeof(int);
+
+		SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)accountNumber.c_str(), accountNumberLength, &accountNumberLength);
+		SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, &pincode, 0, &pincodeLength);
+
+		retcode = SQLExecute(sqlStatementHandle);
+
+
+
+		cout << "Loan Information:" << endl;
+		cout << "-----------------" << endl;
+
+		while (SQLFetch(sqlStatementHandle) == SQL_SUCCESS) {
+			SQLGetData(sqlStatementHandle, 1, SQL_C_LONG, &loan, sizeof(loan), NULL);
+			SQLGetData(sqlStatementHandle, 2, SQL_C_WCHAR, loanHistory, sizeof(loanHistory), &loanHistoryLength);
+			SQLGetData(sqlStatementHandle, 3, SQL_C_WCHAR, loanStatus, sizeof(loanStatus), &loanStatusLength);
+
+			wcout << L"Loan Amount: " << loan << endl;
+			wcout << L"Loan History: " << loanHistory << endl;
+			wcout << L"Loan Status: " << loanStatus << endl;
+		}
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+	}
+
+	void displaypersonalinformation(SQLHANDLE& sqlConnectionHandle, const wstring& accountnumber, int pincode) {
+
+		wstring selectSQL = L"SELECT * FROM `personalinformation` WHERE `accountnumber` = ? AND `pincode` = ?";
+
+		SQLHANDLE sqlStatementHandle;
+		SQLRETURN retcode;
+
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+		retcode = SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)selectSQL.c_str(), SQL_NTS);
+
+		SQLLEN accountnumberLength = SQL_NTS;
+		SQLLEN pincodeLength = sizeof(int);
+
+		retcode = SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)accountnumber.c_str(), accountnumber.length() * sizeof(wchar_t), &accountnumberLength);
+		retcode = SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, (SQLPOINTER)&pincode, 0, &pincodeLength);
+
+		retcode = SQLExecute(sqlStatementHandle);
+
+		SQLLEN nameLength, dobLength, accounttypeLength, passwordLength;
+		SQLINTEGER idCardNumber{};
+		wchar_t name[256]{}, dob[256]{}, accounttype[256]{}, password[256]{}, accountnumberBuffer[256]{};
+
+		while (SQLFetch(sqlStatementHandle) == SQL_SUCCESS) {
+			SQLGetData(sqlStatementHandle, 1, SQL_C_WCHAR, name, sizeof(name), &nameLength);
+			SQLGetData(sqlStatementHandle, 2, SQL_C_WCHAR, dob, sizeof(dob), &dobLength);
+			SQLGetData(sqlStatementHandle, 3, SQL_C_LONG, &idCardNumber, sizeof(idCardNumber), NULL);
+			SQLGetData(sqlStatementHandle, 4, SQL_C_WCHAR, accounttype, sizeof(accounttype), &accounttypeLength);
+			SQLGetData(sqlStatementHandle, 5, SQL_C_WCHAR, password, sizeof(password), &passwordLength);
+			SQLGetData(sqlStatementHandle, 6, SQL_C_LONG, &pincode, sizeof(pincode), NULL);
+			SQLGetData(sqlStatementHandle, 7, SQL_C_WCHAR, accountnumberBuffer, sizeof(accountnumberBuffer), &accountnumberLength);
+
+			wcout << left << setw(20) << L"Name: " << name << endl
+				<< left << setw(20) << L"Date of Birth: " << dob << endl
+				<< left << setw(20) << L"ID Card Number: " << idCardNumber << endl
+				<< left << setw(20) << L"Account Type: " << accounttype << endl
+				<< left << setw(20) << L"Password: " << password << endl
+				<< left << setw(20) << L"Pincode: " << pincode << endl
+				<< left << setw(20) << L"Account Number: " << accountnumberBuffer << endl;
+		}
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+	};
+
+	bool updateValues(SQLHANDLE& sqlConnectionHandle, wstring& name, wstring& dob, wstring& idCardNumber, wstring& accounttype, wstring& password, SQLINTEGER pincode, wstring& accountnumber) {
+		SQLWCHAR* updateSQL = (SQLWCHAR*)L"UPDATE personalinformation SET Name = ?, DateofBirth = ?, CNIC = ?, accounttype = ?, password = ? WHERE accountnumber = ? AND pincode = ?";
+
+		SQLHANDLE sqlStatementHandle;
+		SQLRETURN retcode;
+
+		retcode = SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+		retcode = SQLPrepareW(sqlStatementHandle, updateSQL, SQL_NTS);
+
+		SQLLEN nameLength = SQL_NTS;
+		SQLLEN dobLength = SQL_NTS;
+		SQLLEN idCardNumberLength = SQL_NTS;
+		SQLLEN accounttypeLength = SQL_NTS;
+		SQLLEN passwordLength = SQL_NTS;
+		SQLLEN accountnumberLength = SQL_NTS;
+		SQLLEN pincodeLength = SQL_NTS;
+
+		retcode = SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)name.c_str(), name.length() * sizeof(wchar_t), &nameLength);
+		retcode = SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)dob.c_str(), dob.length() * sizeof(wchar_t), &dobLength);
+		retcode = SQLBindParameter(sqlStatementHandle, 3, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)idCardNumber.c_str(), idCardNumber.length() * sizeof(wchar_t), &idCardNumberLength);
+		retcode = SQLBindParameter(sqlStatementHandle, 4, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)accounttype.c_str(), accounttype.length() * sizeof(wchar_t), &accounttypeLength);
+		retcode = SQLBindParameter(sqlStatementHandle, 5, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)password.c_str(), password.length() * sizeof(wchar_t), &passwordLength);
+		retcode = SQLBindParameter(sqlStatementHandle, 6, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)accountnumber.c_str(), accountnumber.length() * sizeof(wchar_t), &accountnumberLength);
+		retcode = SQLBindParameter(sqlStatementHandle, 7, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, &pincode, 0, &pincodeLength);
+
+		retcode = SQLExecute(sqlStatementHandle);
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+		return true;
+	}
+
+
+	void retrieveinsurance_policy_details(SQLHANDLE& sqlConnectionHandle) {
+
+		int pincode;
+		cout << "Enter pincode: ";
+		cin >> pincode;
+
+		wstring selectSQL = L"SELECT pi.Name, pi.CNIC, pi.accountnumber,"
+			"si.savingaccount, si.interestrate, si.insurancedetail "
+			L"FROM personalinformation AS pi "
+			L"JOIN savingsandinsurance AS si ON pi.pincode = si.pincode "
+			L"WHERE pi.pincode = ?";
+
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+		retcode = SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)selectSQL.c_str(), SQL_NTS);
+
+
+		retcode = SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &pincode, 0, NULL);
+
+
+		retcode = SQLExecute(sqlStatementHandle);
+
+
+		SQLWCHAR name[256]{}, CNIC[256]{}, accountnumber[256]{}, insurancedetail[512]{};
+		SQLINTEGER savingaccount{};
+		SQLREAL interestrate{};
+		while (SQLFetch(sqlStatementHandle) == SQL_SUCCESS) {
+			SQLGetData(sqlStatementHandle, 1, SQL_C_WCHAR, name, sizeof(name), NULL);
+			SQLGetData(sqlStatementHandle, 2, SQL_C_WCHAR, CNIC, sizeof(CNIC), NULL);
+			SQLGetData(sqlStatementHandle, 3, SQL_C_WCHAR, accountnumber, sizeof(accountnumber), NULL);
+			SQLGetData(sqlStatementHandle, 4, SQL_C_SLONG, &savingaccount, sizeof(savingaccount), NULL);
+			SQLGetData(sqlStatementHandle, 5, SQL_C_FLOAT, &interestrate, sizeof(interestrate), NULL);
+			SQLGetData(sqlStatementHandle, 6, SQL_C_WCHAR, insurancedetail, sizeof(insurancedetail), NULL);
+
+			wcout << L"Name:                                      " << name << endl;
+			wcout << L"CNIC:                                      " << CNIC << endl;
+			wcout << L"Account Number:                            " << accountnumber << endl;
+			cout << "Saving Account:                              " << savingaccount << endl;
+			cout << "Interest Rate:                               " << interestrate << endl;
+			wcout << L"Insurance Detail:                          " << insurancedetail << endl << endl << endl;
+		}
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+	};
+
+	void deleteAccountByPincodeAndAccountNumber(SQLHANDLE& sqlConnectionHandle) {
+
+		int pincode;
+		wstring accountNumber;
+
+		cout << "Enter pincode: ";
+		cin >> pincode;
+		cout << "Enter account number: ";
+		wcin.ignore();
+		getline(wcin, accountNumber);
+
+		wstring deleteSQL = L"DELETE FROM personalinformation WHERE pincode = ? AND accountnumber = ?";
+
+		SQLHANDLE sqlStatementHandle;
+		SQLRETURN retcode;
+
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+		retcode = SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)deleteSQL.c_str(), SQL_NTS);
+
+
+		retcode = SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &pincode, 0, NULL);
+
+
+		retcode = SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_VARCHAR, 0, 0, (SQLWCHAR*)accountNumber.c_str(), accountNumber.length() * sizeof(wchar_t), NULL);
+
+
+		retcode = SQLExecute(sqlStatementHandle);
+
+
+		cout << "Account deleted successfully." << endl;
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+	};
+
+	void insertTransaction(SQLHANDLE& sqlConnectionHandle, string transactionid, string transactiondetail, int pincode, string accountnumber) {
+
+		string insertSQL = "INSERT INTO transactions (transactionid, transactiondetail, pincode, accountnumber) VALUES (?, ?, ?, ?)";
+
+		SQLHANDLE sqlStatementHandle;
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+		wstring insertSQLW = wstring(insertSQL.begin(), insertSQL.end());
+
+		SQLRETURN retcode = SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)insertSQLW.c_str(), SQL_NTS);
+
+
+		retcode = SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_VARCHAR, 20, 0, (SQLCHAR*)transactionid.c_str(), transactionid.length(), NULL);
+
+		retcode = SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_VARCHAR, 500, 0, (SQLCHAR*)transactiondetail.c_str(), transactiondetail.length(), NULL);
+
+		retcode = SQLBindParameter(sqlStatementHandle, 3, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &pincode, 0, NULL);
+
+		retcode = SQLBindParameter(sqlStatementHandle, 4, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_VARCHAR, 20, 0, (SQLCHAR*)accountnumber.c_str(), accountnumber.length(), NULL);
+
+		executeSQLStatement(sqlStatementHandle);
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+	};
+
+	void displaytransactions(SQLHANDLE& sqlConnectionHandle) {
+
+		int userPincode;
+		cout << "Enter the pincode: ";
+		cin >> userPincode;
+
+		wstring wPincode = to_wstring(userPincode);
+
+		wstring query =
+			L"SELECT p.Name, p.CNIC, t.transactionid, t.transactiondetail, t.pincode, t.accountnumber FROM personalinformation p JOIN accountmgt a ON p.accountnumber = a.accountnumber AND p.pincode = a.pincode JOIN transactions t ON a.accountnumber = t.accountnumber AND a.pincode = t.pincode WHERE p.pincode = " + wPincode;
+
+		SQLHANDLE sqlStatementHandle;
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+		SQLRETURN retcode = SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)query.c_str(), SQL_NTS);
+
+
+		retcode = SQLExecute(sqlStatementHandle);
+
+		if (retcode != SQL_SUCCESS) {
+			cout << "Error executing SQL statement." << endl;
+			showSQLError(SQL_HANDLE_STMT, sqlStatementHandle);
+		}
+		else {
+			// Bind columns to variables
+			SQLCHAR name[100]{}, cnic[100]{}, transactionid[100]{}, transactiondetail[500]{}, accountnumber[100]{};
+			SQLINTEGER pincode{};
+
+			SQLBindCol(sqlStatementHandle, 1, SQL_C_CHAR, name, sizeof(name), NULL);
+			SQLBindCol(sqlStatementHandle, 2, SQL_C_CHAR, cnic, sizeof(cnic), NULL);
+			SQLBindCol(sqlStatementHandle, 3, SQL_C_CHAR, transactionid, sizeof(transactionid), NULL);
+			SQLBindCol(sqlStatementHandle, 4, SQL_C_CHAR, transactiondetail, sizeof(transactiondetail), NULL);
+			SQLBindCol(sqlStatementHandle, 5, SQL_C_SLONG, &pincode, 0, NULL);
+			SQLBindCol(sqlStatementHandle, 6, SQL_C_CHAR, accountnumber, sizeof(accountnumber), NULL);
+
+			// Fetch and display the results
+			while (SQLFetch(sqlStatementHandle) == SQL_SUCCESS) {
+				cout << "Name: " << name << endl;
+				cout << "CNIC: " << cnic << endl;
+				cout << "Transaction ID: " << transactionid << endl;
+				cout << "Transaction Detail: " << transactiondetail << endl;
+				cout << "Pincode: " << pincode << endl;
+				cout << "Account Number: " << accountnumber << endl;
+				cout << "=====================================================\n" << "|||||||||||||||||||||||||||||||||||||||||||||||||||||\n" << "=====================================================" << endl;
+
+
+			}
+		}
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+
+	};
+
+	bool create_account(SQLHANDLE& sqlConnectionHandle, wstring& name, wstring& dob, wstring& idCardNumber, wstring& accounttype, wstring& password, SQLINTEGER pincode, wstring& accountNumber) {
+		SQLWCHAR* insertSQL = (SQLWCHAR*)L"INSERT INTO `personalinformation` (`Name`, `dateofbirth`, `CNIC`, `accounttype`, `password`, `pincode`, `accountnumber`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+		SQLHANDLE sqlStatementHandle;
+		SQLRETURN retcode;
+		SQLINTEGER balance = 0; // Assuming balance should be initialized to zero.
+
+		// Allocate statement handle
+		retcode = SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+		if (retcode != SQL_SUCCESS) {
+			wcerr << L"Failed to allocate statement handle." << endl;
+			return false;
+		}
+
+		// Prepare the SQL statement
+		retcode = SQLPrepareW(sqlStatementHandle, insertSQL, SQL_NTS);
+		if (retcode != SQL_SUCCESS) {
+			showSQLError(SQL_HANDLE_STMT, sqlStatementHandle);
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+
+		// Bind parameters to the statement
+		SQLLEN nameLength = SQL_NTS;
+		SQLLEN dobLength = SQL_NTS;
+		SQLLEN idCardNumberLength = SQL_NTS;
+		SQLLEN accounttypeLength = SQL_NTS;
+		SQLLEN passwordLength = SQL_NTS;
+		SQLLEN accountNumberLength = SQL_NTS;
+
+		retcode = SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)name.c_str(), name.length() * sizeof(wchar_t), &nameLength);
+		
+
+		retcode = SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)dob.c_str(), dob.length() * sizeof(wchar_t), &dobLength);
+		
+
+		retcode = SQLBindParameter(sqlStatementHandle, 3, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)idCardNumber.c_str(), idCardNumber.length() * sizeof(wchar_t), &idCardNumberLength);
+		
+
+		retcode = SQLBindParameter(sqlStatementHandle, 4, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)accounttype.c_str(), accounttype.length() * sizeof(wchar_t), &accounttypeLength);
+		
+
+		retcode = SQLBindParameter(sqlStatementHandle, 5, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)password.c_str(), password.length() * sizeof(wchar_t), &passwordLength);
+		
+
+		retcode = SQLBindParameter(sqlStatementHandle, 6, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, &pincode, 0, NULL);
+		
+
+		retcode = SQLBindParameter(sqlStatementHandle, 7, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)accountNumber.c_str(), accountNumber.length() * sizeof(wchar_t), &accountNumberLength);
+		
+
+		// Execute the SQL statement
+		retcode = SQLExecute(sqlStatementHandle);
+		if (retcode != SQL_SUCCESS) {
+			wcerr << L"Failed to execute SQL statement." << endl;
+			showSQLError(SQL_HANDLE_STMT, sqlStatementHandle);
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+		else {
+			wcout << L"Your Profile Has Been Created With the Following Details:" << endl;
+			wcout << L"Name: " << name << endl;
+			wcout << L"Date of Birth: " << dob << endl;
+			wcout << L"CNIC: " << idCardNumber << endl;
+			wcout << L"Account Type: " << accounttype << endl;
+			wcout << L"Account Number: " << accountNumber << endl;
+			wcout << L"Password: " << password << endl;
+			wcout << L"Pincode: " << pincode << endl;
+			wcout << L"Balance: " << balance << endl; // Assuming you want to initialize balance to zero.
+		}
+
+		// Free statement handle
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+		return true;
+	}
+
+	void displayallpersonalinformation(SQLHANDLE& sqlConnectionHandle) {
+
+		wstring selectSQL = L"SELECT * FROM personalinformation";
+
+
+
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+
+		retcode = SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)selectSQL.c_str(), SQL_NTS);
+
+
+		retcode = SQLExecute(sqlStatementHandle);
+
+
+		SQLLEN nameLength, dobLength, accounttypeLength, passwordLength, accountNumberLength;
+		SQLINTEGER idCardNumber{}, pincode{}, loan_amount{};
+		wchar_t name[256]{}, dob[256]{}, accounttype[256]{}, password[256]{}, email[256]{}, accountNumber[256]{};
+
+		while (SQLFetch(sqlStatementHandle) == SQL_SUCCESS) {
+			SQLGetData(sqlStatementHandle, 1, SQL_C_WCHAR, name, sizeof(name), &nameLength);
+			SQLGetData(sqlStatementHandle, 2, SQL_C_WCHAR, dob, sizeof(dob), &dobLength);
+			SQLGetData(sqlStatementHandle, 3, SQL_C_LONG, &idCardNumber, sizeof(idCardNumber), NULL);
+			SQLGetData(sqlStatementHandle, 4, SQL_C_WCHAR, accounttype, sizeof(accounttype), &accounttypeLength);
+			SQLGetData(sqlStatementHandle, 5, SQL_C_WCHAR, password, sizeof(password), &passwordLength);
+			SQLGetData(sqlStatementHandle, 6, SQL_C_LONG, &pincode, sizeof(pincode), NULL);
+			SQLGetData(sqlStatementHandle, 7, SQL_C_WCHAR, accountNumber, sizeof(accountNumber), &accountNumberLength);
+
+			wcout << left << setw(20) << L"Name: " << name << endl
+				<< left << setw(20) << L"Date of Birth: " << dob << endl
+				<< left << setw(20) << L"ID Card Number: " << idCardNumber << endl
+				<< left << setw(20) << L"Account Type: " << accounttype << endl
+				<< left << setw(20) << L"Password: " << password << endl
+				<< left << setw(20) << L"Pincode: " << pincode << endl
+				<< left << setw(20) << L"Account Number: " << accountNumber << endl;
+			cout << "=====================================================\n" << "|||||||||||||||||||||||||||||||||||||||||||||||||||||\n" << "=====================================================" << endl;
+		}
+
+		// Free statement handle
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+	}
+
+
+	bool accountmgt(SQLHANDLE& sqlConnectionHandle, wstring& accountNumber, SQLINTEGER pincode, wstring& accountsmt, double balance) {
+		SQLWCHAR* insertSQL = (SQLWCHAR*)L"INSERT INTO `accountmgt` (`accountnumber`, `pincode`, `accountsmt`, `balance`) VALUES (?, ?, ?, ?)";
+		SQLHANDLE sqlStatementHandle;
+		SQLRETURN retcode;
+
+		// Allocate statement handle
+		retcode = SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcerr << L"Failed to allocate statement handle." << endl;
+			return false;
+		}
+
+		// Prepare the SQL statement
+		retcode = SQLPrepareW(sqlStatementHandle, insertSQL, SQL_NTS);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcerr << L"Failed to prepare the SQL statement." << endl;
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+
+		// Bind parameters to the statement
+		SQLLEN accountNumberLength = SQL_NTS;
+		SQLLEN accountsmtLength = SQL_NTS;
+		SQLLEN balanceLength = 0; // Not required for numeric data types
+
+		retcode = SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)accountNumber.c_str(), accountNumber.length() * sizeof(wchar_t), &accountNumberLength);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcerr << L"Failed to bind accountnumber parameter." << endl;
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+
+		retcode = SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, &pincode, 0, NULL);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcerr << L"Failed to bind pincode parameter." << endl;
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+
+		retcode = SQLBindParameter(sqlStatementHandle, 3, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)accountsmt.c_str(), accountsmt.length() * sizeof(wchar_t), &accountsmtLength);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcerr << L"Failed to bind accountsmt parameter." << endl;
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+
+		retcode = SQLBindParameter(sqlStatementHandle, 4, SQL_PARAM_INPUT, SQL_C_DOUBLE, SQL_DOUBLE, 0, 0, &balance, 0, &balanceLength);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcerr << L"Failed to bind balance parameter." << endl;
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+
+		// Execute the SQL statement
+		retcode = SQLExecute(sqlStatementHandle);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcerr << L"Failed to execute the SQL statement." << endl;
+
+			// Retrieve detailed error message
+			SQLWCHAR sqlState[1024];
+			SQLWCHAR message[1024];
+			SQLINTEGER nativeError;
+			SQLSMALLINT textLength;
+
+			SQLGetDiagRec(SQL_HANDLE_STMT, sqlStatementHandle, 1, sqlState, &nativeError, message, sizeof(message) / sizeof(SQLWCHAR), &textLength);
+			wcerr << L"SQLSTATE: " << sqlState << L", Message: " << message << endl;
+
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+
+		// Free statement handle
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+		return true;
+	};
+
+	bool insertSavingsAndInsuranceData(SQLHANDLE& sqlConnectionHandle, int savingaccount, float interestrate, wstring& insurancedetail, wstring& accountnumber, int pincode) {
+		wstring insertSQL = L"INSERT INTO savingsandinsurance (savingaccount, interestrate, insurancedetail, accountnumber, pincode) VALUES (?, ?, ?, ?, ?)";
+
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+		SQLPrepareW(sqlStatementHandle, (SQLWCHAR*)insertSQL.c_str(), SQL_NTS);
+
+		SQLLEN savingaccountLength = sizeof(int);
+		SQLLEN interestrateLength = sizeof(float);
+		SQLLEN insurancedetailLength = insurancedetail.length() * sizeof(wchar_t);
+		SQLLEN accountnumberLength = accountnumber.length() * sizeof(wchar_t);
+		SQLLEN pincodeLength = sizeof(int);
+
+		SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, &savingaccount, 0, &savingaccountLength);
+		SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_FLOAT, SQL_FLOAT, 0, 0, &interestrate, 0, &interestrateLength);
+		SQLBindParameter(sqlStatementHandle, 3, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)insurancedetail.c_str(), insurancedetailLength, &insurancedetailLength);
+		SQLBindParameter(sqlStatementHandle, 4, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 0, 0, (SQLPOINTER)accountnumber.c_str(), accountnumberLength, &accountnumberLength);
+		SQLBindParameter(sqlStatementHandle, 5, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, &pincode, 0, &pincodeLength);
+
+		SQLExecute(sqlStatementHandle);
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+
+		return true;
+	}
+
+	bool depositAmount(SQLHANDLE& sqlConnectionHandle, const wstring& accountNumber, double amount) {
+
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+		wstring selectQuery = L"SELECT balance FROM accountmgt WHERE accountnumber = ?";
+		SQLPrepare(sqlStatementHandle, (SQLWCHAR*)selectQuery.c_str(), SQL_NTS);
+		SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 40, 0, (SQLWCHAR*)accountNumber.c_str(), accountNumber.length() * sizeof(wchar_t), NULL);
+
+		SQLRETURN retcode = SQLExecute(sqlStatementHandle);
+		if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
+			SQLBindCol(sqlStatementHandle, 1, SQL_C_DOUBLE, &currentBalance, sizeof(currentBalance), NULL);
+			if (SQLFetch(sqlStatementHandle) == SQL_NO_DATA) {
+				wcout << L"Account not found." << endl;
+				SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+				return false;
+			}
+		}
+		else {
+			wcout << L"Error executing select query." << endl;
+			showSQLError(SQL_HANDLE_STMT, sqlStatementHandle);
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+		SQLFreeStmt(sqlStatementHandle, SQL_CLOSE);
+
+		newBalance = currentBalance + Amount;
+		readtransactionidCount();
+		transactionid++;
+		writetransactionidCount(transactionid);
+
+		wstring updateQuery = L"UPDATE accountmgt SET balance = ? WHERE accountnumber = ?";
+		SQLPrepare(sqlStatementHandle, (SQLWCHAR*)updateQuery.c_str(), SQL_NTS);
+		SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_DOUBLE, SQL_DOUBLE, 14, 0, &newBalance, sizeof(newBalance), NULL);
+		SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 40, 0, (SQLWCHAR*)accountNumber.c_str(), accountNumber.length() * sizeof(wchar_t), NULL);
+
+		executeSQLStatement(sqlStatementHandle);
+		SQLFreeStmt(sqlStatementHandle, SQL_CLOSE);
+
+		wstring transactionDetail = DprintCurrentDateTime(Amount);
+		wstring insertQuery = L"INSERT INTO transactions (transactionid, transactiondetail, accountnumber, pincode) VALUES (?, ?, ?, ?)";
+		SQLPrepare(sqlStatementHandle, (SQLWCHAR*)insertQuery.c_str(), SQL_NTS);
+		SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &transactionid, sizeof(SQLINTEGER), NULL);
+		SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 5000, 0, (SQLWCHAR*)transactionDetail.c_str(), transactionDetail.length() * sizeof(wchar_t), NULL);
+		SQLBindParameter(sqlStatementHandle, 3, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 40, 0, (SQLWCHAR*)accountNumber.c_str(), accountNumber.length() * sizeof(wchar_t), NULL);
+		SQLBindParameter(sqlStatementHandle, 4, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &pincode, sizeof(SQLINTEGER), NULL);
+		retcode = SQLExecute(sqlStatementHandle);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcout << L"Error inserting transaction." << endl;
+			showSQLError(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+		else {
+			wcout << L"Transaction successful. New balance: " << newBalance << endl;
+			return true;
+		}
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+	}
+
+	bool WithdrawAmount(SQLHANDLE& sqlConnectionHandle, wstring& accountNumber, int pincode, double Amount) {
+		SQLHANDLE sqlStatementHandle;
+		SQLAllocHandle(SQL_HANDLE_STMT, sqlConnectionHandle, &sqlStatementHandle);
+
+		double currentBalance{};
+		wstring selectQuery = L"SELECT balance FROM accountmgt WHERE accountnumber = ? AND pincode = ?";
+		SQLPrepare(sqlStatementHandle, (SQLWCHAR*)selectQuery.c_str(), SQL_NTS);
+		SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 40, 0, (SQLWCHAR*)accountNumber.c_str(), accountNumber.length() * sizeof(wchar_t), NULL);
+		SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &pincode, sizeof(SQLINTEGER), NULL);
+
+		SQLRETURN retcode = SQLExecute(sqlStatementHandle);
+		if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
+			SQLBindCol(sqlStatementHandle, 1, SQL_C_DOUBLE, &currentBalance, sizeof(currentBalance), NULL);
+			if (SQLFetch(sqlStatementHandle) == SQL_NO_DATA) {
+				wcout << L"Account not found or incorrect pincode." << endl;
+				SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+				return false;
+			}
+		}
+		else {
+			wcout << L"Error executing select query." << endl;
+			showSQLError(SQL_HANDLE_STMT, sqlStatementHandle);
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+		SQLFreeStmt(sqlStatementHandle, SQL_CLOSE);
+
+		newBalance = currentBalance - Amount;
+		if (newBalance < 0) {
+			wcout << L"Insufficient funds for withdrawal." << endl;
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+		readtransactionidCount();
+		transactionid++;
+		writetransactionidCount(transactionid);
+		wstring updateQuery = L"UPDATE accountmgt SET balance = ? WHERE accountnumber = ? AND pincode = ?";
+		SQLPrepare(sqlStatementHandle, (SQLWCHAR*)updateQuery.c_str(), SQL_NTS);
+		SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_DOUBLE, SQL_INTEGER, 0, 0, &newBalance, sizeof(newBalance), NULL);
+		SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 40, 0, (SQLWCHAR*)accountNumber.c_str(), accountNumber.length() * sizeof(wchar_t), NULL);
+		SQLBindParameter(sqlStatementHandle, 3, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &pincode, sizeof(SQLINTEGER), NULL);
+
+		retcode = SQLExecute(sqlStatementHandle);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcout << L"Error updating balance." << endl;
+			showSQLError(SQL_HANDLE_STMT, sqlStatementHandle);
+			SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+		SQLFreeStmt(sqlStatementHandle, SQL_CLOSE);
+
+		readtransactionidCount();
+		transactionid++;
+		writetransactionidCount(transactionid);
+
+		wstring transactionDetail = WprintCurrentDateTime(Amount);
+		wstring insertQuery = L"INSERT INTO transactions (transactionid, transactiondetail, accountnumber, pincode) VALUES (?, ?, ?, ?)";
+		SQLPrepare(sqlStatementHandle, (SQLWCHAR*)insertQuery.c_str(), SQL_NTS);
+		SQLBindParameter(sqlStatementHandle, 1, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &transactionid, sizeof(SQLINTEGER), NULL);
+		SQLBindParameter(sqlStatementHandle, 2, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 5000, 0, (SQLWCHAR*)transactionDetail.c_str(), transactionDetail.length() * sizeof(wchar_t), NULL);
+		SQLBindParameter(sqlStatementHandle, 3, SQL_PARAM_INPUT, SQL_C_WCHAR, SQL_WVARCHAR, 40, 0, (SQLWCHAR*)accountNumber.c_str(), accountNumber.length() * sizeof(wchar_t), NULL);
+		SQLBindParameter(sqlStatementHandle, 4, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &pincode, sizeof(SQLINTEGER), NULL);
+
+		retcode = SQLExecute(sqlStatementHandle);
+		if (retcode != SQL_SUCCESS && retcode != SQL_SUCCESS_WITH_INFO) {
+			wcout << L"Error inserting transaction." << endl;
+			showSQLError(SQL_HANDLE_STMT, sqlStatementHandle);
+			return false;
+		}
+		else {
+
+			return true;
+		}
+
+		SQLFreeHandle(SQL_HANDLE_STMT, sqlStatementHandle);
+	}
+
+};
+
+class new_customer : public main_menu
+{
+public:
+
+	void new_customer_options() {
+		cout << "==============================================================\n"
+			<< "| Welcome to The Smart Family of Pakistan's Smart Banking    |\n"
+			<< "| Please Let Us Know How Can We Help You                     |\n"
+			<< "| Select An Option Given Below                              |\n"
+			<< "| [1] - Account Opening :                                    |\n"
+			<< "| [2] - About US :                                           |\n"
+			<< "| [3] - Contact US :                                         |\n"
+			<< "| [4] - Locate US :                                          |\n"
+			<< "| [5] - Orientation :                                        |\n"
+			<< "==============================================================\n"
+			<< "=> ";
+	}
+
+	void about_us() {
+		cout << "About Us\n";
+		cout << "Smart Bank of Pakistan: Your Trusted Financial Partner\n\n";
+
+		cout << "Welcome to Smart Bank of Pakistan, a premier banking institution dedicated to providing top-notch financial services across the nation. Founded by Ali Ishaq, Muhammad Ishaq, and Irfan Shehzad, our bank stands as a testament to innovation, trust, and exceptional customer service. With over 1000 branches spread across Pakistan, we are committed to serving you with integrity and excellence.\n\n";
+
+		cout << "Our Mission:\n";
+		cout << "To empower individuals and businesses by offering comprehensive financial solutions that foster growth, stability, and prosperity.\n\n";
+
+		cout << "Our Vision:\n";
+		cout << "To be the leading bank in Pakistan known for its customer-centric approach, innovative products, and contribution to the nation's economic development.\n\n";
+
+		cout << "Our Values:\n\n";
+
+		cout << "Integrity: We uphold the highest standards of honesty and transparency in all our dealings.\n";
+		cout << "Innovation: We continuously strive to introduce cutting-edge financial products and services.\n";
+		cout << "Customer Focus: Our customers are at the heart of everything we do.\n";
+		cout << "Excellence: We aim for excellence in every aspect of our operations.\n\n";
+
+		cout << "Leadership:\n\n";
+
+		cout << "Ali Ishaq - Chief Executive Officer (CEO)\n";
+		cout << "Irfan Shehzad - Chairman\n";
+		cout << "Muhammad Ishaq - Chief Operating Officer (COO)\n\n";
+
+		cout << "Join us at Smart Bank of Pakistan and experience a new era of banking excellence.\n";
+
+	}
+
+	void Contact_us() {
+		cout << "Contact Us\n";
+		cout << "Get in Touch with Smart Bank of Pakistan\n\n";
+
+		cout << "We are here to assist you with all your banking needs. Reach out to us through any of the following channels:\n\n";
+
+		cout << "Phone Numbers:\n\n";
+		cout << "0346-0422988\n";
+		cout << "0345-8783923\n\n";
+
+		cout << "Email:\n\n";
+		cout << "info@newbank.com\n\n";
+
+		cout << "Mailing accounttype:\n\n";
+		cout << "Smart Bank of Pakistan, Head Office, 123 Financial Avenue, Karachi, Pakistan.\n\n";
+
+		cout << "Social Media:\n\n";
+		cout << "Facebook: facebook.com/smartbankpk\n";
+		cout << "Twitter: twitter.com/smartbankpk\n";
+		cout << "Instagram: instagram.com/smartbankpk\n";
+		cout << "LinkedIn: linkedin.com/company/smartbankpk\n\n";
+
+		cout << "Our customer service team is available 24/7 to accounttype your inquiries and provide support.\n";
+
+	}
+
+	void Locate_us() {
+		cout << "Locate Us\n";
+		cout << "Find Our Branches Across Major Cities\n\n";
+
+		cout << "===============================================================================================================\n";
+		cout << "| City       | accounttype                            | Landmark               | Contact          | Opening Hours      |\n";
+		cout << "===============================================================================================================\n";
+		cout << "| Karachi    | 45 Clifton Road, Clifton Block 2  | Near Bilawal Chowrangi | +92 21 1234567   | Mon-Fri: 9AM-5PM,  |\n";
+		cout << "|            | Karachi, Sindh, Pakistan          | and Boat Basin Park    |                  | Sat: 9AM-1PM       |\n";
+		cout << "| Lahore     | 23 Mall Road, Gulberg III         | Opposite Lahore Zoo    | +92 42 7654321   | Mon-Fri: 8AM-4PM,  |\n";
+		cout << "|            | Lahore, Punjab, Pakistan          | and Liberty Market     |                  | Sat: 8AM-12PM      |\n";
+		cout << "| Islamabad  | 67 Blue Area, G-7/3               | Near Centaurus Mall    | +92 51 9876543   | Mon-Fri: 8:30AM-   |\n";
+		cout << "|            | Islamabad, Capital Territory      | and Serena Hotel       |                  | 4:30PM, Sat:       |\n";
+		cout << "|            |                                   |                        |                  | 8:30AM-1:30PM      |\n";
+		cout << "| Rawalpindi | 78 Saddar Road, Saddar            | Opposite Rehmanabad    | +92 51 8765432   | Mon-Fri: 9AM-5PM,  |\n";
+		cout << "|            | Rawalpindi, Punjab, Pakistan      | Metro Station and      |                  | Sat: 9AM-1PM       |\n";
+		cout << "|            |                                   | Liaquat Bagh           |                  |                    |\n";
+		cout << "| Peshawar   | 90 University Road                | Near University of     | +92 91 7654321   | Mon-Fri: 8AM-4PM,  |\n";
+		cout << "|            | Peshawar, Khyber Pakhtunkhwa,     | Peshawar and Governor's|                  | Sat: 8AM-12PM      |\n";
+		cout << "|            | Pakistan                          | House                  |                  |                    |\n";
+		cout << "| Quetta     | 15 Jinnah Road                    | Near Balochistan       | +92 81 6543210   | Mon-Fri: 9:30AM-   |\n";
+		cout << "|            | Quetta, Balochistan, Pakistan     | Assembly and Serena    |                  | 5:30PM, Sat:       |\n";
+		cout << "|            |                                   | Hotel                  |                  | 9:30AM-1:30PM      |\n";
+		cout << "| Faisalabad | 32 Peoples Colony                 | Near ChenOne Tower     | +92 41 8765432   | Mon-Fri: 8:30AM-   |\n";
+		cout << "|            | Faisalabad, Punjab, Pakistan      | and D Ground Park      |                  | 4:30PM, Sat:       |\n";
+		cout << "|            |                                   |                        |                  | 8:30AM-12:30PM     |\n";
+		cout << "| Multan     | 21 Cantt Road                     | Opposite Nishtar Park  | +92 61 7654321   | Mon-Fri: 9AM-5PM,  |\n";
+		cout << "|            | Multan, Punjab, Pakistan          | and Multan Arts Council|                  | Sat: 9AM-1PM       |\n";
+		cout << "| Sialkot    | 56 Kutchery Road                  | Near District Courts   | +92 52 6543210   | Mon-Fri: 8AM-4PM,  |\n";
+		cout << "|            | Sialkot, Punjab, Pakistan         | and Clock Tower        |                  | Sat: 8AM-12PM      |\n";
+		cout << "| Hyderabad  | 88 Auto Bhan Road                 | Opposite City Gate     | +92 22 9876543   | Mon-Fri: 9:30AM-   |\n";
+		cout << "|            | Hyderabad, Sindh, Pakistan        | and Ghanta Ghar        |                  | 5:30PM, Sat:       |\n";
+		cout << "|            |                                   |                        |                  | 9:30AM-1:30PM      |\n";
+		cout << "===================================================================================================================\n\n";
+
+		cout << "Visit us at any of these locations for personalized banking services.\n";
+
+	}
+
+	void Orientation() {
+		cout << "Orientation\n";
+		cout << "Welcome to Smart Bank of Pakistan\n\n";
+
+		cout << "As a new customer of Smart Bank of Pakistan, we are delighted to have you join our family. Here's what you can expect:\n\n";
+
+		cout << "Step-by-Step Guide to Getting Started:\n\n";
+
+		cout << "Account Setup:\n\n";
+		cout << "Visit any of our branches with your CNIC and proof of accounttype.\n";
+		cout << "Our friendly staff will assist you in filling out the necessary forms and setting up your account.\n\n";
+
+		cout << "Digital Banking:\n\n";
+		cout << "Register for our online banking services to manage your account from anywhere.\n";
+		cout << "Download our mobile app for easy access to your banking needs on the go.\n\n";
+
+		cout << "Products and Services:\n\n";
+		cout << "Explore a wide range of financial products tailored to your needs, including savings accounts, current accounts, loans, and investment opportunities.\n\n";
+
+		cout << "Customer Support:\n\n";
+		cout << "Our dedicated customer support team is always ready to help. Contact us via phone, email, or visit your nearest branch.\n\n";
+
+		cout << "Security:\n\n";
+		cout << "Learn about our robust security measures to protect your financial information.\n";
+		cout << "Set up SMS and email alerts for all account activities.\n\n";
+
+		cout << "Community and Events:\n\n";
+		cout << "Stay informed about our community initiatives and events.\n";
+		cout << "Participate in financial literacy workshops and seminars.\n\n";
+
+		cout << "Thank you for choosing Smart Bank of Pakistan. We look forward to serving you and helping you achieve your financial goals.\n";
+
+	}
+};
+
+class money_transfer : public main_menu
+{
+private:
+
+public:
+	string Your_AC{};
+	int reciever_ID{};
+	int Your_bank{};
+	string Reciever_AC{};
+	string password{};
+	int transferOption{};
+
+	void money_transfer_options() {
+		cout << "=====================================================\n"
+			<< "| Please Select an Option to Perform Your Task       |\n"
+			<< "|                                                    |\n"
+			<< "| 1. Transfer To Bank Account                        |\n"
+			<< "| 2. Transfer to Mobile Wallet                       |\n"
+			<< "| 3. International Transfers                         |\n"
+			<< "| 4. Transfer History                                |\n"
+			<< "| 5. Deposit To Bank Account                         |\n"
+			<< "|                                                    |\n"
+			<< "=====================================================\n"
+			<< "=> ";
+
+	}
+
+	void transfer_to_Bank_account() {
+
+		cout << "==========================================\n"
+			<< "| Welcome to Smart Bank of Pakistan!      |\n"
+			<< "|                                         |\n"
+			<< "| Select Your Bank:                       |\n"
+			<< "| 1. Smart Bank of Pakistan               |\n"
+			<< "| 2. Habib Bank Limited (HBL)             |\n"
+			<< "| 3. National Bank of Pakistan (NBP)      |\n"
+			<< "| 4. MCB Bank Limited                     |\n"
+			<< "| 5. United Bank Limited (UBL)            |\n"
+			<< "| 6. Allied Bank Limited (ABL)            |\n"
+			<< "| 7. Bank Alfalah Limited                 |\n"
+			<< "| 8. Askari Bank Limited                  |\n"
+			<< "| 9. Faysal Bank Limited                  |\n"
+			<< "| 10. Bank Al Habib Limited               |\n"
+			<< "===========================================\n"
+			<< "=> ";
+
+		cin >> Your_bank;
+		if (Your_bank == 1) {
+			transactionid++;
+			cout << "PLease Enter Your Account Number\n";
+			wcin >> accountNumber;
+			wstring Youraccountnumber;
+			Youraccountnumber = accountNumber;
+
+			cout << "Please Enter Your PIN Code \n";
+			wcin >> pincode;
+			cout << "PLease Enter You CNIC Number \n";
+			cin >> password;
+			cout << "Please Enter The Amount to Transfer\n";
+			cin >> Amount;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "PLease Enter Reciever's Account Number\n";
+				wcin >> accountNumber;
+				receiverAccountnumber = accountNumber;
+				success = depositAmount(sqlConnectionHandle, accountNumber, Amount);
+				if (success) {
+
+					wcout << "|=====================================================|\n"
+						<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+						<< "|=====================================================|\n"
+						<< "|       Your Transfer was successful!                 |\n"
+						<< "|       Details of the transaction:                   |\n"
+						<< "|-----------------------------------------------------|\n"
+						<< "|       You AC Number:          "; wcout << Youraccountnumber << "\n"
+						<< "|       Reciever's AC Number:   "; wcout << receiverAccountnumber << "\n"
+						<< "|       Payment Amount:         "; cout << Amount << "           \n"
+						<< "|       Transaction ID:         " << "SBPX"; wcout << transactionid; wcout << "\n"
+						<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+					wcout << "\n|=====================================================|\n"
+						<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+						<< "| For any queries, contact our customer support:      |\n"
+						<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+						<< "| Email: support@smartbank.com                        |\n"
+						<< "|=====================================================|\n"
+						<< endl;
+				}
+				else {
+					std::wcerr << L"Failed to deposit amount." << std::endl;
+				}
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+
+		}
+		else {
+
+			cout << "PLease Enter You Account Number\n";
+			wcin >> accountNumber;
+			cout << "Please Enter Your PIN Code \n";
+			cin >> pincode;
+			cout << "PLease Enter You CNIC Number \n";
+			wcin >> idCardNumber;
+			cout << "Please Enter The Amount to Transfer\n";
+			cin >> Amount;
+			cout << "PLease Enter Reciever's Account Number\n";
+			cin >> Reciever_AC;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "|=====================================================|\n"
+					<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+					<< "|=====================================================|\n"
+					<< "|       Your Transfer was successful!                 |\n"
+					<< "|       Details of the transaction:                   |\n"
+					<< "|-----------------------------------------------------|\n"
+					<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+					<< "|       Reciever's AC Number:   "; cout << Reciever_AC << "      \n"
+					<< "|       Payment Amount:         " << Amount << "          \n"
+					<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+					<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+				cout << "|=====================================================|\n"
+					<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+					<< "| For any queries, contact our customer support:      |\n"
+					<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+					<< "| Email: support@smartbank.com                |\n"
+					<< "|=====================================================|\n"
+					<< endl;
+
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+
+		}
+
+	};
+
+	void transfer_to_mobile_wallet() {
+
+		cout << "PLease Enter You Account Number\n";
+		wcin >> accountNumber;
+		cout << "Please Enter Your PIN Code \n";
+		cin >> pincode;
+		cout << "PLease Enter You CNIC Number \n";
+		wcin >> idCardNumber;
+		cout << "Please Enter The Amount to Load\n";
+		cin >> Amount;
+		cout << "PLease Enter Reciever's Mobile Number\n";
+		cin >> Reciever_AC;
+		bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+		if (success) {
+
+			cout << "|=====================================================|\n"
+				<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+				<< "|=====================================================|\n"
+				<< "|       Your Transfer was successful!                 |\n"
+				<< "|       Details of the transaction:                   |\n"
+				<< "|-----------------------------------------------------|\n"
+				<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+				<< "|       Reciever's Mobile Number:   "; cout << Reciever_AC << "      \n"
+				<< "|       Payment Amount:         " << Amount << "          \n"
+				<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+				<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+			cout << "|=====================================================|\n"
+				<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+				<< "| For any queries, contact our customer support:      |\n"
+				<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+				<< "| Email: support@smartbank.com                        |\n"
+				<< "|=====================================================|\n"
+				<< endl;
+
+		}
+		else {
+			cout << L"Failed to deposit amount." << endl;
+		}
+	};
+	void international_transfer() {
+		cout << "============================================\n"
+			<< "| Welcome to Smart Bank of Pakistan!        |\n"
+			<< "|                                           |\n"
+			<< "| Select Your International Transfer Option |\n"
+			<< "| 1. ONLINE MONEY TRANSFER SERVICES         |\n"
+			<< "| 2. INTERNATIONAL MONEY ORDERS             |\n"
+			<< "| 3. CRYPTOCURRENCY TRANSFERS               |\n"
+			<< "============================================\n"
+			<< "=> ";
+
+		cin >> transferOption;
+		if (transferOption == 1) {
+
+			cout << "PLease Enter You Account Number\n";
+			wcin >> accountNumber;
+			cout << "Please Enter Your PIN Code \n";
+			cin >> pincode;
+			cout << "PLease Enter You CNIC Number \n";
+			wcin >> idCardNumber;
+			cout << "Please Enter The Amount of Money Order\n";
+			cin >> Amount;
+			cout << "PLease Enter Reciever's Account Number\n";
+			cin >> Reciever_AC;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "|=====================================================|\n"
+					<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+					<< "|=====================================================|\n"
+					<< "|       Your Transfer was successful!                 |\n"
+					<< "|       Details of the transaction:                   |\n"
+					<< "|-----------------------------------------------------|\n"
+					<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+					<< "|       Reciever's AC Number:   "; cout << Reciever_AC << "      \n"
+					<< "|       Payment Amount:         " << Amount << "          \n"
+					<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+					<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+				cout << "|=====================================================|\n"
+					<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+					<< "| For any queries, contact our customer support:      |\n"
+					<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+					<< "| Email: support@smartbank.com                        |\n"
+					<< "|=====================================================|\n"
+					<< endl;
+
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+		}
+		else if (transferOption == 2) {
+
+			cout << "PLease Enter You Account Number\n";
+			wcin >> accountNumber;
+			cout << "Please Enter Your PIN Code \n";
+			cin >> pincode;
+			cout << "PLease Enter You CNIC Number \n";
+			wcin >> idCardNumber;
+			cout << "Please Enter The Amount to Transfer\n";
+			cin >> Amount;
+			cout << "PLease Enter Reciever's Account Number\n";
+			cin >> Reciever_AC;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "|=====================================================|\n"
+					<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+					<< "|=====================================================|\n"
+					<< "|       Your Transfer was successful!                 |\n"
+					<< "|       Details of the transaction:                   |\n"
+					<< "|-----------------------------------------------------|\n"
+					<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+					<< "|       Reciever's AC Number:   "; cout << Reciever_AC << "      \n"
+					<< "|       Payment Amount:         " << Amount << "          \n"
+					<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+					<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+				cout << "|=====================================================|\n"
+					<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+					<< "| For any queries, contact our customer support:      |\n"
+					<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+					<< "| Email: support@smartbank.com                        |\n"
+					<< "|=====================================================|\n"
+					<< endl;
+
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+		}
+		else if (transferOption == 3) {
+
+			cout << "PLease Enter You Account Number\n";
+			wcin >> accountNumber;
+			cout << "Please Enter Your PIN Code \n";
+			cin >> pincode;
+			cout << "PLease Enter You CNIC Number \n";
+			wcin >> idCardNumber;
+			cout << "Please Enter The Amount to Transfer\n";
+			cin >> Amount;
+			cout << "PLease Enter Reference Account Number\n";
+			cin >> Reciever_AC;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "|=====================================================|\n"
+					<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+					<< "|=====================================================|\n"
+					<< "|       Your Transfer was successful!                 |\n"
+					<< "|       Details of the transaction:                   |\n"
+					<< "|-----------------------------------------------------|\n"
+					<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+					<< "|       Reciever's AC Number:   "; cout << Reciever_AC << "      \n"
+					<< "|       Payment Amount:         " << Amount << "          \n"
+					<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+					<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+				cout << "|=====================================================|\n"
+					<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+					<< "| For any queries, contact our customer support:      |\n"
+					<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+					<< "| Email: support@smartbank.com                |\n"
+					<< "|=====================================================|\n"
+					<< endl;
+
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+		}
+		else {
+			cout << "Incorect Option Selected.";
+		}
+	};
+	void transfer_history() {
+		cout << "No Transaction History Found";
+
+	};
+
+};
+
+class mobile_load : public main_menu
+{
+private:
+
+public:
+	string Your_AC{};
+	int reciever_ID{};
+	int Your_bank{};
+	string Reciever_AC{};
+	string password{};
+	int transferOption{};
+	int package{};
+	void mobile_load_options() {
+		cout << "Please Select an Option to perform Your Task " << endl
+			<< endl;
+		cout << "1. Load Mobile Number " << endl;
+		cout << "2. Mobile Packages  " << endl
+			<< "=> ";
+	}
+
+	void load_mobile_number() {
+
+		cout << "PLease Enter You Account Number\n";
+		wcin >> accountNumber;
+		cout << "Please Enter Your PIN Code \n";
+		cin >> pincode;
+		cout << "PLease Enter You CNIC Number \n";
+		wcin >> idCardNumber;
+		cout << "Please Enter The Amount to Load\n";
+		cin >> Amount;
+		cout << "PLease Enter Reciever's Mobile Number\n";
+		cin >> Reciever_AC;
+		bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+		if (success) {
+
+			cout << "|=====================================================|\n"
+				<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+				<< "|=====================================================|\n"
+				<< "|       Your Transfer was successful!                 |\n"
+				<< "|       Details of the transaction:                   |\n"
+				<< "|-----------------------------------------------------|\n"
+				<< "|       Your AC Number:             "; wcout << accountNumber << "          \n"
+				<< "|       Reciever's Mobile Number:   "; cout << Reciever_AC << "      \n"
+				<< "|       Payment Amount:             " << Amount << "          \n"
+				<< "|       Transaction ID:             " << "SBPX" << transactionid << "\n"
+				<< "|       Date and Time:              "; printCurrentDateTime(); "\n";
+			cout << "|=====================================================|\n"
+				<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+				<< "| For any queries, contact our customer support:      |\n"
+				<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+				<< "| Email: support@smartbank.com                        |\n"
+				<< "|=====================================================|\n"
+				<< endl;
+
+		}
+		else {
+			std::wcerr << L"Failed to deposit amount." << std::endl;
+		}
+	};
+	void mobile_packages() {
+		cout << "==========================================================================================================================================================\n"
+			<< "|                                       Mobile Packages                                                                                                     |\n"
+			<< "==========================================================================================================================================================\n"
+			<< "| Package          | Features                                                                         | Price            |\n"
+			<< "==========================================================================================================================================================\n"
+			<< "| Basic Package    | - Free mobile app access                                                     | PKR 100/month    |\n"
+			<< "|                  | - 10 free SMS alerts per month                                               |                  |\n"
+			<< "|                  | - Basic account management features                                          |                  |\n"
+			<< "----------------------------------------------------------------------------------------------------------------------------------------------------------\n"
+			<< "| Standard Package | - Free mobile app access                                                     | PKR 300/month    |\n"
+			<< "|                  | - 50 free SMS alerts per month                                                |                  |\n"
+			<< "|                  | - Enhanced account management features                                        |                  |\n"
+			<< "|                  | - Free e-statements                                                           |                  |\n"
+			<< "----------------------------------------------------------------------------------------------------------------------------------------------------------\n"
+			<< "| Premium Package  | - Free mobile app access                                                     | PKR 700/month    |\n"
+			<< "|                  | - Unlimited SMS alerts                                                         |                  |\n"
+			<< "|                  | - Advanced account management features                                        |                  |\n"
+			<< "|                  | - Free e-statements                                                           |                  |\n"
+			<< "|                  | - Priority customer support                                                   |                  |\n"
+			<< "----------------------------------------------------------------------------------------------------------------------------------------------------------\n"
+			<< "| Business Package | - Free mobile app access                                                     | PKR 1500/month   |\n"
+			<< "|                  | - Unlimited SMS alerts                                                         |                  |\n"
+			<< "|                  | - Comprehensive account management features                                    |                  |\n"
+			<< "|                  | - Free e-statements                                                           |                  |\n"
+			<< "|                  | - Priority customer support                                                   |                  |\n"
+			<< "|                  | - Dedicated account manager                                                   |                  |\n"
+			<< "==========================================================================================================================================================\n"
+			<< "Choose the package that best suits your needs and experience the convenience of mobile banking with Smart Bank of Pakistan.\n";
+
+		cin >> package;
+
+		if (package == 1) {
+
+			cout << "PLease Enter You Account Number\n";
+			wcin >> accountNumber;
+			cout << "Please Enter Your PIN Code \n";
+			cin >> pincode;
+			cout << "PLease Enter You CNIC Number \n";
+			wcin >> idCardNumber;
+
+			Amount = 100;
+			cout << "PLease Enter Reciever's Account Number\n";
+			cin >> Reciever_AC;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "|=====================================================|\n"
+					<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+					<< "|=====================================================|\n"
+					<< "|       Your Transfer was successful!                 |\n"
+					<< "|       Details of the transaction:                   |\n"
+					<< "|-----------------------------------------------------|\n"
+					<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+					<< "|       Reciever's AC Number:   "; cout << Reciever_AC << "      \n"
+					<< "|       Payment Amount:         " << Amount << "          \n"
+					<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+					<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+				cout << "|=====================================================|\n"
+					<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+					<< "| For any queries, contact our customer support:      |\n"
+					<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+					<< "| Email: support@smartbank.com                        |\n"
+					<< "|=====================================================|\n"
+					<< endl;
+
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+
+		}
+		else if (package == 2) {
+
+			cout << "PLease Enter You Account Number\n";
+			wcin >> accountNumber;
+			cout << "Please Enter Your PIN Code \n";
+			cin >> pincode;
+			cout << "PLease Enter You CNIC Number \n";
+			wcin >> idCardNumber;
+
+			Amount = 300;
+			cout << "PLease Enter Reciever's Account Number\n";
+			cin >> Reciever_AC;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "|=====================================================|\n"
+					<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+					<< "|=====================================================|\n"
+					<< "|       Your Transfer was successful!                 |\n"
+					<< "|       Details of the transaction:                   |\n"
+					<< "|-----------------------------------------------------|\n"
+					<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+					<< "|       Reciever's AC Number:   "; cout << Reciever_AC << "      \n"
+					<< "|       Payment Amount:         " << Amount << "          \n"
+					<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+					<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+				cout << "|=====================================================|\n"
+					<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+					<< "| For any queries, contact our customer support:      |\n"
+					<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+					<< "| Email: support@smartbank.com                        |\n"
+					<< "|=====================================================|\n"
+					<< endl;
+
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+
+		}
+		else if (package == 3) {
+
+			cout << "PLease Enter You Account Number\n";
+			wcin >> accountNumber;
+			cout << "Please Enter Your PIN Code \n";
+			cin >> pincode;
+			cout << "PLease Enter Your CNIC Number \n";
+			wcin >> idCardNumber;
+
+			Amount = 700;
+			cout << "PLease Enter Reciever's Account Number\n";
+			cin >> Reciever_AC;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "|=====================================================|\n"
+					<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+					<< "|=====================================================|\n"
+					<< "|       Your Transfer was successful!                 |\n"
+					<< "|       Details of the transaction:                   |\n"
+					<< "|-----------------------------------------------------|\n"
+					<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+					<< "|       Reciever's AC Number:   "; cout << Reciever_AC << "      \n"
+					<< "|       Payment Amount:         " << Amount << "          \n"
+					<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+					<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+				cout << "|=====================================================|\n"
+					<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+					<< "| For any queries, contact our customer support:      |\n"
+					<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+					<< "| Email: support@smartbank.com                        |\n"
+					<< "|=====================================================|\n"
+					<< endl;
+
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+
+		}
+		else if (package == 4) {
+
+			cout << "PLease Enter You Account Number\n";
+			wcin >> accountNumber;
+			cout << "Please Enter Your PIN Code \n";
+			cin >> pincode;
+			cout << "PLease Enter You CNIC Number \n";
+			wcin >> idCardNumber;
+
+			Amount = 1500;
+			cout << "PLease Enter Reciever's Account Number\n";
+			cin >> Reciever_AC;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "|=====================================================|\n"
+					<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+					<< "|=====================================================|\n"
+					<< "|       Your Transfer was successful!                 |\n"
+					<< "|       Details of the transaction:                   |\n"
+					<< "|-----------------------------------------------------|\n"
+					<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+					<< "|       Reciever's AC Number:   "; cout << Reciever_AC << "      \n"
+					<< "|       Payment Amount:         " << Amount << "          \n"
+					<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+					<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+				cout << "|=====================================================|\n"
+					<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+					<< "| For any queries, contact our customer support:      |\n"
+					<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+					<< "| Email: support@smartbank.com                        |\n"
+					<< "|=====================================================|\n"
+					<< endl;
+
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+
+		}
+		else {
+
+			cout << "Error! operator is not correct";
+
+		}
+
+	};
+};
+
+class bill_payments : public main_menu
+{
+private:
+
+public:
+
+	void bill_payments_options() {
+		cout << "=================================================================\n"
+			<< "| Please Select an Option to Perform Your Task                 |\n"
+			<< "|                                                               |\n"
+			<< "| 1. Pay Utility Bills                                          |\n"
+			<< "| 2. Pay Credit Card Bills                                      |\n"
+			<< "| 3. Pay Internet Bills                                         |\n"
+			<< "| 4. Pay TV Subscription                                        |\n"
+			<< "| 5. Pay Gas Bill                                               |\n"
+			<< "=================================================================\n"
+			<< "=> ";
+
+	}
+	void pay_utility_bills() {
+
+		cout << "PLease Enter Your Account Number\n";
+		wcin >> accountNumber;
+		cout << "Please Enter Your PIN Code \n";
+		cin >> pincode;
+		cout << "PLease Enter Your Name Mentioned on Bill Number \n";
+		wcin >> idCardNumber;
+		cout << "Please Enter The Amount to Transfer\n";
+		cin >> Amount;
+		cout << "PLease Enter Reference Number of Bill\n";
+		cin >> Reciever_AC;
+		bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+		if (success) {
+
+			cout << "|=====================================================|\n"
+				<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+				<< "|=====================================================|\n"
+				<< "|       Your Transfer was successful!                 |\n"
+				<< "|       Details of the transaction:                   |\n"
+				<< "|-----------------------------------------------------|\n"
+				<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+				<< "|       Reference Number:       "; cout << Reciever_AC << "      \n"
+				<< "|       Payment Amount:         " << Amount << "          \n"
+				<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+				<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+			cout << "|=====================================================|\n"
+				<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+				<< "| For any queries, contact our customer support:      |\n"
+				<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+				<< "| Email: support@smartbank.com                        |\n"
+				<< "|=====================================================|\n"
+				<< endl;
+
+		}
+		else {
+			cout << L"Failed to deposit amount." << endl;
+		}
+	};
+	void pay_credit_card_bills() {
+
+		cout << "PLease Enter Your Account Number\n";
+		wcin >> accountNumber;
+		cout << "Please Enter Your PIN Code \n";
+		cin >> pincode;
+		cout << "PLease Enter Your Name Mentioned on Bill Number \n";
+		wcin >> idCardNumber;
+		cout << "Please Enter The Amount to Transfer\n";
+		cin >> Amount;
+		cout << "PLease Enter Reference Number of Bill\n";
+		cin >> Reciever_AC;
+		bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+		if (success) {
+
+			cout << "|=====================================================|\n"
+				<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+				<< "|=====================================================|\n"
+				<< "|       Your Transfer was successful!                 |\n"
+				<< "|       Details of the transaction:                   |\n"
+				<< "|-----------------------------------------------------|\n"
+				<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+				<< "|       Reference Number:       "; cout << Reciever_AC << "      \n"
+				<< "|       Payment Amount:         " << Amount << "          \n"
+				<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+				<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+			cout << "|=====================================================|\n"
+				<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+				<< "| For any queries, contact our customer support:      |\n"
+				<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+				<< "| Email: support@smartbank.com                        |\n"
+				<< "|=====================================================|\n"
+				<< endl;
+
+		}
+		else {
+			cout << L"Failed to deposit amount." << endl;
+		}
+	};
+	void pay_internet_bills() {
+
+		cout << "PLease Enter Your Account Number\n";
+		wcin >> accountNumber;
+		cout << "Please Enter Your PIN Code \n";
+		cin >> pincode;
+		cout << "PLease Enter Your Name Mentioned on Bill Number \n";
+		wcin >> idCardNumber;
+		cout << "Please Enter The Amount to Transfer\n";
+		cin >> Amount;
+		cout << "PLease Enter Reference Number of Bill\n";
+		cin >> Reciever_AC;
+		bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+		if (success) {
+
+			cout << "|=====================================================|\n"
+				<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+				<< "|=====================================================|\n"
+				<< "|       Your Transfer was successful!                 |\n"
+				<< "|       Details of the transaction:                   |\n"
+				<< "|-----------------------------------------------------|\n"
+				<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+				<< "|       Reference Number:       "; cout << Reciever_AC << "      \n"
+				<< "|       Payment Amount:         " << Amount << "          \n"
+				<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+				<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+			cout << "|=====================================================|\n"
+				<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+				<< "| For any queries, contact our customer support:      |\n"
+				<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+				<< "| Email: support@smartbank.com                        |\n"
+				<< "|=====================================================|\n"
+				<< endl;
+
+		}
+		else {
+			cout << L"Failed to deposit amount." << endl;
+		}
+	};
+
+	void pay_gas_bills() {
+
+		cout << "PLease Enter Your Account Number\n";
+		wcin >> accountNumber;
+		cout << "Please Enter Your PIN Code \n";
+		cin >> pincode;
+		cout << "PLease Enter Your Name Mentioned on Bill Number \n";
+		wcin >> idCardNumber;
+		cout << "Please Enter The Amount to Transfer\n";
+		cin >> Amount;
+		cout << "PLease Enter Reference Number of Bill\n";
+		cin >> Reciever_AC;
+		bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+		if (success) {
+
+			cout << "|=====================================================|\n"
+				<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+				<< "|=====================================================|\n"
+				<< "|       Your Transfer was successful!                 |\n"
+				<< "|       Details of the transaction:                   |\n"
+				<< "|-----------------------------------------------------|\n"
+				<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+				<< "|       Reference Number:       "; cout << Reciever_AC << "      \n"
+				<< "|       Payment Amount:         " << Amount << "          \n"
+				<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+				<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+			cout << "|=====================================================|\n"
+				<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+				<< "| For any queries, contact our customer support:      |\n"
+				<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+				<< "| Email: support@smartbank.com                        |\n"
+				<< "|=====================================================|\n"
+				<< endl;
+
+		}
+		else {
+			cout << L"Failed to deposit amount." << endl;
+		}
+	};
+
+	void pay_tv_subscription() {
+
+		cout << "PLease Enter Your Account Number\n";
+		wcin >> accountNumber;
+		cout << "Please Enter Your PIN Code \n";
+		cin >> pincode;
+		cout << "PLease Enter Your Name Mentioned on Bill Number \n";
+		wcin >> idCardNumber;
+		cout << "Please Enter The Amount to Transfer\n";
+		cin >> Amount;
+		cout << "PLease Enter Reference Number of Bill\n";
+		cin >> Reciever_AC;
+		bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+		if (success) {
+
+			cout << "|=====================================================|\n"
+				<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+				<< "|=====================================================|\n"
+				<< "|       Your Transfer was successful!                 |\n"
+				<< "|       Details of the transaction:                   |\n"
+				<< "|-----------------------------------------------------|\n"
+				<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+				<< "|       Reference Number:       "; cout << Reciever_AC << "      \n"
+				<< "|       Payment Amount:         " << Amount << "          \n"
+				<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+				<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+			cout << "|=====================================================|\n"
+				<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+				<< "| For any queries, contact our customer support:      |\n"
+				<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+				<< "| Email: support@smartbank.com                        |\n"
+				<< "|=====================================================|\n"
+				<< endl;
+
+		}
+		else {
+			cout << L"Failed to deposit amount." << endl;
+		}
+	};
+
+};
+
+class ATM : virtual public main_menu
+{
+private:
+
+public:
+	string Your_AC{};
+	int reciever_ID{};
+	int Your_bank{};
+	string Reciever_AC{};
+	string password{};
+	int transferOption{};
+
+	void payments_options() {
+		cout << "=================================================================|\n"
+			<< "| Please Select an Option to Perform Your Task                 \n"
+			<< "|                                                               \n"
+			<< "| 1. Withdraw Cash                                          \n"
+			<< "| 2. Deposit Cash                                      \n"
+			<< "| 3. Check Balance                                         \n"
+			<< "| 4. Transfer Funds                                        \n"
+			<< "| 5. Transaction History                                              \n"
+			<< "=================================================================|\n"
+			<< "=> ";
+
+	}
+	void withdrawCash() {
+		cout << "PLease Enter Your Name \n";
+		cin >> Reciever_AC;
+		cout << "PLease Enter You Account Number\n";
+		wcin >> accountNumber;
+		cout << "Please Enter Your PIN Code \n";
+		cin >> pincode;
+		cout << "PLease Enter You CNIC Number \n";
+		wcin >> idCardNumber;
+		cout << "Please Enter The Amount to Withdraw\n";
+		cin >> Amount;
+
+		bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+		if (success) {
+
+			cout << "|=====================================================|\n"
+				<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+				<< "|=====================================================|\n"
+				<< "|       Your Transfer was successful!                 |\n"
+				<< "|       Details of the transaction:                   |\n"
+				<< "|-----------------------------------------------------|\n"
+				<< "|       Your Name:              "; wcout << accountNumber << "          \n"
+				<< "|       Your AC Number:         "; cout << Reciever_AC << "      \n"
+				<< "|       Payment Amount:         " << Amount << "          \n"
+				<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+				<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+			cout << "|=====================================================|\n"
+				<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+				<< "| For any queries, contact our customer support:      |\n"
+				<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+				<< "| Email: support@smartbank.com                        |\n"
+				<< "|=====================================================|\n"
+				<< endl;
+
+		}
+		else {
+			cout << L"Failed to deposit amount." << endl;
+		}
+	};
+	void depositCash() {
+		cout << "PLease Enter Your Account Type\n";
+		cin >> Reciever_AC;
+		cout << "PLease Enter You Account Number\n";
+		wcin >> accountNumber;
+		cout << "Please Enter Your PIN Code \n";
+		cin >> pincode;
+		cout << "PLease Enter Your CNIC Number \n";
+		wcin >> idCardNumber;
+		cout << "Please Enter The Amount to Deposit\n";
+		cin >> Amount;
+
+		bool success = depositAmount(sqlConnectionHandle, accountNumber, Amount);
+		if (success) {
+
+			cout << "|=====================================================|\n"
+				<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+				<< "|=====================================================|\n"
+				<< "|       Your Transfer was successful!                 |\n"
+				<< "|       Details of the transaction:                   |\n"
+				<< "|-----------------------------------------------------|\n"
+				<< "|       Your AC Type:           "; wcout << accountNumber << "          \n"
+				<< "|       Your AC Number:         "; cout << Reciever_AC << "      \n"
+				<< "|       Payment Amount:         " << Amount << "          \n"
+				<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+				<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+			cout << "|=====================================================|\n"
+				<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+				<< "| For any queries, contact our customer support:      |\n"
+				<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+				<< "| Email: support@smartbank.com                |\n"
+				<< "|=====================================================|\n"
+				<< endl;
+
+		}
+		else {
+			cout << L"Failed to deposit amount." << endl;
+		}
+	};
+
+	void transferFunds() {
+		cout << "==========================================\n"
+			<< "| Welcome to Smart Bank of Pakistan!      |\n"
+			<< "|                                         |\n"
+			<< "| Select Your Bank:                       |\n"
+			<< "| 1. Smart Bank of Pakistan               |\n"
+			<< "| 2. Habib Bank Limited (HBL)             |\n"
+			<< "| 3. National Bank of Pakistan (NBP)      |\n"
+			<< "| 4. MCB Bank Limited                     |\n"
+			<< "| 5. United Bank Limited (UBL)            |\n"
+			<< "| 6. Allied Bank Limited (ABL)            |\n"
+			<< "| 7. Bank Alfalah Limited                 |\n"
+			<< "| 8. Askari Bank Limited                  |\n"
+			<< "| 9. Faysal Bank Limited                  |\n"
+			<< "| 10. Bank Al Habib Limited               |\n"
+			<< "===========================================\n"
+			<< "=> ";
+
+		cin >> Your_bank;
+		if (Your_bank == 1) {
+			cout << "PLease Enter Your Account Number\n";
+			wcin >> accountNumber;
+			wstring Youraccountnumber;
+			Youraccountnumber = accountNumber;
+
+			cout << "Please Enter Your PIN Code \n";
+			wcin >> pincode;
+			cout << "PLease Enter You CNIC Number \n";
+			cin >> password;
+			cout << "Please Enter The Amount to Transfer\n";
+			cin >> Amount;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "PLease Enter Reciever's Account Number\n";
+				wcin >> accountNumber;
+				receiverAccountnumber = accountNumber;
+				success = depositAmount(sqlConnectionHandle, accountNumber, Amount);
+				if (success) {
+
+					wcout << "|=====================================================|\n"
+						<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+						<< "|=====================================================|\n"
+						<< "|       Your Transfer was successful!                 |\n"
+						<< "|       Details of the transaction:                   |\n"
+						<< "|-----------------------------------------------------|\n"
+						<< "|       You AC Number:          "; wcout << Youraccountnumber << "\n"
+						<< "|       Reciever's AC Number:   "; wcout << receiverAccountnumber << "\n"
+						<< "|       Payment Amount:         "; cout << Amount << "           \n"
+						<< "|       Transaction ID:         " << "SBPX"; wcout << transactionid; wcout << "\n"
+						<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+					wcout << "\n|=====================================================|\n"
+						<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+						<< "| For any queries, contact our customer support:      |\n"
+						<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+						<< "| Email: support@smartbank.com                        |\n"
+						<< "|=====================================================|\n"
+						<< endl;
+				}
+				else {
+					cout << L"Failed to deposit amount." << endl;
+				}
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+
+		}
+		else {
+
+			cout << "PLease Enter You Account Number\n";
+			wcin >> accountNumber;
+			cout << "Please Enter Your PIN Code \n";
+			cin >> pincode;
+			cout << "PLease Enter You CNIC Number \n";
+			wcin >> idCardNumber;
+			cout << "Please Enter The Amount to Transfer\n";
+			cin >> Amount;
+			cout << "PLease Enter Reciever's Account Number\n";
+			cin >> Reciever_AC;
+			bool success = WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount);
+			if (success) {
+
+				cout << "|=====================================================|\n"
+					<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+					<< "|=====================================================|\n"
+					<< "|       Your Transfer was successful!                 |\n"
+					<< "|       Details of the transaction:                   |\n"
+					<< "|-----------------------------------------------------|\n"
+					<< "|       Your AC Number:         "; wcout << accountNumber << "          \n"
+					<< "|       Reciever's AC Number:   "; cout << Reciever_AC << "      \n"
+					<< "|       Payment Amount:         " << Amount << "          \n"
+					<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+					<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+				cout << "|=====================================================|\n"
+					<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+					<< "| For any queries, contact our customer support:      |\n"
+					<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+					<< "| Email: support@smartbank.com                        |\n"
+					<< "|=====================================================|\n"
+					<< endl;
+
+			}
+			else {
+				cout << L"Failed to deposit amount." << endl;
+			}
+
+		}
+	};
+	void printTransactionHistory() {
+		displaytransactions(sqlConnectionHandle);
+	};
+
+};
+
+class savings_and_insurance : public main_menu
+{
+private:
+
+public:
+	void display_main_menu() {
+		cout << "=================================================================\n"
+			<< "| Please Select an Option to Perform Your Task                  |\n"
+			<< "|                                                               |\n"
+			<< "| 1. View Savings Account                                       |\n"
+			<< "| 2. Open New Savings Account                                   |\n"
+			<< "| 3. Insurance Plans                                            |\n"
+			<< "| 4. Apply for Insurance                                        |\n"
+			<< "| 5. Insurance Policy Details                                   |\n"
+			<< "=================================================================\n"
+			<< "=> ";
+	}
+
+	void view_savings_account() {
+		cout << "=================================================================\n"
+			<< "|             Savings Account Types                             |\n"
+			<< "=================================================================\n"
+			<< "| 1. Basic Savings Account                                      |\n"
+			<< "| 2. High-Yield Savings Account                                 |\n"
+			<< "| 3. Money Market Account                                       |\n"
+			<< "| 4. Certificate of Deposit (CD)                                |\n"
+			<< "| 5. Individual Retirement Account (IRA)                        |\n"
+			<< "=================================================================\n"
+			<< "=> ";
+		cin >> sub_selection_by_customer;
+
+		if (sub_selection_by_customer == 1) {
+
+			cout << "Basic Savings Account:\n"
+				<< "-----------------------\n"
+				<< "Features: This account offers a standard interest rate and may have minimum pincode requirements.\n"
+				<< "Pricing: No monthly maintenance fees. Minimum initial deposit: PKR 10,000. Interest rate: 0.5% per annum.\n"
+				<< "Timeline: Account activation typically within 1 business day.\n\n";
+
+		}
+		else if (sub_selection_by_customer == 2) {
+
+			cout << "High-Yield Savings Account:\n"
+				<< "---------------------------\n"
+				<< "Features: This account offers a higher interest rate than basic savings accounts and may require a larger initial deposit. Be aware of potential fees for falling below the minimum pincode.\n"
+				<< "Pricing: No monthly maintenance fees. Minimum initial deposit: PKR 50,000. Interest rate: 1.5% per annum.\n"
+				<< "Timeline: Account activation typically within 1-2 business days.\n\n";
+
+		}
+		else if (sub_selection_by_customer == 3) {
+			cout << "Money Market Account:\n"
+				<< "---------------------\n"
+				<< "Features: This account typically offers higher interest rates than basic savings accounts and often allows limited check-writing capabilities. It may have minimum pincode requirements.\n"
+				<< "Pricing: No monthly maintenance fees. Minimum initial deposit: PKR 100,000. Interest rate: 2% per annum.\n"
+				<< "Timeline: Account activation typically within 2-3 business days.\n\n";
+
+		}
+		else if (sub_selection_by_customer == 4) {
+
+			cout << "Certificate of Deposit (CD):\n"
+				<< "------------------------------\n"
+				<< "Features: CDs offer fixed interest rates for a specified term length. Early withdrawals may incur penalties.\n"
+				<< "Pricing: No monthly maintenance fees. Minimum initial deposit: PKR 50,000. Interest rate: 2.5% per annum for a 12-month CD.\n"
+				<< "Timeline: Account activation typically within 1-2 business days.\n\n";
+
+		}
+		else if (sub_selection_by_customer == 5) {
+			cout << "Individual Retirement Account (IRA):\n"
+				<< "------------------------------------\n"
+				<< "Features: IRAs are designed for retirement savings, with potential tax benefits. Contribution limits and penalties for early withdrawal may apply.\n"
+				<< "Pricing: No monthly maintenance fees. Minimum initial deposit: PKR 25,000. Interest rate:  3.5% per annum for a 12-month CD.\n";
+
+		}
+		else {
+
+			cout << "Error! operator is not correct";
+
+		}
+	}
+
+	void insurance_plans() {
+		cout << "=================================================================\n"
+			<< "|             Available Insurance Plans                         |\n"
+			<< "=================================================================\n"
+			<< "| 1. Life Insurance                                             |\n"
+			<< "| 2. Health Insurance                                           |\n"
+			<< "| 3. Auto Insurance                                             |\n"
+			<< "| 4. Home Insurance                                             |\n"
+			<< "| 5. Travel Insurance                                           |\n"
+			<< "=================================================================\n"
+			<< "=> ";
+
+		cin >> sub_selection_by_customer;
+
+		if (sub_selection_by_customer == 1) {
+
+			cout << "1. Life Insurance\n"
+				<< "   Features:\n"
+				<< "   - Provides financial protection to your family in the event of your death.\n"
+				<< "   - Coverage includes death benefits paid to beneficiaries.\n"
+				<< "   - Optional riders may include accidental death benefit, critical illness coverage, and terminal illness benefit.\n"
+				<< "Payment Plan:\n"
+				<< "   - Premiums may vary based on age, coverage amount, and health status.\n"
+				<< "   - Premiums can be paid monthly, quarterly, semi-annually, or annually.\n"
+				<< "   - Example: Monthly premium for PKR 1,000.\n\n";
+
+		}
+		else if (sub_selection_by_customer == 2) {
+
+			cout << "2. Health Insurance\n"
+				<< "   Features:\n"
+				<< "   - Covers medical expenses, including hospitalization, surgeries, and treatments.\n"
+				<< "   - Benefits may include coverage for doctor visits, prescription drugs, and preventive care.\n"
+				<< "   - Optional coverage for dental, vision, and maternity care may be available.\n"
+				<< "Payment Plan:\n"
+				<< "   - Premiums may vary based on age, coverage type, and pre-existing conditions.\n"
+				<< "   - Premiums are typically paid monthly or annually.\n"
+				<< "   - Example: Annual premium for PKR 12,000.\n\n";
+
+		}
+		else if (sub_selection_by_customer == 3) {
+			cout << "3. Auto Insurance\n"
+				<< "   Features:\n"
+				<< "   - Provides coverage for damages to your vehicle and liability in case of accidents.\n"
+				<< "   - Coverage options may include collision, comprehensive, and liability insurance.\n"
+				<< "   - Additional coverage for uninsured/underinsured motorists, roadside assistance, and rental reimbursement may be offered.\n"
+				<< "Payment Plan:\n"
+				<< "   - Premiums may vary based on the value of the vehicle, driving history, and coverage options.\n"
+				<< "   - Premiums are usually paid monthly or annually.\n"
+				<< "   - Example: Annual premium for PKR 20,000.\n\n";
+
+		}
+		else if (sub_selection_by_customer == 4) {
+
+			cout << "4. Home Insurance\n"
+				<< "   Features:\n"
+				<< "   - Protects your home and belongings against damages and theft.\n"
+				<< "   - Coverage includes dwelling coverage for the structure of your home and personal property coverage for belongings.\n"
+				<< "   - Additional coverage options may include liability protection, loss of use coverage, and personal injury coverage.\n"
+				<< "Payment Plan:\n"
+				<< "   - Premiums may vary based on the value of the home, location, and coverage options.\n"
+				<< "   - Premiums are typically paid annually.\n"
+				<< "   - Example: Annual premium for PKR 15,000.\n\n";
+
+		}
+		else if (sub_selection_by_customer == 5) {
+			cout << "5. Travel Insurance\n"
+				<< "   Features:\n"
+				<< "   - Offers coverage for medical emergencies, trip cancellations, and lost luggage during travel.\n"
+				<< "   - Coverage may include emergency medical treatment, trip interruption/cancellation, and baggage loss/delay.\n"
+				<< "   - Additional benefits such as emergency evacuation, travel assistance, and rental car protection may be included.\n"
+				<< "Payment Plan:\n"
+				<< "   - Premiums may vary based on trip duration, destination, and coverage options.\n"
+				<< "   - Premiums are usually paid for the duration of the trip or for a specific period.\n"
+				<< "   - Example: Premium of PKR 500 for a 7-day trip.\n\n";
+		}
+		else {
+
+			cout << "Error! operator is not correct";
+
+		}
+	}
+
+	void apply_for_insurance() {
+
+		cout << "=================================================================\n"
+			<< "|             Available Insurance Plans                         |\n"
+			<< "=================================================================\n"
+			<< "| 1. Life Insurance                                             |\n"
+			<< "| 2. Health Insurance                                           |\n"
+			<< "| 3. Auto Insurance                                             |\n"
+			<< "| 4. Home Insurance                                             |\n"
+			<< "| 5. Travel Insurance                                           |\n"
+			<< "=================================================================\n"
+			<< "=> ";
+
+		cin >> sub_selection_by_customer;
+
+		if (sub_selection_by_customer == 1) {
+
+			cout << savingaccount;
+
+			cout << "1. Life Insurance\n"
+				<< "   Features:\n"
+				<< "   - Provides financial protection to your family in the event of your death.\n"
+				<< "   - Coverage includes death benefits paid to beneficiaries.\n"
+				<< "   - Optional riders may include accidental death benefit, critical illness coverage, and terminal illness benefit.\n"
+				<< "Payment Plan:\n"
+				<< "   - Premiums may vary based on age, coverage amount, and health status.\n"
+				<< "   - Premiums can be paid monthly, quarterly, semi-annually, or annually.\n"
+				<< "   - Example: Monthly premium for PKR 1,000.\n\n";
+
+			wcout << L"Please Enter Your Current Account Number: ";
+			wcin >> accountnumber;
+
+			wcout << L"Please Enter Your Current Account pincode: ";
+			wcin >> pincode;
+
+			insurancedetail = L"Life Insurance";
+			interestrate = 0.0f;
+			Amount = 1000;
+			savingaccount = readAccountNumberCount();
+
+			accountnumbercount += 12;
+			savingaccount = accountnumbercount;
+
+			writeAccountNumberCount(accountnumbercount);
+
+			if (insertSavingsAndInsuranceData(sqlConnectionHandle, savingaccount, interestrate, insurancedetail, accountnumber, pincode)) {
+				accountNumber = accountnumber;
+
+				if (WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount)) {
+					cout << "|=====================================================|\n"
+						<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+						<< "|=====================================================|\n"
+						<< "|       Your Transfer was successful!                 |\n"
+						<< "|       Details of the transaction:                   |\n"
+						<< "|-----------------------------------------------------|\n"
+						<< "|       Your Account No. :      "; wcout << accountnumber << "          \n"
+						<< "|       Insurance Type:         "; wcout << insurancedetail << "      \n"
+						<< "|       Payment Amount:         " << Amount << "          \n"
+						<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+						<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+					cout << "|=====================================================|\n"
+						<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+						<< "| For any queries, contact our customer support:      |\n"
+						<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+						<< "| Email: support@smartbank.com                        |\n"
+						<< "|=====================================================|\n"
+						<< endl;
+
+				}
+			}
+			else {
+
+				cout << "You Do Not Deserve to Get A Insurance Policy Get Lost From Here ";
+			}
+
+		}
+		else if (sub_selection_by_customer == 2) {
+
+			cout << "2. Health Insurance\n"
+				<< "   Features:\n"
+				<< "   - Covers medical expenses, including hospitalization, surgeries, and treatments.\n"
+				<< "   - Benefits may include coverage for doctor visits, prescription drugs, and preventive care.\n"
+				<< "   - Optional coverage for dental, vision, and maternity care may be available.\n"
+				<< "Payment Plan:\n"
+				<< "   - 10000 Yearly"
+				<< "   - Premiums may vary based on age, coverage type, and pre-existing conditions.\n"
+				<< "   - Premiums are typically paid monthly or annually.\n\n";
+
+			wcout << L"Please Enter Your Current Account Number: ";
+			wcin >> accountnumber;
+
+			wcout << L"Please Enter Your Current Account pincode: ";
+			wcin >> pincode;
+
+			insurancedetail = L"Health Insurance";
+			interestrate = 0.0f;
+			Amount = 10000;
+			savingaccount = readAccountNumberCount();
+
+			accountnumbercount += 1;
+			savingaccount = accountnumbercount;
+
+			writeAccountNumberCount(accountnumbercount);
+
+			if (insertSavingsAndInsuranceData(sqlConnectionHandle, savingaccount, interestrate, insurancedetail, accountnumber, pincode)) {
+				accountNumber = accountnumber;
+
+				if (WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount)) {
+					cout << "|=====================================================|\n"
+						<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+						<< "|=====================================================|\n"
+						<< "|       Your Transfer was successful!                 |\n"
+						<< "|       Details of the transaction:                   |\n"
+						<< "|-----------------------------------------------------|\n"
+						<< "|       Your Account No. :      "; wcout << accountnumber << "          \n"
+						<< "|       Insurance Type:         "; wcout << insurancedetail << "      \n"
+						<< "|       Payment Amount:         " << Amount << "          \n"
+						<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+						<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+					cout << "|=====================================================|\n"
+						<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+						<< "| For any queries, contact our customer support:      |\n"
+						<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+						<< "| Email: support@smartbank.com                        |\n"
+						<< "|=====================================================|\n"
+						<< endl;
+
+				}
+			}
+			else {
+
+				cout << "You Do Not Deserve to Get A Insurance Policy Get Lost From Here ";
+			}
+
+		}
+		else if (sub_selection_by_customer == 3) {
+			cout << "3. Auto Insurance\n"
+				<< "   Features:\n"
+				<< "   - Provides coverage for damages to your vehicle and liability in case of accidents.\n"
+				<< "   - Coverage options may include collision, comprehensive, and liability insurance.\n"
+				<< "   - Additional coverage for uninsured/underinsured motorists, roadside assistance, and rental reimbursement may be offered.\n"
+				<< "Payment Plan:\n"
+				<< "   - Premiums may vary based on the value of the vehicle, driving history, and coverage options.\n"
+				<< "   - Premiums are usually paid monthly or annually.\n"
+				<< "   - Annual premium for PKR 20,000.\n\n";
+
+			wcout << L"Please Enter Your Current Account Number: ";
+			wcin >> accountnumber;
+
+			wcout << L"Please Enter Your Current Account pincode: ";
+			wcin >> pincode;
+
+			insurancedetail = L"Auto Insurance";
+			interestrate = 0.0f;
+			Amount = 20000;
+			savingaccount = readAccountNumberCount();
+
+			accountnumbercount += 1;
+			savingaccount = accountnumbercount;
+
+			writeAccountNumberCount(accountnumbercount);
+
+			if (insertSavingsAndInsuranceData(sqlConnectionHandle, savingaccount, interestrate, insurancedetail, accountnumber, pincode)) {
+				accountNumber = accountnumber;
+
+				if (WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount)) {
+					cout << "|=====================================================|\n"
+						<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+						<< "|=====================================================|\n"
+						<< "|       Your Transfer was successful!                 |\n"
+						<< "|       Details of the transaction:                   |\n"
+						<< "|-----------------------------------------------------|\n"
+						<< "|       Your Account No. :      "; wcout << accountnumber << "          \n"
+						<< "|       Insurance Type:         "; wcout << insurancedetail << "      \n"
+						<< "|       Payment Amount:         " << Amount << "          \n"
+						<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+						<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+					cout << "|=====================================================|\n"
+						<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+						<< "| For any queries, contact our customer support:      |\n"
+						<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+						<< "| Email: support@smartbank.com                        |\n"
+						<< "|=====================================================|\n"
+						<< endl;
+
+				}
+			}
+			else {
+
+				cout << "You Do Not Deserve to Get A Insurance Policy Get Lost From Here ";
+			}
+
+		}
+		else if (sub_selection_by_customer == 4) {
+
+			cout << "4. Home Insurance\n"
+				<< "   Features:\n"
+				<< "   - Protects your home and belongings against damages and theft.\n"
+				<< "   - Coverage includes dwelling coverage for the structure of your home and personal property coverage for belongings.\n"
+				<< "   - Additional coverage options may include liability protection, loss of use coverage, and personal injury coverage.\n"
+				<< "Payment Plan:\n"
+				<< "   - Premiums may vary based on the value of the home, location, and coverage options.\n"
+				<< "   - Premiums are typically paid annually.\n"
+				<< "   - Annual premium for PKR 15,000.\n\n";
+
+			wcout << L"Please Enter Your Current Account Number: ";
+			wcin >> accountnumber;
+
+			wcout << L"Please Enter Your Current Account pincode: ";
+			wcin >> pincode;
+
+			insurancedetail = L"Home Insurance";
+			interestrate = 0.0f;
+			Amount = 15000;
+			savingaccount = readAccountNumberCount();
+
+			accountnumbercount += 1;
+			savingaccount = accountnumbercount;
+
+			writeAccountNumberCount(accountnumbercount);
+
+			if (insertSavingsAndInsuranceData(sqlConnectionHandle, savingaccount, interestrate, insurancedetail, accountnumber, pincode)) {
+				accountNumber = accountnumber;
+
+				if (WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount)) {
+					cout << "|=====================================================|\n"
+						<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+						<< "|=====================================================|\n"
+						<< "|       Your Transfer was successful!                 |\n"
+						<< "|       Details of the transaction:                   |\n"
+						<< "|-----------------------------------------------------|\n"
+						<< "|       Your Account No. :      "; wcout << accountnumber << "          \n"
+						<< "|       Insurance Type:         "; wcout << insurancedetail << "      \n"
+						<< "|       Payment Amount:         " << Amount << "          \n"
+						<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+						<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+					cout << "|=====================================================|\n"
+						<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+						<< "| For any queries, contact our customer support:      |\n"
+						<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+						<< "| Email: support@smartbank.com                        |\n"
+						<< "|=====================================================|\n"
+						<< endl;
+
+				}
+			}
+			else {
+
+				cout << "You Do Not Deserve to Get A Insurance Policy Get Lost From Here ";
+			}
+
+		}
+		else if (sub_selection_by_customer == 5) {
+			cout << "5. Travel Insurance\n"
+				<< "   Features:\n"
+				<< "   - Offers coverage for medical emergencies, trip cancellations, and lost luggage during travel.\n"
+				<< "   - Coverage may include emergency medical treatment, trip interruption/cancellation, and baggage loss/delay.\n"
+				<< "   - Additional benefits such as emergency evacuation, travel assistance, and rental car protection may be included.\n"
+				<< "Payment Plan:\n"
+				<< "   - Premiums may vary based on trip duration, destination, and coverage options.\n"
+				<< "   - Premiums are usually paid for the duration of the trip or for a specific period.\n"
+				<< "   - Premium of PKR 500 for a 7-day trip.\n\n";
+
+			wcout << L"Please Enter Your Current Account Number: ";
+			wcin >> accountnumber;
+
+			wcout << L"Please Enter Your Current Account pincode: ";
+			wcin >> pincode;
+
+			insurancedetail = L"Travel Insurance";
+			interestrate = 0.0f;
+			Amount = 500;
+			savingaccount = readAccountNumberCount();
+
+			accountnumbercount += 1;
+			savingaccount = accountnumbercount;
+
+			writeAccountNumberCount(accountnumbercount);
+
+			if (insertSavingsAndInsuranceData(sqlConnectionHandle, savingaccount, interestrate, insurancedetail, accountnumber, pincode)) {
+				accountNumber = accountnumber;
+
+				if (WithdrawAmount(sqlConnectionHandle, accountNumber, pincode, Amount)) {
+					cout << "|=====================================================|\n"
+						<< "|       Smart Bank of Pakistan - Transaction Notice   |\n"
+						<< "|=====================================================|\n"
+						<< "|       Your Transfer was successful!                 |\n"
+						<< "|       Details of the transaction:                   |\n"
+						<< "|-----------------------------------------------------|\n"
+						<< "|       Your Account No. :      "; wcout << accountnumber << "          \n"
+						<< "|       Insurance Type:         "; wcout << insurancedetail << "      \n"
+						<< "|       Payment Amount:         " << Amount << "          \n"
+						<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+						<< "|       Date and Time:          "; printCurrentDateTime(); "\n";
+					cout << "|=====================================================|\n"
+						<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+						<< "| For any queries, contact our customer support:      |\n"
+						<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+						<< "| Email: support@smartbank.com                        |\n"
+						<< "|=====================================================|\n"
+						<< endl;
+
+				}
+			}
+			else {
+
+				cout << "You Do Not Deserve to Get A Insurance Policy Get Lost From Here ";
+			}
+
+		}
+		else {
+
+			cout << "Error! operator is not correct";
+
+		}
+	}
+
+	void insurance_policy_details() {
+
+		retrieveinsurance_policy_details(sqlConnectionHandle);
+	}
+
+};
+
+class my_account : public main_menu
+{
+private:
+
+public:
+	void my_account_options() {
+		cout << "=================================================================\n"
+			<< "| Please Select an Option to Perform Your Task                 \n"
+			<< "|                                                               \n"
+			<< "| 1. View Account Balance                                      \n"
+			<< "| 2. Account Statements                                        \n"
+			<< "| 3. Update Personal Information                               \n"
+			<< "| 4. Change Password                                           \n"
+			<< "| 5. Delete Account                                            \n"
+			<< "=================================================================\n"
+			<< "=> ";
+
+	}
+
+};
+
+class Loan : public main_menu
+{
+private:
+
+public:
+	void loan_options() {
+		cout << "=================================================================\n"
+			<< "| Please Select an Option to Perform Your Task                   |\n"
+			<< "|                                                                |\n"
+			<< "| 1. Apply For Loans                                             |\n"
+			<< "| 2. Loan Status                                                 |\n"
+			<< "| 3. Loan Repayment                                              |\n"
+			<< "| 4. Loan History                                                |\n"
+			<< "=================================================================\n"
+			<< "=> ";
+
+	}
+
+	void loan_status() {
+		Name = L"Name";
+		wstring columnName{ Name }, columnValue = { name };
+
+		cout << "PLease Enter The Debit Card Number ";
+		cin >> Reciever_AC;
+		cout << "PLease Enter The Account Type ";
+		cin >> Your_AC;
+		cout << "Please Enter Your PIN Code \n";
+		wcin >> idCardNumber;
+		wcout << L"Please Enter Your Name: ";
+		wcin.ignore();
+		getline(wcin, name);
+
+	};
+	void loan_repayment() {
+
+	};
+	void loan_history() {
+
+	};
+
+};
+
+int main() {
+
+	my_account displayCP, account, deleteAC, MAoptions;
+	new_customer insert, New_customer;
+	money_transfer MToptions;
+	mobile_load MLoptions;
+	bill_payments BPoptions;
+	ATM Paymentoptions;
+	savings_and_insurance SIoptions;
+	Loan loan_options;
+	main_menu error, options;
+	string welcome = "=============== WELCOME TO THE SMART BANK OF PAKISTAN ====================\n\n";
+	int delay = 10;
+	int accountnumbercount = options.readAccountNumberCount();
+
+	SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &sqlEnvHandle);
+	SQLSetEnvAttr(sqlEnvHandle, SQL_ATTR_ODBC_VERSION, (SQLPOINTER)SQL_OV_ODBC3, 0);
+	SQLAllocHandle(SQL_HANDLE_DBC, sqlEnvHandle, &sqlConnectionHandle);
+
+	SQLWCHAR retconstring[1024];
+	SQLWCHAR* connectionString = (SQLWCHAR*)L"DRIVER={MySQL ODBC 8.4 Unicode Driver};SERVER=localhost;DATABASE=smartbank;USER=root;PASSWORD=Maasaa229$;OPTION=3;";
+
+	retcode = SQLDriverConnectW(sqlConnectionHandle, NULL, connectionString, SQL_NTS, retconstring, 1024, NULL, SQL_DRIVER_NOPROMPT);
+
+	if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
+		options.printSlowly(welcome, delay);
+		cout << endl << endl;
+	}
+	else {
+		cerr << L"Failed to connect to Open \n Please Check Your Network Connection." << endl << endl;
+		options.showSQLError(SQL_HANDLE_DBC, sqlConnectionHandle);
+	}
+	cout << "===========================================================\n\n"
+		<< "           Please Select Appropriate Option                        \n"
+		<< "                                                          \n"
+		<< "                [1] - Existing User                                      \n"
+		<< "                                                          \n"
+		<< "          [2] - New User/Create New Account                        \n\n"
+		<< "===========================================================\n";
+
+	cin >> new_user_check;
+	if (new_user_check != new_user)
+	{
+		
+		do {
+			New_customer.new_customer_options();
+
+			cin >> sub_selection_by_new_customer;
+
+			if (sub_selection_by_new_customer == 1) {
+				wstring accountNumber = options.accountnumbergenerator();
+				
+				
+				wcout << L"Please Enter Your Name: ";
+				wcin.ignore();
+				getline(wcin, name);
+
+				wcout << L"Please Enter Your Date of Birth (YYYY-MM-DD): ";
+				getline(wcin, dob);
+
+				wcout << L"Please Enter Your CNIC (Only Numeric) : ";
+				wcin >> idCardNumber;
+
+				wcin.ignore();
+				wcout << L"Please Enter Your Account Type: ";
+				getline(wcin, accounttype);
+
+				wcout << L"Please Enter Your Password: ";
+				getline(wcin, password);
+
+				wcout << L"Please Enter Your pincode: ";
+				cin >> pincode;
+
+				wcout << L"Please Enter The Purpose of Account creation : ";
+				wcin >> accountsmt;
+
+				wcout << L"Please Enter Your Amount of Intial Transaction : ";
+				cin >> balance;
+
+				options.accountmgt(sqlConnectionHandle, accountNumber, pincode, accountsmt, balance);
+
+				if (options.create_account(sqlConnectionHandle, name, dob, idCardNumber, accounttype, password, pincode, accountNumber)) {
+					wcout << L"Account creation successful." << endl;
+				}
+				else {
+					wcerr << L"Account creation failed." << endl;
+				}
+
+
+
+			}
+
+			else if (sub_selection_by_new_customer == 2) {
+
+				New_customer.about_us();
+			}
+
+			else if (sub_selection_by_new_customer == 3) {
+				New_customer.Contact_us();
+			}
+
+			else if (sub_selection_by_new_customer == 4) {
+				New_customer.Locate_us();
+			}
+
+			else if (sub_selection_by_new_customer == 5) {
+				New_customer.Orientation();
+			}
+
+			else {
+
+				cout << "Error! operator is not correct";
+
+			}
+			cout << "do You want to Continue ? (Yes(y)/No(n))" << endl;
+			cin >> continue1;
+
+		} while (continue1 == yes); {
+
+		}
+	}
+	else
+	{
+		do {
+
+			options.main_menu_options();
+
+			cin >> option_selected_by_customer;
+
+			if (option_selected_by_customer == 1)
+			{
+				MToptions.money_transfer_options();
+				cin >> sub_selection_by_customer;
+
+				if (sub_selection_by_customer == 1) {
+
+					MToptions.transfer_to_Bank_account();
+
+				}
+				else if (sub_selection_by_customer == 2) {
+					MToptions.transfer_to_mobile_wallet();
+
+				}
+				else if (sub_selection_by_customer == 3) {
+					MToptions.international_transfer();
+				}
+				else if (sub_selection_by_customer == 4) {
+
+					MToptions.transfer_history();
+
+				}
+				else {
+
+					cout << "Error! operator is not correct";
+
+				}
+
+			}
+
+			else if (option_selected_by_customer == 2) {
+				MLoptions.mobile_load_options();
+				cin >> sub_selection_by_customer;
+
+				if (sub_selection_by_customer == 1) {
+
+					MLoptions.load_mobile_number();
+
+				}
+				else if (sub_selection_by_customer == 2) {
+
+					MLoptions.mobile_packages();
+
+				}
+				else {
+
+					cout << "Error! operator is not correct";
+
+				}
+			}
+
+			else if (option_selected_by_customer == 3) {
+
+				BPoptions.bill_payments_options();
+				cin >> sub_selection_by_customer;
+
+				if (sub_selection_by_customer == 1) {
+
+					BPoptions.pay_utility_bills();
+
+				}
+				else if (sub_selection_by_customer == 2) {
+
+					BPoptions.pay_credit_card_bills();
+
+				}
+				else if (sub_selection_by_customer == 3) {
+
+					BPoptions.pay_internet_bills();
+				}
+				else if (sub_selection_by_customer == 4) {
+
+					BPoptions.pay_tv_subscription();
+
+				}
+				else if (sub_selection_by_customer == 5) {
+
+					BPoptions.pay_gas_bills();
+				}
+				else {
+
+					cout << "Error! operator is not correct";
+
+				}
+
+			}
+
+			else if (option_selected_by_customer == 4) {
+
+				Paymentoptions.payments_options();
+				cin >> sub_selection_by_customer;
+
+				if (sub_selection_by_customer == 1) {
+
+					Paymentoptions.withdrawCash();
+
+				}
+				else if (sub_selection_by_customer == 2) {
+
+					Paymentoptions.depositCash();
+
+				}
+				else if (sub_selection_by_customer == 3) {
+
+					wcout << L"Account Number: ";
+					wcin >> accountNumber;
+					wcout << L"Enter Pin Code: ";
+					wcin >> pincode;
+					options.displaybalance(sqlConnectionHandle, accountNumber, pincode);
+
+				}
+				else if (sub_selection_by_customer == 4) {
+
+					Paymentoptions.transferFunds();
+
+				}
+				else if (sub_selection_by_customer == 5) {
+
+					Paymentoptions.printTransactionHistory();
+
+				}
+				else {
+
+					cout << "Error! operator is not correct";
+
+				}
+
+			}
+
+			else if (option_selected_by_customer == 5) {
+
+				SIoptions.display_main_menu();
+				cin >> sub_selection_by_customer;
+
+				if (sub_selection_by_customer == 1) {
+
+					SIoptions.view_savings_account();
+
+				}
+				else if (sub_selection_by_customer == 2) {
+
+					cout << "Select an account type:" << endl;
+					cout << "1. Basic Savings Account" << endl;
+					cout << "2. High-Yield Savings Account" << endl;
+					cout << "3. Money Market Account" << endl;
+					cout << "4. Certificate of Deposit (CD)" << endl;
+					cout << "5. Individual Retirement Account (IRA)" << endl;
+
+					int choice;
+					cout << "Enter your choice (1-5): ";
+					cin >> choice;
+
+					if (choice == 1) {
+						cout << "You selected: Basic Savings Account" << endl;
+						interestrate = 0.5;
+						Amount = 10000;
+						accounttype = L"Saving";
+						insurancedetail = L"Basic Savings Account ";
+
+					}
+					else if (choice == 2) {
+						cout << "You selected: High-Yield Savings Account" << endl;
+						interestrate = 1.5;
+						Amount = 50000;
+						accounttype = L"Saving";
+						insurancedetail = L"High-Yield Savings Account ";
+					}
+					else if (choice == 3) {
+						cout << "You selected: Money Market Account" << endl;
+						interestrate = 2.0;
+						Amount = 100000;
+						accounttype = L"Saving";
+						insurancedetail = L" Money Market Account ";
+					}
+					else if (choice == 4) {
+						cout << "You selected: Certificate of Deposit (CD)" << endl;
+						interestrate = 2.5;
+						Amount = 50000;
+						accounttype = L"Saving";
+						insurancedetail = L" Certificate of Deposit (CD) ";
+					}
+					else if (choice == 5) {
+						cout << "You selected: Individual Retirement Account (IRA)" << endl;
+						interestrate = 3.5;
+						Amount = 20000;
+						accounttype = L"Saving";
+						insurancedetail = L" Individual Retirement Account (IRA) ";
+					}
+					else {
+						cout << "Invalid choice. Please enter a number between 1 and 5." << endl;
+
+					}
+
+					wstring accountNumber = options.accountnumbergenerator();
+
+					wcout << L"Please Enter Your Current Account Number: ";
+					wcin >> accountnumber;
+
+					wcout << L"Please Enter Your Current Account pincode: ";
+					wcin >> pincode;
+
+					if (options.insertSavingsAndInsuranceData(sqlConnectionHandle, savingaccount, interestrate, insurancedetail, accountnumber, pincode)) {
+						accountNumber = accountnumber;
+
+						if (options.depositAmount(sqlConnectionHandle, accountNumber, Amount)) {
+
+							cout << " Saving Account Successfully created at interest rate of " << interestrate << " and on intial deposit of " << Amount << "Rs .";
+						}
+					}
+					else {
+
+						cout << "You Do Not Deserve to open a Saving Account Get Lost From Here ";
+					}
+
+				}
+				else if (sub_selection_by_customer == 3) {
+
+					SIoptions.insurance_plans();
+				}
+				else if (sub_selection_by_customer == 4) {
+
+					SIoptions.apply_for_insurance();
+
+				}
+				else if (sub_selection_by_customer == 5) {
+
+					SIoptions.insurance_policy_details();
+				}
+				else {
+
+					cout << "what the fuck are you doing ! Enter the correct operator ";
+
+				}
+			}
+
+			else if (option_selected_by_customer == 6) {
+
+				MAoptions.my_account_options();
+				cin >> sub_selection_by_customer;
+
+				if (sub_selection_by_customer == 1) {
+					wcout << L"Account Number: ";
+					wcin >> accountNumber;
+					wcout << L"Enter Pin Code: ";
+					wcin >> pincode;
+					options.displaybalance(sqlConnectionHandle, accountNumber, pincode);
+
+				}
+				else if (sub_selection_by_customer == 2) {
+					Paymentoptions.printTransactionHistory();
+
+				}
+				else if (sub_selection_by_customer == 3) {
+					wcout << L"Please Enter Your Name: ";
+					wcin.ignore();
+					getline(wcin, name);
+
+					wcout << L"Please Enter Your Date of Birth (YYYY-MM-DD): ";
+					getline(wcin, dob);
+
+					wcout << L"Please Enter Your CNIC (Only Numeric) : ";
+					wcin >> idCardNumber;
+
+					wcin.ignore();
+					wcout << L"Please Enter Your Account Type: ";
+					getline(wcin, accounttype);
+
+					wcout << L"Please Enter Your Password: ";
+					getline(wcin, password);
+
+					wcout << L"Please Enter Your pincode: ";
+					cin >> pincode;
+
+					wcout << L"Please Enter The Account Number : ";
+					wcin >> accountnumber;
+
+					bool success = options.updateValues(sqlConnectionHandle, name, dob, idCardNumber, accounttype, password, pincode, accountnumber);
+
+					if (success) {
+						wcout << L"Data updated successfully." << endl;
+					}
+					else {
+						wcerr << L"Failed to update data." << endl;
+					}
+
+				}
+				else if (sub_selection_by_customer == 4) {
+
+					wcout << L"Please Enter Your Name: ";
+					wcin.ignore();
+					getline(wcin, name);
+
+					wcout << L"Please Enter Your Date of Birth (YYYY-MM-DD): ";
+					getline(wcin, dob);
+
+					wcout << L"Please Enter Your CNIC (Only Numeric) : ";
+					wcin >> idCardNumber;
+
+					wcin.ignore();
+					wcout << L"Please Enter Your Account Type: ";
+					getline(wcin, accounttype);
+
+					wcout << L"Please Enter Your Password: ";
+					getline(wcin, password);
+
+					wcout << L"Please Enter Your pincode: ";
+					cin >> pincode;
+
+					wcout << L"Please Enter The Account Number : ";
+					wcin >> accountnumber;
+
+					bool success = options.updateValues(sqlConnectionHandle, name, dob, idCardNumber, accounttype, password, pincode, accountnumber);
+
+					if (success) {
+						wcout << L"Data updated successfully." << endl;
+					}
+					else {
+						wcerr << L"Failed to update data." << endl;
+					}
+
+				}
+				else if (sub_selection_by_customer == 5) {
+					options.deleteAccountByPincodeAndAccountNumber(sqlConnectionHandle);
+
+				}
+				else {
+
+					cout << "Error! operator is not correct";
+
+				}
+			}
+
+			else if (option_selected_by_customer == 7) {
+
+				loan_options.loan_options();
+				cin >> sub_selection_by_customer;
+
+				if (sub_selection_by_customer == 1) {
+
+					cout << "=================================================================\n"
+						<< "|                   Available Loan Types                        |\n"
+						<< "=================================================================\n\n"
+						<< "Please Select Which Offer Suits You the Best \n\n"
+
+						<< "1. Personal Loan\n"
+						<< "   Features:\n"
+						<< "   - Used for personal expenses like medical bills, home renovations, etc.\n"
+						<< "   - Unsecured loan (no collateral required).\n"
+						<< "   - Loan Amount: PKR 50,000 to PKR 2,000,000.\n"
+						<< "   - Interest Rate: 12-20% per annum.\n\n"
+
+						<< "2. Home Loan\n"
+						<< "   Features:\n"
+						<< "   - Used for purchasing or constructing a house.\n"
+						<< "   - Secured loan (property is used as collateral).\n"
+						<< "   - Loan Amount: PKR 500,000 to PKR 10,000,000.\n"
+						<< "   - Interest Rate: 7-10% per annum.\n\n"
+
+						<< "3. Auto Loan\n"
+						<< "   Features:\n"
+						<< "   - Used for purchasing a vehicle.\n"
+						<< "   - Secured loan (vehicle is used as collateral).\n"
+						<< "   - Loan Amount: PKR 200,000 to PKR 5,000,000.\n"
+						<< "   - Interest Rate: 9-15% per annum.\n\n"
+
+						<< "4. Business Loan\n"
+						<< "   Features:\n"
+						<< "   - Used for business purposes like expansion, working capital, etc.\n"
+						<< "   - Can be secured (with collateral) or unsecured.\n"
+						<< "   - Loan Amount: PKR 100,000 to PKR 15,000,000.\n"
+						<< "   - Interest Rate: 12-18% per annum.\n\n"
+
+						<< "5. Education Loan\n"
+						<< "   Features:\n"
+						<< "   - Used for funding higher education expenses.\n"
+						<< "   - Typically requires a guarantor or collateral.\n"
+						<< "   - Loan Amount: PKR 50,000 to PKR 1,000,000.\n"
+						<< "   - Interest Rate: 8-12% per annum.\n\n"
+
+						<< "=================================================================\n"
+						<< "=> ";
+
+					cin >> sl;
+
+					if (sl == 1) {
+
+						wcout << L"Please Enter Your Account Number : ";
+						wcin >> accountnumber;
+						wcout << L"Please Enter Loan Amount : ";
+						cin >> Amount;
+						wcout << L"Please Enter Your pincode: ";
+						cin >> pincode;
+						loanstatus = L"Granted";
+						loanhistory = L"Null";
+
+						loantype = L"Personal Loan";
+						loaninterestrate = 12.5;
+
+						options.insertLoanData(sqlConnectionHandle, Amount, loanhistory, loanstatus, pincode, loaninterestrate, loantype);
+
+						bool succes = options.depositAmount(sqlConnectionHandle, accountnumber, Amount);
+
+						cout << "|=====================================================|\n"
+							<< "|      Smart Bank of Pakistan - Transaction Notice   |\n"
+							<< "|=====================================================|\n"
+							<< "|      Congratulations You Have Been Granted Loan!    |\n"
+							<< "|              Details of the transaction:            |\n"
+							<< "|-----------------------------------------------------|\n"
+							<< "|       Your Account Number:           "; wcout << accountnumber << "          \n"
+							<< "|       Your Account Type:         "; wcout << loantype << "      \n"
+							<< "|       Payment Amount:         " << Amount << "          \n"
+							<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+							<< "|       Date and Time:          "; options.printCurrentDateTime(); "\n";
+						cout << "|=====================================================|\n"
+							<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+							<< "| For any queries, contact our customer support:      |\n"
+							<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+							<< "| Email: support@smartbank.com                        |\n"
+							<< "|=====================================================|\n"
+							<< endl;
+
+					}
+					else if (sl == 2) {
+
+						wcout << L"Please Enter Your Account Number : ";
+						wcin >> accountnumber;
+						wcout << L"Please Enter Loan Amount : ";
+						cin >> Amount;
+						wcout << L"Please Enter Your pincode: ";
+						cin >> pincode;
+						loanstatus = L"Granted";
+						loanhistory = L"Null";
+
+						loantype = L"Home Loan";
+						loaninterestrate = 14.5;
+
+						options.insertLoanData(sqlConnectionHandle, Amount, loanhistory, loanstatus, pincode, loaninterestrate, loantype);
+
+						bool succes = options.depositAmount(sqlConnectionHandle, accountnumber, Amount);
+
+						cout << "|=====================================================|\n"
+							<< "|      Smart Bank of Pakistan - Transaction Notice   |\n"
+							<< "|=====================================================|\n"
+							<< "|      Congratulations You Have Been Granted Loan!    |\n"
+							<< "|              Details of the transaction:            |\n"
+							<< "|-----------------------------------------------------|\n"
+							<< "|       Your Account Number:           "; wcout << accountnumber << "          \n"
+							<< "|       Your Account Type:         "; wcout << loantype << "      \n"
+							<< "|       Payment Amount:         " << Amount << "          \n"
+							<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+							<< "|       Date and Time:          "; options.printCurrentDateTime(); "\n";
+						cout << "|=====================================================|\n"
+							<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+							<< "| For any queries, contact our customer support:      |\n"
+							<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+							<< "| Email: support@smartbank.com                        |\n"
+							<< "|=====================================================|\n"
+							<< endl;
+
+					}
+					else if (sl == 3) {
+						wcout << L"Please Enter Your Account Number : ";
+						wcin >> accountnumber;
+						wcout << L"Please Enter Loan Amount : ";
+						cin >> Amount;
+						wcout << L"Please Enter Your pincode: ";
+						cin >> pincode;
+						loanstatus = L"Granted";
+						loanhistory = L"Null";
+
+						loantype = L"Auto Loan";
+						loaninterestrate = 18.5;
+
+						options.insertLoanData(sqlConnectionHandle, Amount, loanhistory, loanstatus, pincode, loaninterestrate, loantype);
+
+						bool succes = options.depositAmount(sqlConnectionHandle, accountnumber, Amount);
+
+						cout << "|=====================================================|\n"
+							<< "|      Smart Bank of Pakistan - Transaction Notice   |\n"
+							<< "|=====================================================|\n"
+							<< "|      Congratulations You Have Been Granted Loan!    |\n"
+							<< "|              Details of the transaction:            |\n"
+							<< "|-----------------------------------------------------|\n"
+							<< "|       Your Account Number:           "; wcout << accountnumber << "          \n"
+							<< "|       Your Account Type:         "; wcout << loantype << "      \n"
+							<< "|       Payment Amount:         " << Amount << "          \n"
+							<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+							<< "|       Date and Time:          "; options.printCurrentDateTime(); "\n";
+						cout << "|=====================================================|\n"
+							<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+							<< "| For any queries, contact our customer support:      |\n"
+							<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+							<< "| Email: support@smartbank.com                        |\n"
+							<< "|=====================================================|\n"
+							<< endl;
+
+					}
+					else if (sl == 4) {
+
+						wcout << L"Please Enter Your Account Number : ";
+						wcin >> accountnumber;
+						wcout << L"Please Enter Loan Amount : ";
+						cin >> Amount;
+						wcout << L"Please Enter Your pincode: ";
+						cin >> pincode;
+						loanstatus = L"Granted";
+						loanhistory = L"Null";
+
+						loantype = L"Buisness Loan";
+						loaninterestrate = 15.0;
+
+						options.insertLoanData(sqlConnectionHandle, Amount, loanhistory, loanstatus, pincode, loaninterestrate, loantype);
+
+						bool succes = options.depositAmount(sqlConnectionHandle, accountnumber, Amount);
+
+						cout << "|=====================================================|\n"
+							<< "|      Smart Bank of Pakistan - Transaction Notice   |\n"
+							<< "|=====================================================|\n"
+							<< "|      Congratulations You Have Been Granted Loan!    |\n"
+							<< "|              Details of the transaction:            |\n"
+							<< "|-----------------------------------------------------|\n"
+							<< "|       Your Account Number:           "; wcout << accountnumber << "          \n"
+							<< "|       Your Account Type:         "; wcout << loantype << "      \n"
+							<< "|       Payment Amount:         " << Amount << "          \n"
+							<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+							<< "|       Date and Time:          "; options.printCurrentDateTime(); "\n";
+						cout << "|=====================================================|\n"
+							<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+							<< "| For any queries, contact our customer support:      |\n"
+							<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+							<< "| Email: support@smartbank.com                        |\n"
+							<< "|=====================================================|\n"
+							<< endl;
+
+					}
+					else if (sl == 5) {
+
+						wcout << L"Please Enter Your Account Number : ";
+						wcin >> accountnumber;
+						wcout << L"Please Enter Loan Amount : ";
+						cin >> Amount;
+						wcout << L"Please Enter Your pincode: ";
+						cin >> pincode;
+						loanstatus = L"Granted";
+						loanhistory = L"Null";
+
+						loantype = L"Education Loan";
+						loaninterestrate = 10.5;
+
+						options.insertLoanData(sqlConnectionHandle, Amount, loanhistory, loanstatus, pincode, loaninterestrate, loantype);
+
+						bool succes = options.depositAmount(sqlConnectionHandle, accountnumber, Amount);
+
+						cout << "|=====================================================|\n"
+							<< "|      Smart Bank of Pakistan - Transaction Notice   |\n"
+							<< "|=====================================================|\n"
+							<< "|      Congratulations You Have Been Granted Loan!    |\n"
+							<< "|              Details of the transaction:            |\n"
+							<< "|-----------------------------------------------------|\n"
+							<< "|       Your Account Number:           "; wcout << accountnumber << "          \n"
+							<< "|       Your Account Type:         "; wcout << loantype << "      \n"
+							<< "|       Payment Amount:         " << Amount << "          \n"
+							<< "|       Transaction ID:         " << "SBPX" << transactionid << "\n"
+							<< "|       Date and Time:          "; options.printCurrentDateTime(); "\n";
+						cout << "|=====================================================|\n"
+							<< "| Thank you for using Smart Bank of Pakistan!         |\n"
+							<< "| For any queries, contact our customer support:      |\n"
+							<< "| Phone: 0346-0422988, 0345-8783923                   |\n"
+							<< "| Email: support@smartbank.com                        |\n"
+							<< "|=====================================================|\n"
+							<< endl;
+
+					}
+					else {
+
+						cout << "Error! operator is not correct";
+
+					}
+
+				}
+				else if (sub_selection_by_customer == 2) {
+					cout << "Enter your account number: ";
+					wcin >> accountNumber;
+					cout << "Enter your pincode: ";
+					cin >> pincode;
+
+					options.showLoanInformation(sqlConnectionHandle, accountNumber, pincode);
+				}
+				else if (sub_selection_by_customer == 3) {
+
+					wcout << L"Enter pincode: ";
+					wcin >> pincode;
+
+					wcout << L"Enter loan amount to repay: ";
+					wcin >> Amount;
+
+					wcin.ignore();
+
+					wcout << L"Enter loan type: ";
+					getline(wcin, loantype);
+
+					options.repayLoan(sqlConnectionHandle, Amount, loanhistory, loanstatus, pincode, loaninterestrate, loantype);
+
+				}
+				else if (sub_selection_by_customer == 4) {
+
+					options.displayallpersonalinformation(sqlConnectionHandle);
+
+					cout << "Enter your account number: ";
+					wcin >> accountNumber;
+					cout << "Enter your pincode: ";
+					cin >> pincode;
+
+					options.showLoanInformation(sqlConnectionHandle, accountNumber, pincode);
+
+				}
+				else if (sub_selection_by_customer == 5) {
+
+					options.displayallpersonalinformation(sqlConnectionHandle);
+
+				}
+				else {
+
+					cout << "Error! operator is not correct";
+
+				}
+
+			}
+
+			cout << "do You want to Continue ? (Yes(y)/No(n))" << endl;
+			cin >> continue1;
+		} while (continue1 == yes); {
+
+		}
+	}
+
+	SQLDisconnect(sqlConnectionHandle);
+
+	SQLFreeHandle(SQL_HANDLE_DBC, sqlConnectionHandle);
+	SQLFreeHandle(SQL_HANDLE_ENV, sqlEnvHandle);
+	system("pause");
+	return 0;
+}
+    </code></pre></div>
+  </div>
+</div>
+</div>
+
+
+
+  
 </body>
 </html>

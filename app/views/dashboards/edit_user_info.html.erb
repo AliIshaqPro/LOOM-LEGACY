@@ -1,54 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Ishaq 3D Sphere</title>
+  <title>Ali Ishaq Video Background</title>
+
   <style>
-    /* Basic styling for the content and container */
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      background-color: #000; /* Black background */
       overflow-y: auto;
     }
 
-    .parallax {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      width:100%;
-      z-index: 2; /* Ensure this is on top of the 3D scene */
-      position: relative; /* To position the content on top */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Ensure video is behind other content */
+      overflow: hidden;
+    }
+
+    .video-background video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Cover the whole background */
     }
 
     .content {
-      background-color:transparent;
-      
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      z-index: 3; /* Ensure content is above the sphere */
       position: relative; /* To ensure proper stacking */
+      z-index: 1; /* Content is above the video */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: white;
     }
 
     h1 {
-      font-size: 36px;
-      color: #333;
-      margin-bottom: 30px;
+      font-size: 40px;
+      text-align:center;
+      color:white;
     }
 
-    .card {
-      background-color: #fff;
-      padding: 20px;
-      margin-top: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
+    p {
+      font-size: 20px;
     }
 
+    a {
+      font-size: 20px;
+      border: 2px solid white;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
     /* Container background styling */
 .form-background {
   height: 100vh;
@@ -75,7 +95,6 @@
 .form-title {
   font-size: 24px;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -103,28 +122,20 @@
  /* Optional: Remove padding if not needed */
 }
 
-
-    #threejs-container {
-      position: fixed; /* Ensures it stays in place */
-      background-color: black;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 1; /* Sphere behind the content */
-    }
   </style>
 </head>
 <body>
-  <!-- Container for the Three.js scene -->
-  <div id="threejs-container"></div>
-  
-  <!-- Content on top of the 3D sphere -->
-  <div class="parallax">
+  <!-- Video background -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="https://videos.pexels.com/video-files/856857/856857-uhd_2732_1440_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+ <div class="parallax">
     <div class="content">
       <p class="fs-1" style="color:white;">Welcome to Chatsphere</p><br>
-<p class="fs-3" style="color:white;">Thank You So Much For Choosing Chatsphere </p><br>
-<p class="fs-4" style="color:white;">We Would Be Glad To Get Some Of Your Personal Information For Best User Experience </p><br>
 <div class="container-fluid d-flex justify-content-center align-items-center">
   <div class="form-container">
     <h1 class="form-title">Complete Your Profile</h1>
@@ -165,48 +176,5 @@
 
     </div>
   </div>
-
-  <!-- Three.js CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  
-  <script>
-    // Create the scene, camera, and renderer
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
-
-    // Add the renderer's canvas to the container
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.getElementById('threejs-container').appendChild(renderer.domElement);
-
-    // Create a geometry (sphere) and add it to the scene
-    const geometry = new THREE.SphereGeometry(1, 32, 32); // radius, width segments, height segments
-    const material = new THREE.MeshBasicMaterial({ color: 0x007bff, wireframe: true });
-    const sphere = new THREE.Mesh(geometry, material);
-    scene.add(sphere);
-
-    camera.position.z = 1.2; // Set the camera position
-
-    // Animate the sphere
-    const animate = function () {
-      requestAnimationFrame(animate);
-
-      sphere.rotation.x += 0.01;
-      sphere.rotation.y += 0.01;
-
-      renderer.render(scene, camera);
-    };
-
-    animate(); // Start the animation loop
-
-    // Adjust the scene when the window is resized
-    window.addEventListener('resize', () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      renderer.setSize(width, height);
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-    });
-  </script>
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html>
 <head>
  <%= stylesheet_link_tag 'whatsapp', media: 'all', 'data-turbolinks-track': 'reload' %>
+ <%= stylesheet_link_tag 'form', media: 'all', 'data-turbolinks-track': 'reload' %>
  <style>
 body {
     margin: 0;
@@ -24,12 +25,12 @@ body {
             d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
           <path fill-rule="evenodd"
             d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
-        </svg> <h4>Select a New Contact</h4></button>
+        </svg> Select a New Contact</button>
     </div>
 <div style="padding-bottom: 100px;">
     <% @conversations.each do |conversation| %>
       <% most_recent_message = conversation.messages.order(created_at: :desc).first %>
-      <%= link_to conversation_path(conversation), class: 'list-group-item list-group-item-action border border-secondary py-2 mb-2', style: 'background-color: rgba(255, 255, 255, 0.5); z-index:0;' do %>
+      <%= link_to conversation_path(conversation), class: 'list-group-item list-group-item-action border border-secondary py-2 mb-1 mt-1', style: 'background-color: rgba(255, 255, 255, 0.1); z-index:0; border-radius:20px;' do %>
         <% other_user = conversation.other_user(current_user) %>
         <% if other_user.photo.attached? %>
           <%= image_tag other_user.photo.variant(resize_to_fill: [50, 50]), alt: other_user.username, class: 'rounded-circle' %>
@@ -42,7 +43,7 @@ body {
             <% if most_recent_message.present? %>
               <%= truncate(most_recent_message.content, length: 30) %>
             <% else %>
-              <span style="font-size: 0.75rem; color: #666;">- - - - - - - - - - </span>
+              <span style="font-size: 0.75rem; color: #666;">- - - - - No- - - - - </span>
             <% end %>
           </p>
         </div>
@@ -110,7 +111,7 @@ body {
 
 <footer class="footer">
 <div class="footer-icons">
-  <a href="https://example.com/facebook" target="_blank"
+  <a href="#" target="_blank"
     aria-label="Facebook">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
       fill="currentColor" class="bi bi-chat-right-text"
@@ -122,7 +123,7 @@ body {
     </svg>
     <span>Chats</span>
   </a>
-  <a href="https://example.com/facebook" target="_blank"
+  <a href="#" target="_blank"
     aria-label="Facebook">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
       fill="currentColor" class="bi bi-chat-quote" viewBox="0 0 16 16">
@@ -133,14 +134,14 @@ body {
     </svg>
     <span>Updates</span>
   </a>
-  <a href="https://example.com/facebook" target="_blank"
+  <a href="#" target="_blank"
     aria-label="Facebook">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
 </svg>
     <span>Communities</span>
   </a>
-  <a href="https://example.com/facebook" target="_blank"
+  <a href="" target="_blank"
     aria-label="Facebook">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-outbound" viewBox="0 0 16 16">
 <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5"/>

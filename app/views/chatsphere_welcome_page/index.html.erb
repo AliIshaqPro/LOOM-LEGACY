@@ -3,87 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Ishaq 3D Sphere</title>
-  <%= javascript_include_tag 'index' %>
+  <title>Ali Ishaq Video Background</title>
 
   <style>
-    /* Basic styling for the content and container */
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
       font-family: Arial, sans-serif;
-      background-color: #000; /* Black background */
-      overflow-y: auto;
+      overflow: hidden; /* Hide scrollbars */
     }
 
-    .parallax {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width:100%;
-      z-index: 2; /* Ensure this is on top of the 3D scene */
-      position: relative; /* To position the content on top */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Ensure video is behind other content */
+      overflow: hidden;
+    }
+
+    .video-background video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Cover the whole background */
     }
 
     .content {
-      background-color:transparent;
-      
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      justify-content:center;
-      align-items:center;
-      z-index: 3; /* Ensure content is above the sphere */
       position: relative; /* To ensure proper stacking */
+      z-index: 1; /* Content is above the video */
       display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: white;
     }
 
     h1 {
-      font-size: 36px;
-      color: #333;
-      margin-bottom: 30px;
+      font-size: 40px;
+      text-align:center;
+      color:white;
     }
 
-    .card {
-      background-color: #fff;
-      padding: 20px;
-      margin-top: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
+    p {
+      font-size: 20px;
     }
 
+    a {
+      font-size: 20px;
+      border: 2px solid white;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
 
-    #threejs-container {
-      position: fixed; /* Ensures it stays in place */
-      background-color: black;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 1; 
+    a:hover {
+      background-color: rgba(0, 0, 0, 0.7);
     }
   </style>
 </head>
 <body>
-<!-- Container for the Three.js scene -->
-<div id="threejs-container" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: black; z-index: 1;"></div>
-
-<!-- Content on top of the 3D sphere -->
-<div class="parallax" style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh; position: absolute; top: 0; left: 0; z-index: 2;">
-  <div class="content" style="text-align: center; color: white;">
-    <h1 style="font-size: 3rem; color:white;">ChatSphere</h1>
-    <p class="fs-2" style="font-size: 50px;">Welcome to Chatsphere</p><br>
-    <p class="fs-3">Thank You For Choosing Chatsphere</p><br>
-    <a href="/whatsapp" style="font-size: 20px; border: 5px solid black; background-color: rgba(26, 22, 22, 0.3); backdrop-filter: blur(10px); border-radius: 50px; padding: 1rem; text-decoration: none; color: white;">Click Here To Proceed</a>
+  <!-- Video background -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="https://videos.pexels.com/video-files/856857/856857-uhd_2732_1440_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
-</div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  
+  <!-- Content on top of the video background -->
+  <h1>CHATSPHERE</h1>
+  <div class="content">
+    
+    <p>Welcome to Chatsphere</p>
+    <p>Thank You For Choosing Chatsphere</p>
+    <a href="/whatsapp">Click Here To Proceed</a>
+  </div>
 </body>
 </html>
