@@ -6,14 +6,18 @@
   <title>Ali Ishaq Video Background</title>
 
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-      overflow: hidden; /* Hide scrollbars */
-
-    }
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; 
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
 
     .video-background {
       position: fixed;
@@ -23,6 +27,7 @@
       height: 100%;
       z-index: -1; /* Ensure video is behind other content */
       overflow: hidden;
+      
     }
 
     .video-background video {
@@ -73,11 +78,7 @@
 </head>
 <body>
   <!-- Video background -->
-  <div class="video-background">
-    <video autoplay muted loop>
-      <source src="https://videos.pexels.com/video-files/10755265/10755265-hd_2560_1440_30fps.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  
   </div>
 
   <!-- Content on top of the video background -->
