@@ -9,7 +9,7 @@ body {
   max-width: 100%;
   box-sizing: border-box;
   /* Background properties */
-  background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url('https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;  /* Ensures the background covers the entire viewport */
   background-position: center; /* Centers the background */
   background-attachment: fixed; /* Makes the background static */
@@ -445,4 +445,67 @@ footer .social-media-icons {
 .card-body {
 
   background-color: darkgray;
+}
+
+.nav-item{
+  border:3px solid black;
+  border-radius: 50px;
+  display: block;
+  text-align: center;
+  background-color: #222;
+  
+
+}
+
+.nav-item:hover {
+  background-color: rgb(60, 60, 82);
+}
+
+.nav-link{
+  
+  border-radius: 50px;
+  display: block;
+  text-align: center;
+  background-color: #222;
+  color: #ddd;
+  opacity: 0.6;
+}
+
+
+/* Products Section */
+#products {
+  padding: 50px 0;
+}
+
+#products h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.product-item {
+  background-color: #c09a9a;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+.product-item:hover{
+  background-color: #e27474;
+}
+
+.product-item img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.product-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
