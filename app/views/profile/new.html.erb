@@ -129,7 +129,7 @@
                            <%= image_tag 'ali.JPG', class: 'avatar-image img-fluid', alt: 'Happy bearded young man' %>
                         </div>
                         <h3 class="pt-2 mb-3">A little bit about Ali</h3>
-                        <p>I am a passionate web developer, primarily focused on Ruby on Rails. I work on various projects, including building a Flyball Club web application, a portfolio website, and creating dashboards for companies like a Textile Company. I am also an ethical hacker, practicing on localhost environments. I use tools like Docker, Jenkins, AWS, and have explored different hosting platforms, such as Heroku, AWS, and Hostinger. I value clean, responsive design and constantly seek to improve components like login forms, sidebars, and dashboards.</p>
+                        <p>I am a passionate web developer with a Bachelor's degree in Computer Science and 2 years of hands-on experience. I have expertise in Ruby on Rails, C++, HTML/CSS, JavaScript, Git/GitHub, Bootstrap, Linux, Tailwind CSS, and React. My skill set also includes Object-Oriented Programming (OOP), and I have a strong foundation in both frontend and backend development. I'm dedicated to building clean, efficient, and scalable web applications.</p>
                      </div>
                   </div>
                </div>
@@ -364,83 +364,104 @@
             </div>
          </section>
          <section class="projects section-padding" id="section_4">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-8 col-md-8 col-12 ms-auto">
-                     <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                        <%= image_tag 'white-desk-work-study-aesthetics.jpg', class: 'avatar-image img-fluid', alt: '' %>
-                        <h2 class="text-white ms-4 mb-0">Projects</h2>
-                     </div>
-                  </div>
-                  <div class="clearfix"></div>
-                  <!-- LOOMS-LEGACY Project -->
-                  <div class="col-lg-4 col-md-6 col-12">
-                     <div class="projects-thumb">
-                        <div class="projects-info">
-                           <small class="projects-tag">Web Application</small>
-                           <h3 class="projects-title">LOOMS-LEGACY</h3>
-                           <p class="projects-description">Application to manage textile company operations online.</p>
-                        </div>
-                        <a href="<%= asset_path('looms-legacy.jpg') %>" class="popup-image">
-                        <%= image_tag 'looms-legacy.jpg', class: 'projects-image img-fluid', alt: 'Looms-Legacy' %>
-                        </a>
-                     </div>
-                  </div>
-                  <!-- CHATSPHERE Project -->
-                  <div class="col-lg-4 col-md-6 col-12">
-                     <div class="projects-thumb">
-                        <div class="projects-info">
-                           <small class="projects-tag">Chat Application</small>
-                           <h3 class="projects-title">CHATSPHERE</h3>
-                           <p class="projects-description">Real-time chatting application for seamless communication.</p>
-                        </div>
-                        <a href="<%= asset_path('chatsphere.jpg') %>" class="popup-image">
-                        <%= image_tag 'chatsphere.jpg', class: 'projects-image img-fluid', alt: 'Chatsphere' %>
-                        </a>
-                     </div>
-                  </div>
-                  <!-- SMART-BANK Project -->
-                  <div class="col-lg-4 col-md-6 col-12">
-                     <div class="projects-thumb">
-                        <div class="projects-info">
-                           <small class="projects-tag">Banking Application</small>
-                           <h3 class="projects-title">SMART-BANK</h3>
-                           <p class="projects-description">A C++ banking application with essential financial operations.</p>
-                        </div>
-                        <a href="<%= asset_path('smart-bank.jpg') %>" class="popup-image">
-                        <%= image_tag 'smart-bank.jpg', class: 'projects-image img-fluid', alt: 'Smart-Bank' %>
-                        </a>
-                     </div>
-                  </div>
-                  <!-- TIC-TAC-TOE Project -->
-                  <div class="col-lg-4 col-md-6 col-12">
-                     <div class="projects-thumb">
-                        <div class="projects-info">
-                           <small class="projects-tag">Game</small>
-                           <h3 class="projects-title">TIC-TAC-TOE</h3>
-                           <p class="projects-description">Classic Tic-Tac-Toe game implemented for practice and fun.</p>
-                        </div>
-                        <a href="<%= asset_path('tic-tac-toe.jpg') %>" class="popup-image">
-                        <%= image_tag 'tic-tac-toe.jpg', class: 'projects-image img-fluid', alt: 'Tic-Tac-Toe' %>
-                        </a>
-                     </div>
-                  </div>
-                  <!-- QUICK-AND-QUALITY Project -->
-                  <div class="col-lg-4 col-md-6 col-12">
-                     <div class="projects-thumb">
-                        <div class="projects-info">
-                           <small class="projects-tag">Website & Admin Dashboard</small>
-                           <h3 class="projects-title">QUICK-AND-QUALITY</h3>
-                           <p class="projects-description">Website and admin dashboard for a construction company.</p>
-                        </div>
-                        <a href="<%= asset_path('quick-and-quality.jpg') %>" class="popup-image">
-                        <%= image_tag 'quick-and-quality.jpg', class: 'projects-image img-fluid', alt: 'Quick-and-Quality' %>
-                        </a>
-                     </div>
-                  </div>
-               </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8 col-md-8 col-12 ms-auto">
+            <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
+               <%= image_tag 'white-desk-work-study-aesthetics.jpg', class: 'avatar-image img-fluid', alt: '' %>
+               <h2 class="text-white ms-4 mb-0">Projects</h2>
             </div>
-         </section>
+         </div>
+         <div class="clearfix"></div>
+         
+         <!-- LOOMS-LEGACY Project -->
+         <div class="col-lg-4 col-md-6 col-12">
+            <a href="/loomlegacies" class="text-decoration-none"> <!-- Link to project page -->
+               <div class="projects-thumb">
+                  <div class="projects-info">
+                     <small class="projects-tag">Web Application</small>
+                     <h3 class="projects-title">LOOMS-LEGACY</h3>
+                     <p class="projects-description">Application to manage textile company operations online.</p>
+                  </div>
+                  <!-- Popup only for image -->
+                  <a href="<%= asset_path('looms-legacy.jpg') %>" class="popup-image">
+                     <%= image_tag 'looms-legacy.jpg', class: 'projects-image img-fluid', alt: 'Looms-Legacy' %>
+                  </a>
+               </div>
+            </a>
+         </div>
+
+         <!-- CHATSPHERE Project -->
+         <div class="col-lg-4 col-md-6 col-12">
+            <a href="/chatsphere_welcome" class="text-decoration-none"> <!-- Link to project page -->
+               <div class="projects-thumb">
+                  <div class="projects-info">
+                     <small class="projects-tag">Chat Application</small>
+                     <h3 class="projects-title">CHATSPHERE</h3>
+                     <p class="projects-description">Real-time chatting application for seamless communication.</p>
+                  </div>
+                  <!-- Popup only for image -->
+                  <a href="<%= asset_path('chatsphere.jpg') %>" class="popup-image">
+                     <%= image_tag 'chatsphere.jpg', class: 'projects-image img-fluid', alt: 'Chatsphere' %>
+                  </a>
+               </div>
+            </a>
+         </div>
+
+         <!-- SMART-BANK Project -->
+         <div class="col-lg-4 col-md-6 col-12">
+            <a href="/smartbank" class="text-decoration-none"> <!-- Link to project page -->
+               <div class="projects-thumb">
+                  <div class="projects-info">
+                     <small class="projects-tag">Banking Application</small>
+                     <h3 class="projects-title">SMART-BANK</h3>
+                     <p class="projects-description">A C++ banking application with essential financial operations.</p>
+                  </div>
+                  <!-- Popup only for image -->
+                  <a href="<%= asset_path('smart-bank.jpg') %>" class="popup-image">
+                     <%= image_tag 'smart-bank.jpg', class: 'projects-image img-fluid', alt: 'Smart-Bank' %>
+                  </a>
+               </div>
+            </a>
+         </div>
+
+         <!-- TIC-TAC-TOE Project -->
+         <div class="col-lg-4 col-md-6 col-12">
+            <a href="/tictactoe" class="text-decoration-none"> <!-- Link to project page -->
+               <div class="projects-thumb">
+                  <div class="projects-info">
+                     <small class="projects-tag">Game</small>
+                     <h3 class="projects-title">TIC-TAC-TOE</h3>
+                     <p class="projects-description">Classic Tic-Tac-Toe game implemented for practice and fun.</p>
+                  </div>
+                  <!-- Popup only for image -->
+                  <a href="<%= asset_path('tic-tac-toe.jpg') %>" class="popup-image">
+                     <%= image_tag 'tic-tac-toe.jpg', class: 'projects-image img-fluid', alt: 'Tic-Tac-Toe' %>
+                  </a>
+               </div>
+            </a>
+         </div>
+
+         <!-- QUICK-AND-QUALITY Project -->
+         <div class="col-lg-4 col-md-6 col-12">
+            <a href="/quickandquality" class="text-decoration-none"> <!-- Link to project page -->
+               <div class="projects-thumb">
+                  <div class="projects-info">
+                     <small class="projects-tag">Website & Admin Dashboard</small>
+                     <h3 class="projects-title">QUICK-AND-QUALITY</h3>
+                     <p class="projects-description">Website and admin dashboard for a construction company.</p>
+                  </div>
+                  <!-- Popup only for image -->
+                  <a href="<%= asset_path('quick-and-quality.jpg') %>" class="popup-image">
+                     <%= image_tag 'quick-and-quality.jpg', class: 'projects-image img-fluid', alt: 'Quick-and-Quality' %>
+                  </a>
+               </div>
+            </a>
+         </div>
+      </div>
+   </div>
+</section>
+
          <section class="contact section-padding" id="section_5">
             <div class="container">
                <div class="row">

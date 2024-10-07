@@ -1,5 +1,150 @@
-<%= stylesheet_link_tag 'login_signup', media: 'all', 'data-turbo-track': 'reload' %>
-<div class="form-container">
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Ishaq Video Background</title>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow-y: auto;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Ensure video is behind other content */
+      overflow: hidden;
+    }
+
+    .video-background video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Cover the whole background */
+    }
+
+    .content {
+      position: relative; /* To ensure proper stacking */
+      z-index: 1; /* Content is above the video */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      font-size: 40px;
+      text-align:center;
+      color:white;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    a {
+      font-size: 20px;
+      border: 2px solid white;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    /* Container background styling */
+.form-background {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form container styling */
+.form-container {
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+/* Form title styling */
+.form-title {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+/* Form label styling */
+.form-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Form control styling */
+.form-control {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Submit button styling */
+.btn-primary {
+  background: rgba(0, 123, 255, 0.7);
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+.container-fluid {
+  width: 70%; /* Set width to 70% of the viewport */
+  max-width: 100%; /* Ensure it doesn't exceed viewport width */
+ /* Optional: Remove padding if not needed */
+}
+
+  </style>
+</head>
+<body>
+  <!-- Video background -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="https://videos.pexels.com/video-files/856857/856857-uhd_2732_1440_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+ <div class="parallax">
+    <div class="content">
+      <p class="fs-1 pt-5" style="color:white;">Welcome <br> PLease Login to Proceed</p><br>
+<div class="container-fluid d-flex justify-content-center align-items-center">
+ <div class="form-container">
   <h2>Log in</h2>
 
   <div class="notice alert alert-info">
@@ -29,7 +174,19 @@
     </div>
   <% end %>
 
-  <div class="links mt-3">
-    <%= render "devise/shared/links" %>
+ <div class="links mt-3">
+  <div class="d-flex justify-content-start">
+    <%= link_to "Sign up", new_user_registration_path, class: "me-3" %>
+    <%= link_to "Forgot your password?", new_user_password_path, class: "me-3" %>
   </div>
 </div>
+
+
+</div>
+</div>
+
+
+    </div>
+  </div>
+</body>
+</html>
