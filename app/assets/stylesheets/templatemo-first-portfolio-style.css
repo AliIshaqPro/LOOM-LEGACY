@@ -310,10 +310,10 @@ strong {
 .is-sticky,
 .is-sticky .navbar .container {
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
+ box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
 }
 
-.is-sticky .navbar-brand,
+.is-sticky .navbar-brand ,
 .is-sticky .navbar-brand:hover {
   color: var(--dark-color);
 }
