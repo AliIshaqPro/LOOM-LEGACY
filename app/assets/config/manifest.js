@@ -3,3 +3,10 @@
 //= link application.js
 //= link custom.js
 //= link index.js
+//= link jquery.min.js
+//= link bootstrap.min.js
+//= link jquery.sticky.js
+//= link click-scroll.js
+//= link jquery.magnific-popup.min.js
+//= link magnific-popup-options.js
+//= link custom.js

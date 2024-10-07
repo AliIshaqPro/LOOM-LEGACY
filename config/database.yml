@@ -3,16 +3,16 @@ default: &default
   encoding: unicode
   pool: 5
   username: postgres
-  password: 
+  password: Maasaa229$27
   host: localhost
 
 development:
   <<: *default
-  database: LOOMS-LEGACY_6
+  database: LOOMS-LEGACY_7
 
 test:
   <<: *default
-  database: LOOMS-LEGACY_test
+  database: LOOMS-LEGACY_test_1
 
 production:
   <<: *default

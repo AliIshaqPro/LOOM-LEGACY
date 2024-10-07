@@ -16,3 +16,5 @@ Rails.start();
 
 import "controllers"; // Stimulus controllers, if used
 import "channels";    // WebSockets or ActionCable, if used
+import 'jquery';
+

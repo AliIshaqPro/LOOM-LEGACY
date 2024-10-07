@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   # get 'departments', to: 'loom_legacies#index'
   #root 'loom_legacies#home'
   #root 'dashboards#board_member'
-  
+  resources :contacts, only: [:new, :create]
+
+
   resources :conversations, only: [:index, :show, :create] do
     resources :messages, only: [:create]
   end
