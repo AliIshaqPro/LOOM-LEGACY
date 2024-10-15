@@ -135,152 +135,149 @@
                </div>
             </div>
          </section>
-         <section class="featured section-padding">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-6 col-12">
-                     <div class="profile-thumb">
-                        <div class="profile-title">
-                           <h4 class="mb-0">Information</h4>
-                        </div>
-                        <div class="profile-body">
-                           <p>
-                              <span class="profile-small-title">Name</span> 
-                              <span>Ali Ishaq</span>
-                           </p>
-                           <p>
-                              <span class="profile-small-title">Education</span> 
-                              <span>Bachelor's in computer science</span>
-                           </p>
-                           <p>
-                              <span class="profile-small-title">Phone</span> 
-                              <span><a href="tel:03460422988">+92 346 0422988</a></span>
-                           </p>
-                           <p>
-                              <span class="profile-small-title">Email</span> 
-                              <span><a href="mailto:hello@josh.design">aliishaqsandho@gmail.com</a></span>
-                           </p>
-                        </div>
-                     </div>
+ <section class="featured section-padding" style="background-color: #f0f4f8;">
+   <div class="container">
+      <div class="row">
+         <!-- Information Section -->
+         <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+            <div class="profile-thumb p-4" style="border-radius: 15px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+               <h4 class="mb-4 text-center" style="font-weight: bold;">Information</h4>
+               <div class="profile-body">
+                  <p>
+                     <strong>Name:</strong> Ali Ishaq
+                  </p>
+                  <p>
+                     <strong>Education:</strong> Bachelor's in Computer Science
+                  </p>
+                  <p>
+                     <strong>Phone:</strong> <a href="tel:03460422988" style="color: #4caf50; text-decoration: none;">+92 346 0422988</a>
+                  </p>
+                  <p>
+                     <strong>Email:</strong> <a href="mailto:aliishaqsandho@gmail.com" style="color: #4caf50; text-decoration: none;">aliishaqsandho@gmail.com</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <!-- Featured Stats Section -->
+         <div class="col-lg-6 col-12">
+            <div class="about-thumb p-4" style="border-radius: 15px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+               <div class="row text-center">
+                  <!-- First Row -->
+                  <div class="col-lg-6 col-md-6 col-6 py-3">
+                     <strong class="d-block" style="font-size: 2.5rem; color: #2196f3;">2+</strong>
+                     <span class="text-muted">Years of Coding Practice</span>
                   </div>
-                  <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                     <div class="about-thumb">
-                        <div class="row">
-                           <div class="col-lg-6 col-6 featured-border-bottom py-2">
-                              <strong class="featured-numbers">2+</strong>
-                              <p class="featured-text">Years of Coding Practice</p>
-                              <!-- Highlight your dedication to learning and coding -->
-                           </div>
-                           <div class="col-lg-6 col-6 featured-border-start featured-border-bottom ps-5 py-2">
-                              <strong class="featured-numbers">5+</strong>
-                              <p class="featured-text">Personal Projects</p>
-                              <!-- Focus on personal projects you've created, no matter the size -->
-                           </div>
-                           <div class="col-lg-6 col-6 pt-4">
-                              <strong class="featured-numbers">10+</strong>
-                              <p class="featured-text">Skills Developed</p>
-                              <!-- Mention key skills you've been learning, such as HTML, CSS, Ruby on Rails, etc. -->
-                           </div>
-                           <div class="col-lg-6 col-6 featured-border-start ps-5 pt-4">
-                              <strong class="featured-numbers">∞</strong>
-                              <p class="featured-text">Passion for Learning</p>
-                              <!-- Emphasize your enthusiasm and commitment to continuous improvement -->
-                           </div>
-                        </div>
-                     </div>
+                  <div class="col-lg-6 col-md-6 col-6 py-3">
+                     <strong class="d-block" style="font-size: 2.5rem; color: #2196f3;">5+</strong>
+                     <span class="text-muted">Personal Projects</span>
+                  </div>
+
+                  <!-- Second Row -->
+                  <div class="col-lg-6 col-md-6 col-6 py-3">
+                     <strong class="d-block" style="font-size: 2.5rem; color: #2196f3;">10+</strong>
+                     <span class="text-muted">Skills Developed</span>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-6 py-3">
+                     <strong class="d-block" style="font-size: 2.5rem; color: #2196f3;">∞</strong>
+                     <span class="text-muted">Passion for Learning</span>
                   </div>
                </div>
             </div>
-            </div>
-         </section>
+         </div>
+      </div>
+   </div>
+</section>
+
+
          <section class="clients section-padding">
-            <div class="container">
-               <div class="row align-items-center">
-                  <div class="row">
-                     <div class="col-lg-2 col-4 ms-auto">
-                        <div class="card h-100" style="border-radius: 20px;">
-                           <%= image_tag 'Ruby_On_Rails_Logo.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'Ruby on Rails' %>
-                           <div class="card-body text-center">
-                              <p class="card-text">Ruby on Rails</p>
-                           </div>
-                        </div>
+         <div class="container">
+            <div class="row d-flex justify-content-center flex-wrap align-items-center">
+               <!-- Skill Cards -->
+               <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4 d-flex justify-content-center">
+                  <div class="card h-100 w-100" style="border-radius: 20px;">
+                     <%= image_tag 'Ruby_On_Rails_Logo.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'Ruby on Rails' %>
+                     <div class="card-body text-center">
+                        <p class="card-text">Ruby on Rails</p>
                      </div>
-                     <div class="col-lg-2 col-4">
-                        <div class="card h-100" style="border-radius: 20px;">
-                           <%= image_tag 'Cpp.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'C++' %>
-                           <div class="card-body text-center">
-                              <p class="card-text">C++</p>
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4 d-flex justify-content-center">
+                  <div class="card h-100 w-100" style="border-radius: 20px;">
+                     <%= image_tag 'Cpp.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'C++' %>
+                     <div class="card-body text-center">
+                        <p class="card-text">C++</p>
                      </div>
-                     <div class="col-lg-2 col-4">
-                        <div class="card h-100" style="border-radius: 20px;">
-                           <%= image_tag 'htmlcs.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'HTML/CSS' %>
-                           <div class="card-body text-center">
-                              <p class="card-text">HTML/CSS</p>
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4 d-flex justify-content-center">
+                  <div class="card h-100 w-100" style="border-radius: 20px;">
+                     <%= image_tag 'htmlcs.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'HTML/CSS' %>
+                     <div class="card-body text-center">
+                        <p class="card-text">HTML/CSS</p>
                      </div>
-                     <div class="col-lg-2 col-4">
-                        <div class="card h-100" style="border-radius: 20px;">
-                           <%= image_tag 'javascript.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'JavaScript' %>
-                           <div class="card-body text-center">
-                              <p class="card-text">JavaScript</p>
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4 d-flex justify-content-center">
+                  <div class="card h-100 w-100" style="border-radius: 20px;">
+                     <%= image_tag 'javascript.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'JavaScript' %>
+                     <div class="card-body text-center">
+                        <p class="card-text">JavaScript</p>
                      </div>
-                     <div class="col-lg-2 col-4">
-                        <div class="card h-100" style="border-radius: 20px;">
-                           <%= image_tag 'github.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'Git/GitHub' %>
-                           <div class="card-body text-center">
-                              <p class="card-text">Git/GitHub</p>
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4 d-flex justify-content-center">
+                  <div class="card h-100 w-100" style="border-radius: 20px;">
+                     <%= image_tag 'github.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'Git/GitHub' %>
+                     <div class="card-body text-center">
+                        <p class="card-text">Git/GitHub</p>
                      </div>
-                     <div class="col-lg-2 col-4">
-                        <div class="card h-100" style="border-radius: 20px;">
-                           <%= image_tag 'bootstrap.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'Bootstrap' %>
-                           <div class="card-body text-center">
-                              <p class="card-text">Bootstrap</p>
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4 d-flex justify-content-center">
+                  <div class="card h-100 w-100" style="border-radius: 20px;">
+                     <%= image_tag 'bootstrap.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'Bootstrap' %>
+                     <div class="card-body text-center">
+                        <p class="card-text">Bootstrap</p>
                      </div>
-                     <div class="col-lg-2 col-4">
-                        <div class="card h-100" style="border-radius: 20px;">
-                           <%= image_tag 'linux.webp', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'Linux' %>
-                           <div class="card-body text-center">
-                              <p class="card-text">Linux</p>
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4 d-flex justify-content-center">
+                  <div class="card h-100 w-100" style="border-radius: 20px;">
+                     <%= image_tag 'linux.webp', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'Linux' %>
+                     <div class="card-body text-center">
+                        <p class="card-text">Linux</p>
                      </div>
-                     <div class="col-lg-2 col-4">
-                        <div class="card h-100" style="border-radius: 20px;">
-                           <%= image_tag 'tailwind.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'Tailwind CSS' %>
-                           <div class="card-body text-center">
-                              <p class="card-text">Tailwind CSS</p>
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4 d-flex justify-content-center">
+                  <div class="card h-100 w-100" style="border-radius: 20px;">
+                     <%= image_tag 'tailwind.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'Tailwind CSS' %>
+                     <div class="card-body text-center">
+                        <p class="card-text">Tailwind CSS</p>
                      </div>
-                     <div class="col-lg-2 col-4">
-                        <div class="card h-100" style="border-radius: 20px;">
-                           <%= image_tag 'react.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'REACT' %>
-                           <div class="card-body text-center">
-                              <p class="card-text">REACT</p>
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4 d-flex justify-content-center">
+                  <div class="card h-100 w-100" style="border-radius: 20px;">
+                     <%= image_tag 'react.png', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'REACT' %>
+                     <div class="card-body text-center">
+                        <p class="card-text">REACT</p>
                      </div>
-                     <div class="col-lg-2 col-4 me-auto">
-                        <div class="card h-100" style="border-radius: 20px;">
-                           <%= image_tag 'oop.jpg', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'OOP' %>
-                           <div class="card-body text-center">
-                              <p class="card-text">(OOP)</p>
-                           </div>
-                        </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-6 col-6 mb-4 d-flex justify-content-center">
+                  <div class="card h-100 w-100" style="border-radius: 20px;">
+                     <%= image_tag 'oop.jpg', class: 'card-img-top img-fluid', style: 'height: 150px; object-fit: contain;', alt: 'OOP' %>
+                     <div class="card-body text-center">
+                        <p class="card-text">(OOP)</p>
                      </div>
                   </div>
                </div>
             </div>
-         </section>
+         </div>
+      </section>
+      
          <section class="services section-padding" id="section_3">
             <div class="container">
                <div class="row">
@@ -372,95 +369,82 @@
                <h2 class="text-white ms-4 mb-0">Projects</h2>
             </div>
          </div>
-         <div class="clearfix"></div>
-         
+      </div>
+
+      <div class="row">
          <!-- LOOMS-LEGACY Project -->
-         <div class="col-lg-4 col-md-6 col-12">
-            <a href="/loomlegacies" class="text-decoration-none"> <!-- Link to project page -->
-               <div class="projects-thumb">
-                  <div class="projects-info">
-                     <small class="projects-tag">Web Application</small>
-                     <h3 class="projects-title">LOOMS-LEGACY</h3>
-                     <p class="projects-description">Application to manage textile company operations online.</p>
+         <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <div class="card h-100">
+               <a href="/loomlegacies" class="text-decoration-none">
+                  <%= image_tag 'looms-legacy.jpg', class: 'card-img-top img-fluid', alt: 'Looms-Legacy' %>
+                  <div class="card-body">
+                     <h5 class="card-title">LOOMS-LEGACY</h5>
+                     <p class="card-text">Application to manage textile company operations online.</p>
+                     <small class="text-muted">Web Application</small>
                   </div>
-                  <!-- Popup only for image -->
-                  <a href="<%= asset_path('looms-legacy.jpg') %>" class="popup-image">
-                     <%= image_tag 'looms-legacy.jpg', class: 'projects-image img-fluid', alt: 'Looms-Legacy' %>
-                  </a>
-               </div>
-            </a>
+               </a>
+            </div>
          </div>
 
          <!-- CHATSPHERE Project -->
-         <div class="col-lg-4 col-md-6 col-12">
-            <a href="/chatsphere_welcome" class="text-decoration-none"> <!-- Link to project page -->
-               <div class="projects-thumb">
-                  <div class="projects-info">
-                     <small class="projects-tag">Chat Application</small>
-                     <h3 class="projects-title">CHATSPHERE</h3>
-                     <p class="projects-description">Real-time chatting application for seamless communication.</p>
+         <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <div class="card h-100">
+               <a href="/chatsphere_welcome" class="text-decoration-none">
+                  <%= image_tag 'chatsphere.jpg', class: 'card-img-top img-fluid', alt: 'Chatsphere' %>
+                  <div class="card-body">
+                     <h5 class="card-title">CHATSPHERE</h5>
+                     <p class="card-text">Real-time chatting application for seamless communication.</p>
+                     <small class="text-muted">Chat Application</small>
                   </div>
-                  <!-- Popup only for image -->
-                  <a href="<%= asset_path('chatsphere.jpg') %>" class="popup-image">
-                     <%= image_tag 'chatsphere.jpg', class: 'projects-image img-fluid', alt: 'Chatsphere' %>
-                  </a>
-               </div>
-            </a>
+               </a>
+            </div>
          </div>
 
          <!-- SMART-BANK Project -->
-         <div class="col-lg-4 col-md-6 col-12">
-            <a href="/smartbank" class="text-decoration-none"> <!-- Link to project page -->
-               <div class="projects-thumb">
-                  <div class="projects-info">
-                     <small class="projects-tag">Banking Application</small>
-                     <h3 class="projects-title">SMART-BANK</h3>
-                     <p class="projects-description">A C++ banking application with essential financial operations.</p>
+         <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <div class="card h-100">
+               <a href="/smartbank" class="text-decoration-none">
+                  <%= image_tag 'smart-bank.jpg', class: 'card-img-top img-fluid', alt: 'Smart-Bank' %>
+                  <div class="card-body">
+                     <h5 class="card-title">SMART-BANK</h5>
+                     <p class="card-text">A C++ banking application with essential financial operations.</p>
+                     <small class="text-muted">Banking Application</small>
                   </div>
-                  <!-- Popup only for image -->
-                  <a href="<%= asset_path('smart-bank.jpg') %>" class="popup-image">
-                     <%= image_tag 'smart-bank.jpg', class: 'projects-image img-fluid', alt: 'Smart-Bank' %>
-                  </a>
-               </div>
-            </a>
+               </a>
+            </div>
          </div>
 
          <!-- TIC-TAC-TOE Project -->
-         <div class="col-lg-4 col-md-6 col-12">
-            <a href="/tictactoe" class="text-decoration-none"> <!-- Link to project page -->
-               <div class="projects-thumb">
-                  <div class="projects-info">
-                     <small class="projects-tag">Game</small>
-                     <h3 class="projects-title">TIC-TAC-TOE</h3>
-                     <p class="projects-description">Classic Tic-Tac-Toe game implemented for practice and fun.</p>
+         <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <div class="card h-100">
+               <a href="/tictactoe" class="text-decoration-none">
+                  <%= image_tag 'tic-tac-toe.jpg', class: 'card-img-top img-fluid', alt: 'Tic-Tac-Toe' %>
+                  <div class="card-body">
+                     <h5 class="card-title">TIC-TAC-TOE</h5>
+                     <p class="card-text">Classic Tic-Tac-Toe game implemented for practice and fun.</p>
+                     <small class="text-muted">Game</small>
                   </div>
-                  <!-- Popup only for image -->
-                  <a href="<%= asset_path('tic-tac-toe.jpg') %>" class="popup-image">
-                     <%= image_tag 'tic-tac-toe.jpg', class: 'projects-image img-fluid', alt: 'Tic-Tac-Toe' %>
-                  </a>
-               </div>
-            </a>
+               </a>
+            </div>
          </div>
 
          <!-- QUICK-AND-QUALITY Project -->
-         <div class="col-lg-4 col-md-6 col-12">
-            <a href="/quickandquality" class="text-decoration-none"> <!-- Link to project page -->
-               <div class="projects-thumb">
-                  <div class="projects-info">
-                     <small class="projects-tag">Website & Admin Dashboard</small>
-                     <h3 class="projects-title">QUICK-AND-QUALITY</h3>
-                     <p class="projects-description">Website and admin dashboard for a construction company.</p>
+         <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <div class="card h-100">
+               <a href="/quickandquality" class="text-decoration-none">
+                  <%= image_tag 'quick-and-quality.jpg', class: 'card-img-top img-fluid', alt: 'Quick-and-Quality' %>
+                  <div class="card-body">
+                     <h5 class="card-title">QUICK-AND-QUALITY</h5>
+                     <p class="card-text">Website and admin dashboard for a construction company.</p>
+                     <small class="text-muted">Website & Admin Dashboard</small>
                   </div>
-                  <!-- Popup only for image -->
-                  <a href="<%= asset_path('quick-and-quality.jpg') %>" class="popup-image">
-                     <%= image_tag 'quick-and-quality.jpg', class: 'projects-image img-fluid', alt: 'Quick-and-Quality' %>
-                  </a>
-               </div>
-            </a>
+               </a>
+            </div>
          </div>
       </div>
    </div>
 </section>
+
 
          <section class="contact section-padding" id="section_5">
             <div class="container">
@@ -588,8 +572,7 @@
                 <div class="copyright-text-wrap">
                     <p class="mb-0">
                         <span class="copyright-text">Copyright © 2036 <a href="#">Ali Ishaq</a>. All rights reserved.</span>
-                        Design: 
-                        <a rel="sponsored" href="https://aliishaq.site" target="_blank">TemplateMo</a>
+                       
                     </p>
                 </div>
             </div>
