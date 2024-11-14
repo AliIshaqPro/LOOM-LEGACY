@@ -15,7 +15,10 @@ test:
   database: LOOMS-LEGACY_test_1
 
 production:
-  <<: *default
-  database: looms_legacy_production-11
+  adapter: postgresql
+  encoding: unicode
+  database: looms_legacy_production
+  pool: 5
   username: ec2-user
-  
+  password: 'Maasaa229$27'
+  host: localhost
